@@ -1,0 +1,1 @@
+pyinstaller -w -F -y -m selfupdate.exe.manifest selfupdate.py

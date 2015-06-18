@@ -1,0 +1,61 @@
+body {
+  background-color: #ebeff9;
+  font-family: arial,sans-serif;
+  font-size: 13px;
+}
+
+#title {
+  color: #434343;
+  margin-top: 0;
+}
+
+#logo {
+  float: right;
+}
+
+h2 {
+  color: #103c94;
+}
+
+button {
+  width: 70px;
+}
+
+#site-list {
+  font-size: 17px;
+  height: 250px;
+  width: 550px;
+}
+
+#status {
+  background-color: #fff1a8;
+}
+
+#content {
+  background-color: #ffffff;
+  border-color: #b5c7de;
+  border-style: solid;
+  border-width: 4px;
+  margin: 40px auto 20px;
+  padding:12px;
+  width:600px;
+  -webkit-border-radius: 12px;
+}
+
+#star {
+  color: #ff0000;
+  font-size: 20px;
+}
+
+label {
+  color: #434343;
+  font-size: 20px;
+}
+
+#donate-link {
+  bottom: 50px;
+  float: right;
+  outline: none;
+  position: relative;
+}
+

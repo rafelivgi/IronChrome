@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/popup.css" />
+  </head>
+  <body>
+    <strong>JavaScript Popup Blocker</strong> intercepted the following popups on this page:
+    <div id="url-list"><div id="no-popups">Nothing yet...</div></div>
+    <a id="site-manage"></a>
+    <a id="options-link" href="options.html" target="_blank">
+      <img src="images/page_gear.png" /> Extension settings
+    </a>
+    <a id="rate-link" href="https://chrome.google.com/webstore/detail/javascript-popup-blocker/hiajdlfgbgnnjakkbnpdhmhfhklkbiol/reviews" target="_blank">
+      <img src="images/award_star.png" /> Rate Me!
+    </a>
+    <a id="bug-link" href="https://docs.google.com/forms/d/1cOif5qUHAQrOVwc-KabHT4D_EBkM78ue6Kbr85N2slw/viewform" target="_blank">
+      <img src="images/bug.png" /> Report a problem
+    </a>
+    <form id="donate-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_donations">
+      <input type="hidden" name="business" value="3WZ2MKGTT8VBJ">
+      <input type="hidden" name="lc" value="IE">
+      <input type="hidden" name="item_name" value="JavaScript Popup Blocker">
+      <input type="hidden" name="currency_code" value="EUR">
+      <a id="donate-link" href="javascript:void(0)" target="_blank">
+        <img src="images/money.png" /> Donate
+      </a>
+    </form>
+    <script type="text/javascript" src="js/popup.js"></script>
+  </body>
+</html>

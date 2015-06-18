@@ -1,0 +1,16 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "description": "BarTab inspired (but infinately more primitive) utility for blocking background tabs from killing Chrome on start.",
+   "homepage_url": "http://sourceforge.net/projects/footab/",
+   "icons": {
+      "128": "footab128.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAosp8IEekIZ1WfUWlp9jzjwBSui61PTHmGLUN0i1sNCmpdP6vr4Osi1mcm15ESjiJbtBHvWlE4DAUMr8g5LyFvjuKeKxF6KqapyFghn10Cxc7rkka0dH206VLG5N5pJe4Ous433UQacHhIWNXFOF3T32gTTWBOMCtq67/eW/TpxfzEiOIjpzBrJOLdYicJ65VN5qEh1dOvt7kBidRBgIEqLVXBVgFAaCwWZZkQ4rXzT+zci3CMslj3wuRODE6MlmWTrIu5rb0F309JPeyDhyxjEdLtVqz2wtn2fcGKJVLoBgPFPWB1By/9mWnHFKKyUKzkzOV7d/hBrjIzyBkONWshQIDAQAB",
+   "manifest_version": 2,
+   "name": "FooTab",
+   "permissions": [ "webRequest", "webRequestBlocking", "storage", "tabs", "*://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "13.3.5"
+}

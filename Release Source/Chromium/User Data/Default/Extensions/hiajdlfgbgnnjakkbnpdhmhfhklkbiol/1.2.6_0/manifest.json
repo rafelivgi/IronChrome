@@ -1,0 +1,30 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "images/19.png",
+      "default_popup": "popup.html",
+      "default_title": "JavaScript Popup Blocker"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "js/jpb.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   } ],
+   "description": "A powerful popup blocker for JavaScript popup & pop-under windows.",
+   "icons": {
+      "128": "images/128.png",
+      "16": "images/16.png",
+      "48": "images/48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCgDObEDxztbrKT0pyh1gkVERqbcHZ8+2E8th/+tONTmn2/m+70rw5A3tqFtyNUkj7sCczPO8MyT2U4TIvGyzNMHr+8l4aJKng8AKJ5Mo+PCYdWW66gYOOZ1xedjdFpdXH0ZJBoPpzEZq0P2KEb8tIEPk7e07SD9s2WCtqkBAPY2wIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "20.0.0.0",
+   "name": "JavaScript Popup Blocker",
+   "options_page": "options.html",
+   "permissions": [ "tabs", "\u003Call_urls>" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2.6"
+}

@@ -1,0 +1,36 @@
+{
+   "checksum": "e7af7b2aa1c7054ea249f9901b418377",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13076092344579116",
+            "id": "8",
+            "name": "Webmaster Tools",
+            "type": "url",
+            "url": "https://www.google.com/webmasters/verification/verification?hl=en&siteUrl=http://www.ironchrome.co.il/&theme=wmt&continue=https://www.google.com/webmasters/tools/dashboard?hl%3Den%26siteUrl%3Dhttp://www.ironchrome.co.il/%26authuser%3D0%26sig%3DALjLGbPXe4NJeIpr86BHwNDsYdn8BzENzA&authuser=0&priorities=vfile,vmeta,vdns,vanalytics,vtagmanager&vtype=vfile&failed=true&mesd=ACQ0Nr-h3n_3AE8SfhipEgFLYGTHXycfERSXahcgdOYS-Op7YA9_J2oCndJHHxXzv593k3fILoGNTmyHG1IZF9PoLY_2Bu4C9Khe-9PXcYogXUR9QFRLuPZsFe1hxuwP89i-RAs2XR6jXD-GqDXZ-QEcO6NKCWdhy_DptP4j2PpZgwCeTMKpyBI"
+         } ],
+         "date_added": "13003283766115659",
+         "date_modified": "13076092344579116",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13003283766116659",
+         "date_modified": "0",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13003283766116659",
+         "date_modified": "0",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

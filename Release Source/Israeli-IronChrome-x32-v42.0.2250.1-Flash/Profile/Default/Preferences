@@ -1,0 +1,667 @@
+{
+   "autofill": {
+      "enabled": false
+   },
+   "bookmark_bar": {
+      "show_apps_shortcut": false,
+      "show_on_all_tabs": false
+   },
+   "browser": {
+      "check_default_browser": false,
+      "clear_data": {
+         "form_data": true,
+         "hosted_apps_data": true,
+         "passwords": true,
+         "time_period": 4
+      },
+      "clear_lso_data_enabled": true,
+      "last_clear_browsing_data_time": "13076089100555672",
+      "pepper_flash_settings_enabled": false,
+      "window_placement": {
+         "bottom": 1058,
+         "left": 117,
+         "maximized": false,
+         "right": 1692,
+         "top": 15,
+         "work_area_bottom": 1080,
+         "work_area_left": 0,
+         "work_area_right": 1920,
+         "work_area_top": 0
+      }
+   },
+   "countryid_at_install": 17477,
+   "custom_handlers": {
+      "enabled": false,
+      "ignored_protocol_handlers": [  ],
+      "registered_protocol_handlers": [  ]
+   },
+   "data_reduction": {
+      "daily_original_length": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "132148", "38267", "0", "9270644", "7000040", "0", "0", "0", "0", "0", "0", "37544749", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "190", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "607227" ],
+      "daily_original_length_via_data_reduction_proxy": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+      "daily_original_length_with_data_reduction_proxy_enabled": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+      "daily_received_length": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "132148", "38267", "0", "9270644", "7000040", "0", "0", "0", "0", "0", "0", "37544749", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "190", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "607227" ],
+      "daily_received_length_https_with_data_reduction_proxy_enabled": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+      "daily_received_length_long_bypass_with_data_reduction_proxy_enabled": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+      "daily_received_length_short_bypass_with_data_reduction_proxy_enabled": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+      "daily_received_length_unknown_with_data_reduction_proxy_enabled": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+      "daily_received_length_via_data_reduction_proxy": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+      "daily_received_length_with_data_reduction_proxy_enabled": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+      "last_update_date": "13078962000000000"
+   },
+   "default_apps_install_state": 2,
+   "default_search_provider": {
+      "enabled": true,
+      "encodings": "",
+      "icon_url": "",
+      "id": "6",
+      "instant_url": "",
+      "prepopulate_id": "0",
+      "suggest_url": "",
+      "synced_guid": "30EAC18A-5355-4E3B-B6BD-3D69DC327589"
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "download": {
+      "directory_upgrade": true,
+      "extensions_to_open": ""
+   },
+   "enable_do_not_track": true,
+   "enhanced_bookmarks_enabled": 0,
+   "extensions": {
+      "alerts": {
+         "initialized": true
+      },
+      "autoupdate": {
+         "last_check": "13076091516990658",
+         "next_check": "13079007395731818"
+      },
+      "chrome_url_overrides": {
+         "bookmarks": [ "chrome-extension://eemcgdkfndhakfknompkggombfjjjeno/main.html" ]
+      },
+      "commands": {
+         "windows:Alt+B": {
+            "command_name": "myCommandSDCtrlShiftQ",
+            "extension": "celgmkbkgakmkfboolifhbllkfiepcae",
+            "global": false
+         },
+         "windows:Alt+V": {
+            "command_name": "myCommandSDCtrlQ",
+            "extension": "celgmkbkgakmkfboolifhbllkfiepcae",
+            "global": false
+         }
+      },
+      "last_chrome_version": "42.0.2250.1",
+      "toolbar": [ "njgklfjnbilehhanbalgkdglmfclhahd", "cfhdojbkjhnklbpkdaibdccddilifddb", "celgmkbkgakmkfboolifhbllkfiepcae", "mlomiejdfkolichcflejclcbmpeaniij", "hiajdlfgbgnnjakkbnpdhmhfhklkbiol", "gcbommkclmclpchllfjekcdonpmejbdp", "cjpalhdlnbpafiamejdnhcphjbkeiagm", "mkbjaellhjjekekddpmjchkfijglghep", "bochefhmmcfecenocbcmmlemoghcpjfo" ],
+      "ui": {
+         "developer_mode": true
+      }
+   },
+   "gcm": {
+      "check_time": "13076089290152702"
+   },
+   "http_original_content_length": "54593265",
+   "http_received_content_length": "54593265",
+   "intl": {
+      "accept_languages": "en-US,en"
+   },
+   "invalidator": {
+      "client_id": "Y422KA5gqEa676w1vip8dQ=="
+   },
+   "media": {
+      "device_id_salt": "4sELxnHKRceR/oP3iWREgg=="
+   },
+   "net": {
+      "http_server_properties": {
+         "servers": {
+            "0.client-channel.google.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "accounts.google.co.il:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "accounts.google.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "android.clients.google.com:443": {
+               "supports_spdy": true
+            },
+            "apis.google.com:443": {
+               "supports_spdy": true
+            },
+            "checkout.google.com:443": {
+               "supports_spdy": true
+            },
+            "chrome.google.com:443": {
+               "supports_spdy": true
+            },
+            "ci3.googleusercontent.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               }
+            },
+            "ci4.googleusercontent.com:443": {
+               "supports_spdy": true
+            },
+            "clients2.google.com:443": {
+               "supports_spdy": true
+            },
+            "clients2.googleusercontent.com:443": {
+               "supports_spdy": true
+            },
+            "clients4.google.com:443": {
+               "supports_spdy": true
+            },
+            "clients6.google.com:443": {
+               "supports_spdy": true
+            },
+            "csi.gstatic.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "developer.chrome.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "easylist-downloads.adblockplus.org:443": {
+               "supports_spdy": true
+            },
+            "fbcdn-dragon-a.akamaihd.net:443": {
+               "settings": {
+                  "4": 20,
+                  "7": 65536
+               },
+               "supports_spdy": true
+            },
+            "fbcdn-profile-a.akamaihd.net:443": {
+               "settings": {
+                  "4": 20,
+                  "7": 65536
+               },
+               "supports_spdy": true
+            },
+            "fbcdn-sphotos-b-a.akamaihd.net:443": {
+               "settings": {
+                  "4": 20,
+                  "7": 65536
+               },
+               "supports_spdy": true
+            },
+            "fbcdn-sphotos-g-a.akamaihd.net:443": {
+               "settings": {
+                  "4": 20,
+                  "7": 65536
+               },
+               "supports_spdy": true
+            },
+            "fbcdn-sphotos-h-a.akamaihd.net:443": {
+               "settings": {
+                  "4": 20,
+                  "7": 65536
+               },
+               "supports_spdy": true
+            },
+            "fbexternal-a.akamaihd.net:443": {
+               "settings": {
+                  "4": 20,
+                  "7": 65536
+               },
+               "supports_spdy": true
+            },
+            "fbstatic-a.akamaihd.net:443": {
+               "settings": {
+                  "4": 20,
+                  "7": 65536
+               },
+               "supports_spdy": true
+            },
+            "fonts.googleapis.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "fonts.gstatic.com:443": {
+               "supports_spdy": true
+            },
+            "i18napis.appspot.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "lh3.googleusercontent.com:443": {
+               "supports_spdy": true
+            },
+            "lh4.googleusercontent.com:443": {
+               "supports_spdy": true
+            },
+            "lh5.googleusercontent.com:443": {
+               "supports_spdy": true
+            },
+            "lh6.googleusercontent.com:443": {
+               "supports_spdy": true
+            },
+            "mail.google.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "maps.googleapis.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "notification.adblockplus.org:443": {
+               "supports_spdy": true
+            },
+            "oauth.googleusercontent.com:443": {
+               "supports_spdy": true
+            },
+            "s.ytimg.com:443": {
+               "supports_spdy": true
+            },
+            "scontent-mxp.xx.fbcdn.net:443": {
+               "supports_spdy": true
+            },
+            "ssl.google-analytics.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "ssl.gstatic.com:443": {
+               "supports_spdy": true
+            },
+            "stats.g.doubleclick.net:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "talkgadget.google.com:443": {
+               "supports_spdy": true
+            },
+            "translate.google.com:443": {
+               "supports_spdy": true
+            },
+            "upload.facebook.com:443": {
+               "supports_spdy": true
+            },
+            "wallet.google.com:443": {
+               "supports_spdy": true
+            },
+            "www-gm-opensocial.googleusercontent.com:443": {
+               "supports_spdy": true
+            },
+            "www.facebook.com:443": {
+               "supports_spdy": true
+            },
+            "www.gmail.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "www.google-analytics.com:443": {
+               "supports_spdy": true
+            },
+            "www.google.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "probability": 1.0,
+                  "protocol_str": "quic"
+               },
+               "supports_spdy": true
+            },
+            "www.gstatic.com:443": {
+               "supports_spdy": true
+            },
+            "www.youtube.com:443": {
+               "supports_spdy": true
+            }
+         },
+         "version": 3
+      },
+      "network_prediction_options": 2
+   },
+   "ntp": {
+      "intro_display_count": 11,
+      "most_visited_blacklist": {
+         "04473b90d711c1986d6d8f9d359d24ff": null
+      },
+      "pinned_urls": {
+
+      },
+      "pref_version": 3,
+      "shown_page": 1024,
+      "shown_sections": 5,
+      "web_resource_cache_update": ""
+   },
+   "partition": {
+      "per_host_zoom_levels": {
+         "2166136261": {
+            "developer.chrome.com": 1.2239010857415449,
+            "mail.google.com": 2.223901085741545,
+            "www.facebook.com": 1.2239010857415449,
+            "www.ghacks.net": 1.2239010857415449
+         }
+      }
+   },
+   "plugins": {
+      "last_internal_directory": "J:\\Israeli_IronChrome\\Package\\Israeli-IronChrome-x32-v42.0.2250.1-Flash\\Iron",
+      "migrated_to_pepper_flash": true,
+      "plugins_list": [ {
+         "enabled": true,
+         "name": "Chromium PDF Viewer",
+         "path": "chrome-extension://mhjfbmdgcfjbbpaeojofohoefgiehjai/",
+         "version": ""
+      }, {
+         "enabled": false,
+         "name": "Chromoting Viewer",
+         "path": "internal-remoting-viewer",
+         "version": ""
+      }, {
+         "enabled": false,
+         "name": "Native Client",
+         "path": "J:\\Israeli_IronChrome\\Package\\Israeli-IronChrome-x32-v42.0.2250.1-Flash\\Iron\\internal-nacl-plugin",
+         "version": ""
+      }, {
+         "enabled": true,
+         "name": "Chromium PDF Viewer",
+         "path": "internal-pdf-viewer",
+         "version": ""
+      }, {
+         "enabled": false,
+         "name": "Microsoft Lync 2010 Meeting Join Plug-in",
+         "path": "C:\\Program Files (x86)\\Mozilla Firefox\\plugins\\npMeetingJoinPluginOC.dll",
+         "version": "4.0.7577.4446"
+      }, {
+         "enabled": false,
+         "name": "QuickTime Plug-in 7.7.6",
+         "path": "C:\\Program Files (x86)\\QuickTime\\plugins\\npqtplugin.dll",
+         "version": "7.7.6 (1680.95.31)"
+      }, {
+         "enabled": false,
+         "name": "QuickTime Plug-in 7.7.6",
+         "path": "C:\\Program Files (x86)\\QuickTime\\plugins\\npqtplugin2.dll",
+         "version": "7.7.6 (1680.95.31)"
+      }, {
+         "enabled": false,
+         "name": "QuickTime Plug-in 7.7.6",
+         "path": "C:\\Program Files (x86)\\QuickTime\\plugins\\npqtplugin3.dll",
+         "version": "7.7.6 (1680.95.31)"
+      }, {
+         "enabled": false,
+         "name": "QuickTime Plug-in 7.7.6",
+         "path": "C:\\Program Files (x86)\\QuickTime\\plugins\\npqtplugin4.dll",
+         "version": "7.7.6 (1680.95.31)"
+      }, {
+         "enabled": false,
+         "name": "QuickTime Plug-in 7.7.6",
+         "path": "C:\\Program Files (x86)\\QuickTime\\plugins\\npqtplugin5.dll",
+         "version": "7.7.6 (1680.95.31)"
+      }, {
+         "enabled": false,
+         "name": "Adobe Acrobat",
+         "path": "C:\\Program Files (x86)\\Adobe\\Reader 11.0\\Reader\\AIR\\nppdf32.dll",
+         "version": "11.0.10.32"
+      }, {
+         "enabled": false,
+         "name": "QQ2013 Firefox Plugin",
+         "path": "C:\\Program Files (x86)\\Common Files\\Tencent\\NPQSCALL\\npqscall.dll",
+         "version": "1.90.4903.0"
+      }, {
+         "enabled": false,
+         "name": "QQ2013 Chrome Plugin for Chrome V23.0.1271.64 or latest version",
+         "path": "C:\\Program Files (x86)\\Common Files\\Tencent\\Npchrome\\npchrome.dll",
+         "version": "1.90.4903.0"
+      }, {
+         "enabled": false,
+         "name": "Tencent SSO Platform",
+         "path": "C:\\Program Files (x86)\\Common Files\\Tencent\\TXSSO\\1.2.2.1\\Bin\\npSSOAxCtrlForPTLogin.dll",
+         "version": "1.0.1.10"
+      }, {
+         "enabled": false,
+         "name": "VMware Remote Console and Client Integration Plug-in",
+         "path": "C:\\Program Files (x86)\\Common Files\\VMware\\VMware VMRC Plug-in\\Firefox\\np-vmware-vmrc.dll",
+         "version": "4.0.0.602215"
+      }, {
+         "enabled": false,
+         "name": "DivX VOD Helper Plug-in",
+         "path": "C:\\Program Files (x86)\\DivX\\DivX OVS Helper\\npovshelper.dll",
+         "version": "1.1.0.14"
+      }, {
+         "enabled": false,
+         "name": "DivX Plus Web Player",
+         "path": "C:\\Program Files (x86)\\DivX\\DivX Web Player\\npdivx32.dll",
+         "version": "3.2.4.1250"
+      }, {
+         "enabled": false,
+         "name": "Java Deployment Toolkit 7.0.510.13",
+         "path": "C:\\Program Files (x86)\\Java\\jre7\\bin\\dtplugin\\npDeployJava1.dll",
+         "version": "10.51.2.13"
+      }, {
+         "enabled": false,
+         "name": "Java(TM) Platform SE 7 U51",
+         "path": "C:\\Program Files (x86)\\Java\\jre7\\bin\\plugin2\\npjp2.dll",
+         "version": "10.51.2.13"
+      }, {
+         "enabled": false,
+         "name": "Microsoft Office 2010",
+         "path": "C:\\Program Files (x86)\\MICROS~2\\Office14\\NPAUTHZ.DLL",
+         "version": "14.0.4730.1010"
+      }, {
+         "enabled": false,
+         "name": "Microsoft Office 2010",
+         "path": "C:\\Program Files (x86)\\MICROS~2\\Office14\\NPSPWRAP.DLL",
+         "version": "14.0.4761.1000"
+      }, {
+         "enabled": false,
+         "name": "Silverlight Plug-In",
+         "path": "C:\\Program Files (x86)\\Microsoft Silverlight\\5.1.30514.0\\npctrl.dll",
+         "version": "5.1.30514.0"
+      }, {
+         "enabled": false,
+         "name": "DVR PLUGIN",
+         "path": "C:\\Program Files (x86)\\NetDvr\\Plugins\\npDvr.dll",
+         "version": "1,6,2,2"
+      }, {
+         "enabled": false,
+         "name": "iTunes Application Detector",
+         "path": "C:\\Program Files (x86)\\iTunes\\Mozilla Plugins\\npitunes.dll",
+         "version": "1.0.1.1"
+      }, {
+         "enabled": false,
+         "name": "Google Update",
+         "path": "C:\\Users\\John\\AppData\\Local\\Google\\Update\\1.3.26.9\\npGoogleUpdate3.dll",
+         "version": "1.3.26.9"
+      }, {
+         "enabled": false,
+         "name": "Google Talk Plugin",
+         "path": "C:\\Users\\John\\AppData\\Roaming\\Mozilla\\plugins\\npgoogletalk.dll",
+         "version": "5.41.2.0"
+      }, {
+         "enabled": false,
+         "name": "Google Talk Plugin Video Renderer",
+         "path": "C:\\Users\\John\\AppData\\Roaming\\Mozilla\\plugins\\npo1d.dll",
+         "version": "5.41.2.0"
+      }, {
+         "enabled": true,
+         "name": "Shockwave Flash",
+         "path": "C:\\Windows\\SysWOW64\\Macromed\\Flash\\NPSWF32_17_0_0_169.dll",
+         "version": "17,0,0,169"
+      }, {
+         "enabled": true,
+         "name": "Adobe Flash Player"
+      }, {
+         "enabled": false,
+         "name": "Adobe Reader"
+      }, {
+         "enabled": true,
+         "name": "Chromium PDF Viewer"
+      }, {
+         "enabled": false,
+         "name": "Chromoting Viewer"
+      }, {
+         "enabled": false,
+         "name": "DVR PLUGIN"
+      }, {
+         "enabled": false,
+         "name": "DivX Plus Web Player"
+      }, {
+         "enabled": false,
+         "name": "DivX VOD Helper Plug-in"
+      }, {
+         "enabled": false,
+         "name": "Google Talk"
+      }, {
+         "enabled": false,
+         "name": "Google Update"
+      }, {
+         "enabled": false,
+         "name": "Java(TM)"
+      }, {
+         "enabled": false,
+         "name": "Microsoft Lync 2010 Meeting Join Plug-in"
+      }, {
+         "enabled": false,
+         "name": "Microsoft Office"
+      }, {
+         "enabled": false,
+         "name": "Native Client"
+      }, {
+         "enabled": false,
+         "name": "QQ2013 Chrome Plugin for Chrome V23.0.1271.64 or latest version"
+      }, {
+         "enabled": false,
+         "name": "QQ2013 Firefox Plugin"
+      }, {
+         "enabled": false,
+         "name": "QuickTime Player"
+      }, {
+         "enabled": false,
+         "name": "Silverlight"
+      }, {
+         "enabled": false,
+         "name": "Tencent SSO Platform"
+      }, {
+         "enabled": false,
+         "name": "VMware Remote Console and Client Integration Plug-in"
+      }, {
+         "enabled": false,
+         "name": "iTunes Application Detector"
+      } ],
+      "removed_old_component_pepper_flash_settings": true
+   },
+   "profile": {
+      "avatar_index": 0,
+      "content_settings": {
+         "clear_on_exit_migrated": true,
+         "pattern_pairs": {
+
+         },
+         "pref_version": 1
+      },
+      "default_content_settings": {
+         "cookies": 4,
+         "geolocation": 2,
+         "media-stream": 2,
+         "mouselock": 2,
+         "notifications": 2,
+         "plugins": 2,
+         "ppapi-broker": 2
+      },
+      "exit_type": "Normal",
+      "exited_cleanly": true,
+      "id": "not-signed-in",
+      "managed_user_id": "",
+      "name": "",
+      "nickname": "",
+      "password_manager_enabled": false,
+      "per_host_zoom_levels": {
+
+      }
+   },
+   "protection": {
+      "macs": {
+
+      }
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "savefile": {
+      "default_directory": "C:\\Users\\John\\Downloads"
+   },
+   "selectfile": {
+      "last_directory": "J:\\Israeli_IronChrome\\Isreali-IronChrome Private Extensions"
+   },
+   "session": {
+      "restore_on_startup_migrated": true,
+      "startup_urls_migration_time": "13056030203225903"
+   },
+   "settings": {
+      "privacy": {
+         "drm_enabled": false
+      }
+   },
+   "translate": {
+      "enabled": false
+   },
+   "translate_accepted_count": {
+      "en": 0
+   },
+   "translate_blocked_languages": [ "en" ],
+   "translate_denied_count": {
+      "en": 1
+   },
+   "translate_site_blacklist": [ "iron-start.com" ],
+   "translate_whitelists": {
+
+   },
+   "zerosuggest": {
+      "cachedresults": ""
+   }
+}

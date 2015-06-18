@@ -1,0 +1,23 @@
+{
+   "author": "www.Browsereaks.com",
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "content.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Disable WebRTC in Your Web Browser!",
+   "homepage_url": "https://www.browserleaks.com/webrtc",
+   "icons": {
+      "128": "icons/128.png",
+      "16": "icons/16.png",
+      "24": "icons/24.png",
+      "32": "icons/32.png",
+      "64": "icons/64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjdmXk8tGfCMkSQwP1p5QvnwRBJSoSbxqQHjJOqAovBufDdeni3Y/ZXmtsqlJKMW0O2LmRnR8AQtmifX2iNaN0gDC+xmu201RiMyXMKU9gKGF0abJUIw92r0wWW+h89ytvRzvDovJEQ9rZPe+3CCtWehbCBE7hPw9jWWcg5nqzGU/Nlpl9RhamQTktv4zCS8UJW2xGngP6SgujiRgu/1Z8XZVlPIauDCO3joHkHDGe0xA7QrlhKoD15YcA3f7ATBZPT7OXEiV1BejV4EPUjSl3tw1WDQNzoSc5SkrlsyhefiXtOQWnCUngwuAHbN8Fuo6k3XMu5jCzHVZEGEk4UPg5wIDAQAB",
+   "manifest_version": 2,
+   "name": "WebRTC Block",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

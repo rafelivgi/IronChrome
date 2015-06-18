@@ -1,0 +1,9 @@
+('J:\\Israeli_IronChrome\\selfupdate\\dist\\selfupdate.exe',
+ False,
+ False,
+ None,
+ None,
+ [],
+ None,
+ True,
+ 1434616123L)

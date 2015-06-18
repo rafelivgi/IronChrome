@@ -1,0 +1,618 @@
+<!DOCTYPE HTML>
+<HTML lang="en">
+<HEAD><base href="https://startpage.com/" />
+<TITLE>chrome webs store ublock - Startpage Web Search</TITLE><META HTTP-EQUIV=Content-Language CONTENT=en>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<META name="ROBOTS" content="NOINDEX">
+<LINK REL="SHORTCUT ICON" HREF="https://startpage.com/favicon.ico">
+<script language="javascript" type="text/javascript" src="https://startpage.com/js/jquery-1.8.0.min.js?changed=1431507576"></script>
+<!--[if lt IE 9]> 
+			    <script language="javascript" type="text/javascript" src="https://startpage.com/js/es5-sim-sham.min.js?changed=1431507565"></script>
+		<![endif]-->
+<script language="javascript" type="text/javascript" src="https://startpage.com/js/calculator_new.js?changed=1431507570"></script>
+<script language="javascript" type="text/javascript" src="https://startpage.com/js/util.js?changed=1431507552"></script>
+<script language="javascript" type="text/javascript" src="https://startpage.com/js/imagesloaded.js?changed=1431507549"></script>
+<script language="javascript" type="text/javascript" src="https://startpage.com/js/math.min.js?changed=1431507558"></script>
+<script language="javascript" type="text/javascript" src="https://startpage.com/js/readint.min.js?changed=1431507567"></script>
+<script language="javascript" type="text/javascript" src="https://startpage.com/js/resize.js?changed=1431507554"></script>
+<script language="javascript" type="text/javascript" src="https://startpage.com/js/swfobject.js?changed=1431507565"></script>
+<script language="javascript" type="text/javascript" src="https://startpage.com/js/image_helper_new.js?changed=1431507549"></script>
+<script language="javascript" type="text/javascript" src="https://startpage.com/js/ccspacer.js?w=m" id="ccspacer_incl"></script>
+<link href="https://startpage.com/css/new_ixquick_result_page.css?changed=1431507585" type="text/css" rel="StyleSheet" />
+<link href="https://startpage.com/css/ixquick_result_page_non_asian.css?changed=1431507586" type="text/css" rel="StyleSheet" />
+<SCRIPT LANGUAGE=JAVASCRIPT> if (jQuery.browser.msie && jQuery.browser.version.substr(0,1)<7) { try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {} } function getelem (i) { if (typeof document.getElementById == "undefined") { return document.all[i]; } else { return document.getElementById(i); } } function show_img (i_ob) { i_ob.style.visibility = 'visible'; } function show (ob) { ob.style.display = ''; } function hide (ob) { ob.style.display = 'none'; } function changeimage(id, url) { var imgname = document.getElementById(id); imgname.src = url; } var allCats = new Array('web','pics','video','phone'); function setCat(catr, obj) { document.blah1.cat.value = catr; for(var i = 0; i < allCats.length; i++) { if (getelem(allCats[i])) { removeClass(getelem(allCats[i]), 'active'); } } addClass(getelem(catr), 'active'); } function hasClass(ele,cls) { return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)')); } function addClass(ele,cls) { if (!this.hasClass(ele,cls)) ele.className += " "+cls; } function removeClass(ele,cls) { if (hasClass(ele,cls)) { var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)'); ele.className=ele.className.replace(reg,' '); } } function click_sponsored (event, lobj, curl) { var left_click=0; var middle_click=0; var right_click=0; var isMSIE=0; if (navigator.userAgent.indexOf('MSIE') != 0) {isMSIE=1;} if (!event) var event = window.event; if ( (event.which && event.which == 1) || (event.button && !isMSIE && event.button == 0) || (event.button && isMSIE && event.button == 1) ) {left_click=1;} if ( (event.which && event.which == 2) || (event.button && !isMSIE && event.button == 1) || (event.button && isMSIE && event.button == 4) ) {middle_click=1;} if ( (event.which && event.which == 3) || (event.button && event.button == 2) ) {right_click=1;} if ((left_click==1) || (middle_click==1) || (right_click==1)) { lobj.href = curl; } } function fadeOutNewLook() { jQuery('#new_look').animate({opacity: 0}, 1500, function() { jQuery('#new_look, #new_look a').click(function () { return false; }).css('cursor','default').removeAttr("onclick"); }); jQuery('#promo_box').animate({opacity: 0}, 1500, function() { jQuery('#promo_box, #promo_box a').click(function () { return false; }).css('cursor','default').removeAttr("onclick"); }); } function setResultWidth() { jQuery('.result').css('width', '80%'); jQuery('#promo_box').replaceWith('<div id="promo_box_replaced"><img src="https://startpage.com/graphics/spacer.gif" width="280" height="80" style="_height:45px;"></div>'); } function adjustUrlsForAbp (value) { var time_urls = jQuery('#by_time a'); for (var i = 0; i < time_urls.length; i++) { time_urls[i].href = updateURLParameter(time_urls[i].href, 'abp', value); } time_urls = jQuery('.location_filter a');; for (var i = 0; i < time_urls.length; i++) { time_urls[i].href = updateURLParameter(time_urls[i].href, 'abp', value); } if (jQuery('a.sugg').attr('href')) { jQuery('a.sugg').attr('href', updateURLParameter(jQuery('a.sugg').attr('href'), 'abp', value)); } } function updateURLParameter(url, param, paramVal){ var newAdditionalURL = ''; var tempArray = url.split('?'); var baseURL = tempArray[0]; var additionalURL = tempArray[1]; var temp = ''; if (additionalURL) { tempArray = additionalURL.split('&'); for (i=0; i<tempArray.length; i++){ if(tempArray[i].split('=')[0] != param){ newAdditionalURL += temp + tempArray[i]; temp = '&'; } } } var rows_txt = temp + "" + param + "=" + paramVal; return baseURL + "?" + newAdditionalURL + rows_txt; } jQuery(document).ready(function() { setTimeout(function() { jQuery("#fade_date_promo").fadeOut(1000); }, 15000); jQuery('#promo_box').fadeIn(1000); jQuery('#new_look').fadeIn(1000); jQuery('#ix_promo_box').fadeIn(1000); setTimeout('fadeOutNewLook()', 9000); if(abp) {jQuery('.abp').val('1');adjustUrlsForAbp('1');} else {jQuery('.abp').val('-1');adjustUrlsForAbp('-1');} jQuery('#search_engines ul li a').click(function() { var inp = jQuery(this).find('input'); if(jQuery(inp).attr('checked')) { jQuery(inp).attr('checked', false); jQuery(this).removeClass('selected'); } else { jQuery(inp).attr('checked', true); jQuery(this).addClass('selected'); } return false; }); jQuery('#vsearch_engines ul li a').click(function() { var inp = jQuery(this).find('input'); jQuery('#vsearch_engines input').attr('checked', false); jQuery(inp).attr('checked', true); jQuery('#vsearch_engines a').removeClass('selected'); jQuery(this).addClass('selected'); jQuery('#results_header form').submit(); return false; }); jQuery('#detail').show(); var is_visible = true; jQuery("#show_hide").click(function(event) { is_visible = !is_visible; jQuery('#side_bar').toggle(); jQuery('#results_content').toggleClass('hide_side_bar'); jQuery("#msg_div").css( 'display', (is_visible) ? 'none' : 'block'); setTimeout(function() { jQuery("#msg_div").fadeOut(500); }, 5000); jQuery("#msg_div").click(function() { jQuery("#msg_div").fadeOut(500); }); return false; }); }); function rc (result_number) { getelem('title_' + result_number).style.color = '#763B75'; } function eh (e_ob, fg, enginename) { var sp_el = document.createElement('span'); if (document.blah1.elements[enginename].value != '') { if (fg == 1) { sp_el.innerHTML = 'Click to disable this search engine for your next search'; e_ob.title = sp_el.innerHTML; e_ob.style.color = '#4585e7';} else {e_ob.style.color = '#140b74';} } else { if (fg == 1) { sp_el.innerHTML = 'Click to enable this search engine for your next search'; e_ob.title = sp_el.innerHTML; e_ob.style.color = '#140b74'; } else {e_ob.style.color = '#4585e7';} } } function vch (e_ob, fg, enginename) { if (document.blah1.elements[enginename].value != '') { if (fg == 1) { e_ob.style.color = '#4585e7';} else {e_ob.style.color = '#140b74';} } else { if (fg == 1) { e_ob.style.color = '#140b74'; } else {e_ob.style.color = '#4585e7';} } } function vd_s (form_obj, enginename, engine) { for (i = 0; i < form_obj.elements.length; i++) { elem = form_obj.elements[i].name; if (elem.indexOf('engine') != -1) { form_obj.elements[elem].value = ''; } } form_obj.elements[enginename].value = engine; if (form_obj.elements['query'].value != '') { form_obj.submit(); } } function serveBookmarkedQuery(){ if (document.forms["blah1"].query.value == '') { var loc = window.location.href; if(loc.match(/(.*?)#q=(.*?)(&|$)(.*?)$/g)){ var resubmit_query = RegExp.$2 ; resubmit_query = resubmit_query.replace(/\+/g, ' '); resubmit_query = unescape(resubmit_query); document.getElementById('query_top').value = resubmit_query; document.forms["blah1"].action = loc; document.forms["blah1"].submit(); } } } function addQueryToUrl () { if (window.location.href.indexOf('#q=') == -1) { window.location.href += '#q=' + 'chrome+webs+store+ublock'; } } function bookmarkUrl(title, url){ if (window.sidebar) window.sidebar.addPanel(title, url, ""); else if(window.opera && window.print){ var elem = document.createElement('a'); elem.setAttribute('href',url); elem.setAttribute('title',title); elem.setAttribute('rel','sidebar'); elem.click(); } else if(document.all) window.external.AddFavorite(url, title); } function bookmarkTip(tiptext){ document.getElementById('bookmark_tip').style.display = 'block'; jQuery('#bookmark_tip_text').html(tiptext); document.getElementById('loadingId').style.display = 'block'; } function te (enginename, engine, instance, wp) { var formname = 'blah' + instance; var imagename = instance + engine; if (document[formname].elements[enginename].value != '') { document[formname].elements[enginename].value = ''; document[imagename].src = 'https://startpage.com/graphics/radio_res_U.gif'; if (wp == 'image') { getelem(imagename + '_span').style.color = '#4585E7'; } else { getelem(imagename + '_span').style.color = '#140B74'; } } else { document[formname].elements[enginename].value = engine; document[imagename].src = 'https://startpage.com/graphics/radio_res_C.gif'; if (wp == 'image') { getelem(imagename + '_span').style.color = '#140B74'; } else { getelem(imagename + '_span').style.color = '#4585E7'; } } } function changeImages() { if (document.images) { var selected = ""; if (typeof document.blah2 == 'undefined') { var catpos = changeImages.arguments[0].indexOf("_"); if (catpos != -1) { changeImages.arguments[0] = changeImages.arguments[0].substring(0,catpos); } } for (var i=0; i<changeImages.arguments.length; i+=2) { document[changeImages.arguments[i]].src = changeImages.arguments[i+1]; var intext = changeImages.arguments[i] + "_span"; getelem(intext).style.color = "#140B74"; var id=changeImages.arguments[i].indexOf("_"); if (id != -1){ changeImages.arguments[i] = changeImages.arguments[i].substring(0,id); } if (typeof document.blah1 != 'undefined') { document.blah1.cat.value=changeImages.arguments[i]; } if (typeof document.blah2 != 'undefined') { document.blah2.cat.value=changeImages.arguments[i]; } } } } function change (image_id, image_url) { getelem(image_id).src = image_url; return true; } function verifyChecked (form_obj) { var formname = form_obj.name; var orig_query = document[formname].query.value; if (orig_query == "") { return false; } form_obj.submit(); return false; } function passQueryAdv(url) { if (url.indexOf('?') == -1) { url += '?'; } url += "&cat=" + document.blah1.cat.value; var orig_query = document.blah1.query.value; url += "&query=" + escape(orig_query); document.getElementById('xsearch').href = url; } function maincats (ct) { uncheckall('web', 'phone', 'video', 'pics'); if ((ct == 'video') && (document.blah1.cat.value != 'video')) { for (i = 0; i < document.blah1.elements.length; i++) { elem_name = document.blah1.elements[i].name; if (elem_name.indexOf('engine') != -1) { document.blah1.elements[i].value = ''; } } } changeImages(ct, 'https://startpage.com/graphics/radio_res_C.gif'); } function cho (c_ob, fg, ct) { if (fg == 1) { c_ob.style.color = '#140b73'; window.status=''; return true; } else { if (document.blah1.cat.value != ct) { c_ob.style.color = '#4585E7'; } else { c_ob.style.color = '#140b73'; } } } function uncheckall() { var selected = ""; var intext = ""; for (var i=0; i<uncheckall.arguments.length; i+=1) { document[uncheckall.arguments[i]].src="https://startpage.com/graphics/radio_res_U.gif"; intext = uncheckall.arguments[i] + "_span"; getelem(intext).style.color = "#4585E7"; } } function ws () { window.status = ''; } function tc (t_ob) { t_ob.style.color = '#763B75'; } function changeIxquickStarRatingImage(start, end, changeOnColor, newImageSrc, theme) { if (theme != 'white') { return false; } for (var i=start;i<=end;i++) { if (document.getElementById('title_'+i) && document.getElementById('title_stars_'+i) ) { var current_color = getStyle('title_'+i, 'color'); if ( current_color.indexOf('#') == -1 ) { current_color = rgbConvert(current_color); } if ( current_color == changeOnColor || current_color == changeOnColor.toLowerCase() ) { var baseTag = document.getElementById("title_stars_"+i); var documentTag = baseTag.getElementsByTagName("img"); for (var j = 0; j < documentTag.length; j++) { if (documentTag[j].src.indexOf('s/white/graphics') != -1) { documentTag[j].src = newImageSrc; } } } } } return false; } function getStyle(el,styleProp) { var x = document.getElementById(el); if (x.currentStyle) var y = x.currentStyle[styleProp]; else if (window.getComputedStyle) var y = document.defaultView.getComputedStyle(x,null).getPropertyValue(styleProp); return y; } function rgbConvert(str) { str = str.replace('rgb', '').replace('(' , '').replace(')' , ''); str = str.split(','); str[0] = parseInt(str[0], 10).toString(16).toLowerCase(); str[1] = parseInt(str[1], 10).toString(16).toLowerCase(); str[2] = parseInt(str[2], 10).toString(16).toLowerCase(); str[0] = (str[0].length == 1) ? '0' + str[0] : str[0]; str[1] = (str[1].length == 1) ? '0' + str[1] : str[1]; str[2] = (str[2].length == 1) ? '0' + str[2] : str[2]; return ('#' + str.join("")); } function newImage(arg) { if (document.images) { rslt = new Image(); rslt.src = arg; return rslt; } } function openResult(imgurl, url, where) { var reg = /result?/; if (reg.test(imgurl)) { var t_url = imgurl + "&j=js&anticache=" + Math.floor(Math.random()*1000001); newImage(t_url); }; reg = /\/highlight.pl?/; if (imgurl == url) { return true; } else if (reg.test(url)) { return true; } where = where.toLowerCase(); if (where == '_blank') { window.open(url); } else { location.href = url; }; return false; } function certifiedsecure() { day = new Date(); id = day.getTime(); eval("page" + id + " = window.open('http://www.certifiedsecure.nl/certificates/52771bfa615370cb7a6a9c31385086a8/', '" + id + "', 'toolbar=0,location=0,statusbar=0,scrollbars=1,menubar=0,resizable=0,width=580,height=515');"); } var preloadFlag = false; function load_img (img_url) {if (document.images) {var dt = new Date(); var arbit_num = dt.getTime();img_url += '&anticache=' + arbit_num + '&/filename.gif';var i_ob = new Image(); i_ob.src = img_url;}; return true;} function preloadImages() { if (document.images) { on = newImage('https://startpage.com/graphics/radio_res_U.gif'); off = newImage('https://startpage.com/graphics/radio_res_C.gif'); pl1 = newImage('https://startpage.com/graphics/eng/plugin_promo_ff.gif'); pl2 = newImage('https://startpage.com/graphics/eng/plugin_promo_ff_hov.gif'); pl3 = newImage('https://startpage.com/graphics/eng/plugin_promo_ie.gif'); pl4 = newImage('https://startpage.com/graphics/eng/plugin_promo_ie_hov.gif'); a1 = newImage('https://startpage.com/graphics/eng/protects_privacy.gif'); a2 = newImage('https://startpage.com/graphics/eng/protects_privacy_hov.gif'); n1 = newImage('https://startpage.com/graphics/eng/certified_secure_results.gif'); seal = newImage('https://startpage.com/graphics/eng/privacy_seal_result.gif'); seal_h = newImage('https://startpage.com/graphics/eng/privacy_seal_result_hover.gif'); preloadFlag = true; } } preloadImages(); function bg_hover(id, imgp_url) { document.getElementById(id).style.backgroundImage = "url(" + imgp_url + ")"; } var abp=true; jQuery(document).ready(function() {if (jQuery.browser.mozilla) {jQuery('#results_content').append('<div id="bookmark_tip"><p class="closeArea"><a id="closeAreaId" style="text-decoration : none;" onclick="changeLoadingIDDisplay()" href="#">x</a></p><p id="bookmark_tip_text">Your bookmark will be opening in the sidebar by default.<br> This can be changed easily by adjusting the properties for this bookmark - uncheck "Load this bookmark in the sidebar". You can locate this after expanding the bottom section in the bookmark details dialog box. </p></div>');jQuery("#bookmark_tip").click( function() {jQuery("#bookmark_tip").hide();document.getElementById("loadingId").style.display = "none";return false;});}if(jQuery.browser.msie){jQuery("#bookmark_tip").click(function() {jQuery("#bookmark_tip").hide();document.getElementById("loadingId").style.display = "none";return false;});}});function changeLoadingIDDisplay() { document.getElementById("bookmark_tip").style.display = "none"; document.getElementById("loadingId").style.display = "none"; return false; }function firefox_bookmark(title,url) {jQuery("#bookmark_tip").show();document.getElementById('loadingId').style.display = 'block'; if(jQuery.browser.mozilla){setTimeout(function() { jQuery("#bookmark_tip").fadeOut(500); document.getElementById("loadingId").style.display = "none";}, 30000);}bookmarkUrl(title, url);if(jQuery.browser.msie){document.getElementById("loadingId").style.display = "none";}}</SCRIPT> </HEAD><BODY  >
+<!--[if IE 7]>
+                <style type=text/css>
+                #results_header {margin-bottom:-16px;}
+               #search input#submit1 {margin-top:3px;}
+                  input#submit1 {margin-left:14px;}
+                </style>
+                <![endif]-->
+               <!--[if IE 8]><style>div.ac_results { margin-left : 0px; margin-right: 14px;}</style><![endif]-->
+               <!-- whichserver: https://s8-eu4.startpage.com/do/--><!-- Loading Time: 0.000911 seconds --> <div id='head'>
+    <table cellspacing=1 cellpadding=1><tr><td><img src='graphics/spacer.gif' width=10 height=1></td></tr></table>
+<table width=100%>
+    <tr><td align='left' nowrap='nowrap' >
+    <div id='head_left'>
+<a href="#" id='web' class='active'>Web</a> &nbsp;&nbsp; <a href="https://startpage.com/do/metasearch.pl?cat=pics&cmd=process_search&language=english&query=chrome+webs+store+ublock&ff=" id='pics' onClick="setCat('pics', this); verifyChecked(document.blah1); return false;">Images</a> &nbsp;&nbsp; <a href="https://startpage.com/do/metasearch.pl?cat=video&cmd=process_search&language=english&query=chrome+webs+store+ublock&ff=" id='video' onClick="setCat('video', this); verifyChecked(document.blah1); return false;">Videos</a> &nbsp;&nbsp; 
+    </div>
+    </td>
+    <td width="260"><img src='graphics/spacer.gif' width=260 height=10></td>
+    <td align='right' nowrap='nowrap'>
+    <a href='https://startpage.com/eng/advanced-search.html?' id='xsearch' onMouseOver="passQueryAdv('https://startpage.com/eng/advanced-search.html?');">Advanced Search</a> &nbsp;&nbsp; <a href="https://startpage.com/do/preferences.pl?language_ui=english&cat=web&query=chrome+webs+store+ublock" title="Customize Startpage to your own taste" >Settings</a>
+    </td></tr>
+</table>
+</div>
+	<div id='results_header'>
+	<div id='logo' class='f-l'>
+	<a href='https://startpage.com/eng/?'><img src='graphics/startpage_logo_res.gif' width='154' height='103' border='0' /></a>
+	</div>
+	<form action="https://startpage.com/do/metasearch.pl?" autocomplete="off" method="POST" name="blah1" id="search_form" onSubmit="return verifyChecked(this);" >
+
+	<div id='search'>
+	<table cellspacing="0" cellpadding="0" border="0">
+	<tbody><tr>
+	<td id='input_p' width="100%"><!--[if IE 7]><div style="position:relative; width:300px; height:0;"></div><![endif]-->
+    <input type=hidden name=cmd value="process_search">
+<input type=hidden name=language value="english"><input type=hidden name=enginecount value="1"><input type=hidden name=pl value="chrome"><input type="hidden" name="abp" class='abp' value="-1" />
+<input type=hidden name=ff value=""><input type=hidden name=theme value=""> <input type=hidden id=flag_ac1 name=flag_ac value="0"><input name="cat" type=hidden value="web">
+	<input type='text' autocomplete='off' name='query' id='query_top' value="chrome webs store ublock" onChange="result();adjust_privacy_div();" onKeyDown="result();adjust_privacy_div();">
+	</td>
+	<td>
+	<input type='image' src='graphics/stp_search.gif' id='submit1' title='Startpage Web Search'/>
+	</td>
+	<td><div id='enhanced'>enhanced by<br><img height='20' width='57' src='graphics/google-results.gif'></div></td>
+	<td><a id='detail' href='javascript:void(0);' onmouseover='if (getelem("popupbox")) { if (getelem("popupbox").style.display != "block") {showPrivacy();}} else {showPrivacy();}' onmouseout='hidePrivacy();' style='display:none;'>Details</a></td>
+	<td><noscript><img src='https://startpage.com/do/avt?a=5285&g=939&l=english&anticache=529359&/filename.gif' width=1 height=1></noscript></td>
+	</tr>
+	<tr>
+        <td>
+        <div id='maths_results' class='result none' style="width : auto;word-break: break-all; max-width: 620px; min-height : 40px; border: 1px solid #CCCCFF; -moz-border-radius: 8px ; -webkit-border-radius:8px; border-radius: 8px 8px 8px 8px; color: #0E5398; margin-right: -14px; _margin-right: 0; margin-top: 4px; padding: 10px 0px 10px 10px; overflow: auto; outline: medium none; text-align: left; position: relative;line-height:23px;background: #FFF;">
+
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                
+                <tr>
+                    <td colspan="2" style="padding-right:10px; padding-left: 5px;padding-top: 5px;">
+                        <span id="maths_results_span" style="width:100%;word-break:break-all;">
+                            <span id='maths_expression'></span>
+                            <span id='maths_final_result'></span>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        </td>
+        <script> result(); load_img('https://startpage.com/do/avt?a=5285&g=938&l=english');
+	</script>
+        </tr>	
+    <tr>
+    <td>
+    <div id="flight_status" class="result none" style="width: 100%; height : 140px; background: url(graphics/enhanced_bg.gif) repeat-x scroll 0 30px #FFFFFF; border: 1px solid #CCCCFF; -moz-border-radius: 8px ; -webkit-border-radius:8px; border-radius: 8px 8px 8px 8px; color: #0E5398; margin-right: -14px; _margin-right: 0; margin-top: 4px; padding: 10px 0 0 10px; overflow: auto; outline: medium none; text-align: left; position: relative; font-size:13px;"></div>
+    <div id="flight_registration" class="result none" style="width: 100%; height: 142px; background: url(graphics/enhanced_bg.gif) repeat-x scroll 0 30px #FFFFFF; border: 1px solid #CCCCFF; -moz-border-radius: 8px ; -webkit-border-radius:8px; border-radius: 8px 8px 8px 8px; color: #0E5398; margin-right: -14px; _margin-right: 0; margin-top: 4px; padding: 10px 0 0 10px; overflow: auto; outline: medium none; text-align: left; position: relative; font-size:13px;"></div>
+    </td>
+    </tr>
+
+	</tbody>
+	</table>
+	</div>
+	</form>
+</div>
+
+<style type='text/css'>
+#sponsored_container ol {list-style: none;padding-left: 0;} #results ol {padding-left: 0; list-style: none;margin: 0;}#results_count_p {*margin-bottom: 16px; *margin-left: 220px; *margin-top: 0px !important; _margin-top: 5px !important;}
+#side_bar {margin-top:8px; *margin-top:25px; _margin-top:20px;}
+div.hide_side_bar #tod_wrap {_margin-left:189px;}
+#bookmark_tip{ background-color: #F7F9FF; border: 1px solid #e4e4e4 !important; left: 50%; margin-left:-300px; position: absolute; top: 149px; width: 530px; z-index: 9; display : none;right: 5px; }
+#bookmark_tip p#bookmark_tip_text{border: 2px solid #BCD3F5;}
+.closeArea{ float: right; font-size: 12px; height: 19px; line-height: 16px; margin: 0; padding: 3px 4px 5px 7px !important; width: 14px; padding : 5px; }
+.closeArea a{ color: #FFFFFF;font-family: tahoma;font-size: 18px;font-weight: bold;text-decoration: none !important; display:block; cursor:pointer;}
+#loadingId{ background:#777; opacity:.4; filter:alpha(opacity=40); display:none; position:fixed; z-index:8; left:0; top:0; bottom:0; right:0}
+</style>
+
+<!--RID=LALONLQLPRQQ898NWUJUE-->
+<script language="javascript">
+e_urls = new Array();
+var c = 0;
+
+function eu (fg, target) { // eu->engine url
+    var u = e_urls[fg-1];
+    if (target !== '') {
+        c++;
+        window.open(u, 'wn'+c, '');
+    } else {
+        location.href = u;
+    }
+    return false;
+}
+var proxyu; // proxy url
+
+function mysubmit (myID) {
+    if (document.pnform && document.pnform.startat) {
+        document.pnform.startat.value = myID;
+        document.pnform.submit();
+    }
+}
+
+function set_tip_width(hover_text, width) {
+    var agentname = navigator.userAgent;
+    if ((agentname.indexOf('Mac') != -1) && (agentname.toLowerCase().indexOf('firefox') != -1)) {
+        Tip(hover_text, WIDTH, width);
+    } else {
+        Tip(hover_text);
+    }
+}
+</script>
+<!-- ELAPSED TIME 1305.73413085938 millisec. --><script>
+	    var privacyDivEvent;
+            function adjust_privacy_div () {
+		if(privacyDivEvent) {
+		    window.clearTimeout(privacyDivEvent);
+		}
+		privacyDivEvent = window.setTimeout ( function () {
+		    if($('#privacy').css('display') == 'block') {
+			$('#privacy').css('display','none');  
+			showPrivacy();
+			$('#query_top').focus();
+		    }
+		},400);
+	    }
+	    </script>
+<div id='results_content'>
+<p id='results_count_p'>About 13,729 results (0.33 seconds)<span></span><img src="https://startpage.com/do/showimage?t=metasearch&l=english&anticache=688053" border=0 width=1 height=1>
+<img src="https://startpage.com/do/avt?a=5276&g=920&l=english&anticache=623153&/filename.gif" border=0 width=1 height=1><img src="https://startpage.com/english/web/?anticache=132808" border=0 width=1 height=1>
+<img src="https://startpage.com/tst2/english/?anticache=399641" border=0 width=1 height=1>
+<span id="news_message_content" class="new_design">StartPage&#8217;s new look is coming soon. <a id="news_message_1_link" class="news" href="https://new.startpage.com/eng/" target="_blank" style="text-decoration: underline;">Preview it here</a>.</span><style>
+                .new_design{ padding: 5px 10px; color: #1261e4; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 5px; outline: medium none; display: inline-block; margin: 4px auto; border: 1px solid #ccf; background-color: #fff; font-size: 13px; background: url('https://startpage.com/graphics/enhanced_bg.gif') repeat-x 0 0px #fff; text-align: center; position: absolute; right: 5px; margin: 5px 0; margin-top: 0px; }
+                .new_design  a{ text-decoration: underline; color:#1261e4; }@media screen and (max-width: 790px){ .new_design { display:none;} }</style></p><!-- 23712 Bookmark - Div : Start -->
+<div id='bookmark_tip'>
+<p class="closeArea">
+<a id="closeAreaId" style='text-decoration : none;' onclick='document.getElementById("bookmark_tip").style.display = "none"; document.getElementById("loadingId").style.display = "none"; return false;' >x</a></p>
+<p id='bookmark_tip_text' style='padding : 10px; margin : 0;'></p>
+</div>
+ <!-- Bookmark - Div : End -->
+<div id='tip'>
+<div id='tod_wrap'>
+<table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td valign="top">
+Did you mean: <a href='https://startpage.com/do/metasearch.pl?cmd=process_search&cat=web&query=chrome+web+store+adblock&language=english&no_sugg=1&ff=&abp=-1' class='sugg'>chrome web store adblock</a></td>
+<td valign="top" align="right"><a href="javascript:void(0);" class='bookmark' onclick="bookmarkTip('Please copy the following URL and store it as a bookmark.<br><br><div style=\'padding-bottom:3px; overflow:auto; white-space:nowrap;\'><b>https://startpage.com/do/search?q=chrome+webs+store+ublock</b></div>');return false;">Bookmark this search</a></td></tr></table>
+</div>
+</div>
+<div id='show_hide' class='show_side_bar'><span></span></div>
+<div id='side_bar' class='f-l'>
+<ul id='by_time'>
+<li><a href='https://startpage.com/do/metasearch.pl?cmd=process_search&query=chrome+webs+store+ublock&language=english&cat=web&with_language=&with_region=&pl=chrome&ff=&rl=&abp=-1' class='active'>Any time</a></li>
+<li><a href='https://startpage.com/do/metasearch.pl?cmd=process_search&query=chrome+webs+store+ublock&language=english&cat=web&with_language=&with_region=&pl=chrome&ff=&rl=&abp=-1&with_date=d' class='no-date'>Past 24 hours</a></li>
+<li><a href='https://startpage.com/do/metasearch.pl?cmd=process_search&query=chrome+webs+store+ublock&language=english&cat=web&with_language=&with_region=&pl=chrome&ff=&rl=&abp=-1&with_date=w' class='no-date'>Past week</a></li>
+<li><a href='https://startpage.com/do/metasearch.pl?cmd=process_search&query=chrome+webs+store+ublock&language=english&cat=web&with_language=&with_region=&pl=chrome&ff=&rl=&abp=-1&with_date=m' class='no-date'>Past month</a></li>
+<li><a href='https://startpage.com/do/metasearch.pl?cmd=process_search&query=chrome+webs+store+ublock&language=english&cat=web&with_language=&with_region=&pl=chrome&ff=&rl=&abp=-1&with_date=y' class='no-date'>Past year</a></li>
+</ul>
+</div>
+<div id='results' class='show_side_bar' style='*position:relative'>
+</ol><div id='sponsored'><p class='head2'><span><a href="https://adwords.google.com/select/main?cmd=Login&sourceid=gr&hl=en" class="adlink" target='_blank'>See your ad here...</a></span>
+<a href="javascript:void();" style="color:#2200c1;text-decoration: none;font-weight: normal;cursor: default;">Ads related to <b>chrome webs store ublock</b></a></p><div id='sponsored_container' style='background-color: #F7F9FF; border-top: 1px solid #E1ECFF; border-bottom: 1px solid #E1ECFF;'>
+<ol><li><div class='result'>
+<h3><a href='http://www.google.com/aclk?sa=l&ai=CcdFYFrlUVfT-BKuUjAaQp4KABeTa6pYDvL6Sv88BtbDvlgQIABABIL_-1RcoAmD5AqAB4vnl7APIAQGqBChP0KnWqrM5QWkyjkBdc3htwKFEM5geSkgx_9iG0U1L8VaunMtYtUNzgAeGhpoTkAcBqAemvhvYBwE&sig=AOD64_0cTVdqQ-DSwhm_XVCtqyq8_XAQjA&adurl=http://www.expressvpn.com/il/%3FrefID%3DIL_SE' id='sptitle1'  onmousedown="click_sponsored(event, this, 'http://www.google.com/aclk?sa=l&ai=CcdFYFrlUVfT-BKuUjAaQp4KABeTa6pYDvL6Sv88BtbDvlgQIABABIL_-1RcoAmD5AqAB4vnl7APIAQGqBChP0KnWqrM5QWkyjkBdc3htwKFEM5geSkgx_9iG0U1L8VaunMtYtUNzgAeGhpoTkAcBqAemvhvYBwE&sig=AOD64_0cTVdqQ-DSwhm_XVCtqyq8_XAQjA&adurl=http://www.expressvpn.com/il/%3FrefID%3DIL_SE');">Fastest VPN for Israel - Secure your Internet from Hotspots</a></h3><p><a class='url' id='spurl1' href='http://www.google.com/aclk?sa=l&ai=CcdFYFrlUVfT-BKuUjAaQp4KABeTa6pYDvL6Sv88BtbDvlgQIABABIL_-1RcoAmD5AqAB4vnl7APIAQGqBChP0KnWqrM5QWkyjkBdc3htwKFEM5geSkgx_9iG0U1L8VaunMtYtUNzgAeGhpoTkAcBqAemvhvYBwE&sig=AOD64_0cTVdqQ-DSwhm_XVCtqyq8_XAQjA&adurl=http://www.expressvpn.com/il/%3FrefID%3DIL_SE'  onmousedown="click_sponsored(event, this, 'http://www.google.com/aclk?sa=l&ai=CcdFYFrlUVfT-BKuUjAaQp4KABeTa6pYDvL6Sv88BtbDvlgQIABABIL_-1RcoAmD5AqAB4vnl7APIAQGqBChP0KnWqrM5QWkyjkBdc3htwKFEM5geSkgx_9iG0U1L8VaunMtYtUNzgAeGhpoTkAcBqAemvhvYBwE&sig=AOD64_0cTVdqQ-DSwhm_XVCtqyq8_XAQjA&adurl=http://www.expressvpn.com/il/%3FrefID%3DIL_SE');">www.expressvpn.com/</a><span class='sellerrating' style='padding-left:16px;'><img src='https://startpage.com/graphics/stars_5.gif'> <a href='http://www.google.com/shopping/seller?q=expressvpn.com' target='_blank'>rating</a> for expressvpn.com</span></p><p class='desc'>Hide your IP Address. Try Risk Free </p>
+</div><script>getelem("sptitle1").href='http://www.expressvpn.com/'; getelem("spurl1").href='http://www.expressvpn.com/';</script></li><li><div class='result last'>
+<h3><a href='http://www.google.com/aclk?sa=l&ai=CAoU-FrlUVfT-BKuUjAaQp4KABbiB_J0KsIfH3dsBkZSe0AcIABACIL_-1RcoAmD5AqABkI-x1gPIAQGpAuFd5P5WRZI-qgQoT9DZyZmzOkFpMo5AXXN4bfyBD1-YHkpIMf_YhtFNS_FWrpzLLIsEToAH2PDOKZAHAagHpr4b2AcB&sig=AOD64_0mTVl7GsNs5dKflaurP99WtHZIVw&adurl=https://www.vpnoneclick.com/marketing/tracking.php%3Fcampaignid%3D3' id='sptitle2'  onmousedown="click_sponsored(event, this, 'http://www.google.com/aclk?sa=l&ai=CAoU-FrlUVfT-BKuUjAaQp4KABbiB_J0KsIfH3dsBkZSe0AcIABACIL_-1RcoAmD5AqABkI-x1gPIAQGpAuFd5P5WRZI-qgQoT9DZyZmzOkFpMo5AXXN4bfyBD1-YHkpIMf_YhtFNS_FWrpzLLIsEToAH2PDOKZAHAagHpr4b2AcB&sig=AOD64_0mTVl7GsNs5dKflaurP99WtHZIVw&adurl=https://www.vpnoneclick.com/marketing/tracking.php%3Fcampaignid%3D3');">VpnOneClick - vpnoneclick.com</a></h3><p><a class='url' id='spurl2' href='http://www.google.com/aclk?sa=l&ai=CAoU-FrlUVfT-BKuUjAaQp4KABbiB_J0KsIfH3dsBkZSe0AcIABACIL_-1RcoAmD5AqABkI-x1gPIAQGpAuFd5P5WRZI-qgQoT9DZyZmzOkFpMo5AXXN4bfyBD1-YHkpIMf_YhtFNS_FWrpzLLIsEToAH2PDOKZAHAagHpr4b2AcB&sig=AOD64_0mTVl7GsNs5dKflaurP99WtHZIVw&adurl=https://www.vpnoneclick.com/marketing/tracking.php%3Fcampaignid%3D3'  onmousedown="click_sponsored(event, this, 'http://www.google.com/aclk?sa=l&ai=CAoU-FrlUVfT-BKuUjAaQp4KABbiB_J0KsIfH3dsBkZSe0AcIABACIL_-1RcoAmD5AqABkI-x1gPIAQGpAuFd5P5WRZI-qgQoT9DZyZmzOkFpMo5AXXN4bfyBD1-YHkpIMf_YhtFNS_FWrpzLLIsEToAH2PDOKZAHAagHpr4b2AcB&sig=AOD64_0mTVl7GsNs5dKflaurP99WtHZIVw&adurl=https://www.vpnoneclick.com/marketing/tracking.php%3Fcampaignid%3D3');">www.vpnoneclick.com/</a></p><p class='desc'>Keep your privacy protected from the Big Data and <b>unlock</b> any service</p>
+</div><script>getelem("sptitle2").href='http://www.vpnoneclick.com/'; getelem("spurl2").href='http://www.vpnoneclick.com/';</script></li></ol>
+</div>
+</div>
+<ol> <li><div class='result' id='first-result' style='width: 80%; *width : auto; *margin-right : 10%; *padding-right: 10px;'>
+<h3><a href='https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en' id='title_1' name='title_1'  onMouseOver="window.status='https://chrome.google.com/ webstore/ detail/ ublock-origin/ cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en'; return true;" onMouseOut="ws('');" onClick="tc(this);  return true;"><b>uBlock</b> Origin - <b>Chrome</b> Web <b>Store</b> - Google</a><span id='title_stars_1' name='title_stars_1'  onMouseOver="Tip('Found by Google');">  </span> </h3>
+<p><span class='url'>https://<b>chrome</b>.google.com/ <b>webs</b>tore/ detail/ <b>ublock</b>-origin/ cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en</span>  - <A class="proxy" id="proxy_link" HREF="https://ixquick-proxy.com/do/spg/proxy2?ep=537a7447595252414e45306d4378496b57457341424374585a4155704b6c39575778344e53783871495545725477424c41317344455649514a79773644476b7a455477344b7951414e6c384549477366634856585545467042674d414b5145474e696f2b4544787458484142434430704f333567554434504d68744d5167383150777446576b513847523833437a4d6246333057586967464368522f5541424c545651724744775848525a4c4b6778754d6c52615a7a496d497a635448553845577a305248537351446b395147787731493352624f58786d4b6c42495a79676344795956475734494f564571495431394b6730465755453443676b454a525176467a30524241554957534533587952675a69345a565534774e31736358796f385154465a546841664256684f5779516c5767634952306c43547a31414e7a464f4768592b4a425971416c6f684e68525a42426c395a443841506d564c4942554d4467457841424d584758736a457777325331344e443046645443556366466b334d68594952566f2f656d4a7247695a4a484745535a78554c4f454e5155683833516e38724841385962476f6c553352324b6e7439497764574a46454e4a55514b4532357a666c6c776630746b5a537838486e4252436c6f5861514d31484146425a53747a656c4234665664544347514c5468523043413d3d&epile=4q6n41784r5441314q5451784r5638784q6935725n586o3q&edata=16ea23c0f833a3c44ac045a741af8f9c&ek=4o6p4r375233683955534r425n3374584q47316n4s554q78516q5n49586q4968506r77724s694n4n53544r45496q566764443568596r6p6n55304r4961554n47633142585345386q52444q35626952524r564q6p4s535655536o4n4q5n6o394o5n325n75516q30385n456o35526q70386353736p646p5n6n5179596o4r6r744654444671645464496547314465314n38636p4r314q555571626r745149325571507n6444506p466n6257596s5333685452544534515639535530646n63584n6r4q30392o6345343265334934623268465546466s65466p55624856364955743066556p3466454276566n354r5456685453574n6s66484r2o6657786q566q42415n5667304r6o4r73504656574r6o6846564768734r794n66564441784q4668564n6p673361794n5n5n6n492o4s6o684r506q746q4n546o6n4o565168576p516o666r685752325n436144684o553330345933525956336p6s556o42345n4842694o485256595764324n454r4164573554666n68755069552o64456439546q4656553355776647706151773q3q&ekdata=dc5426bb02bf92bffdadbb97262ec34c" class='proxy' onClick="rc('1');"  onMouseOver="set_tip_width('Opens the search result with basic anonymity<br>Great privacy feature - slightly slower','0');">View by Ixquick Proxy</A>   - <A HREF="https://ixquick-proxy.com/do/spg/highlight.pl?l=english&c=hf&cat=web&q=chrome+webs+store+ublock&rl=NONE&rid=LALONLQLPRQQ898NWUJUE&hlq=https://startpage.com/do/search&mtcat=web&mtpl=chrome&u=https:%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Fublock-origin%2Fcjpalhdlnbpafiamejdnhcphjbkeiagm%3Fhl%3Den" class='proxy' onClick="rc('1'); return true;" onContextmenu="rc('1'); return true;" onMouseOver="Tip('Highlights your search terms<br>on the result page');">Highlight</A>  </p><p class='desc'>4 days ago ... Finally, an efficient blocker. Easy on CPU and memory.</p>
+</div></li>
+ <li><div class='result' style=' *width : auto; *margin-right : 10%;'>
+<h3><a href='https://chrome.google.com/webstore/detail/ublock/epcnnfbjfcgphgdmggkamkmgojdagdnn?hl=en' id='title_2' name='title_2'  onMouseOver="window.status='https://chrome.google.com/ webstore/ detail/ ublock/ epcnnfbjfcgphgdmggkamkmgojdagdnn?hl=en'; return true;" onMouseOut="ws('');" onClick="tc(this);  return true;"><b>uBlock</b> - <b>Chrome</b> Web <b>Store</b> - Google</a><span id='title_stars_2' name='title_stars_2'  onMouseOver="Tip('Found by Google');">  </span> </h3>
+<p><span class='url'>https://<b>chrome</b>.google.com/ <b>webs</b>tore/ detail/ <b>ublock</b>/ epcnnfbjfcgphgdmggkamkmgojdagdnn?hl=en</span>  - <A class="proxy" id="proxy_link" HREF="https://ixquick-proxy.com/do/spg/proxy2?ep=537a7447595252414e45306d4378496b57457341424374585a4155704b6c39575778344e53783871495545725477424c41317344455649514a79773644476b7a455477344b7951414e6c384549477366634856585545467042674d414b5145474e696f2b4544787458484142434430704f333567554434504d68744d5167383150777446576b513847523833437a4d6246333057586967464368522f5541424c545651724744775848525a4c4b6778754d6c52615a7a496d497a635448553845577a305248537351446b395147787731493352624f58786d4b6c42495a79676344795956475734494f564571495431394b6730465755453443676b454a525176467a30524241554957534533587952675a69345a565534774e31735541683477566a745a42555137444652645854676c5751384c516c354953446c4b4e7a4e4c46427733494149734268313546525655526b63634d68644f4a79515a454246664730566742515a4151585a785451686e526746645768414b51794a454c7764744e5564535456747064474a3143546358446d77525a784d49616e30354d6b4d4f5a52736542676f424533416244676c6d62487033596c45565855514955564241573264784c4670366368466a593374334543494b41516f564d41526c457734535a48386b616741394f6c7058&epile=4q6n41784r5441314q5451784r5638784q6935725n586o3q&edata=b4c74d04515bc2aec538d4e9e99fb2c1&ek=4o6p4r375233683955534r425n3374584q47316n4s554q78516q5n49586q4968506r77724s694n4n53544r45496q566764443568596r6p6n55304r4961554n47633142585345386q52444q35626952524r564q6p4s535655536o4n4q5n6o394o5n325n75516q30385n456o35526q70386353736p646p5n6n5179596o4r6r744654444671645464496547314465314n38636p4r314q555571626r745149325571507n6444506p466n6257596s5333685452544534515639535530646n63584n6r4q30392o6345343265334934623268465546466s65466p55624856364955743066556p3466454276566n354r5456685453574n6s66484r2o6657786q566q42415n5667304r6o4r73504656574r6o6846564768734r794n66564441784q4668564n6p673361794n5n5n6n492o4s6o684r506q746q4n546o6n4o565168576p516o666r685752325n436144684o553330345933525956336p6s556o42345n4842694o485256595764324n454r4164573554666n68755069552o64456439546q4656553355776647706151773q3q&ekdata=e4860bd6ed628ab4705ae446fd041dcf" class='proxy' onClick="rc('2');"  onMouseOver="set_tip_width('Opens the search result with basic anonymity<br>Great privacy feature - slightly slower','0');">View by Ixquick Proxy</A>   - <A HREF="https://ixquick-proxy.com/do/spg/highlight.pl?l=english&c=hf&cat=web&q=chrome+webs+store+ublock&rl=NONE&rid=LALONLQLPRQQ898NWUJUE&hlq=https://startpage.com/do/search&mtcat=web&mtpl=chrome&u=https:%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Fublock%2Fepcnnfbjfcgphgdmggkamkmgojdagdnn%3Fhl%3Den" class='proxy' onClick="rc('2'); return true;" onContextmenu="rc('2'); return true;" onMouseOver="Tip('Highlights your search terms<br>on the result page');">Highlight</A>  </p><p class='desc'>5 May 2015 ... A fast, potent, and lean blocker. Easy on CPU and memory.</p>
+</div></li>
+ <li><div class='result'>
+<h3><a href='https://chrome.google.com/webstore/detail/gom-vpn-bypass-blocked-si/ckiahbcmlmkpfiijecbpflfahoimklke?hl=en' id='title_3' name='title_3'  onMouseOver="window.status='https://chrome.google.com/ webstore/ detail/ gom-vpn-bypass-blocked-si/ ckiahbcmlmkpfiijecbpflfahoimklke?hl=en'; return true;" onMouseOut="ws('');" onClick="tc(this);  return true;">Gom VPN - Bypass blocked sites - <b>Chrome</b> Web <b>Store</b> - Google</a><span id='title_stars_3' name='title_stars_3'  onMouseOver="Tip('Found by Google');">  </span> </h3>
+<p><span class='url'>https://<b>chrome</b>.google.com/ <b>webs</b>tore/ detail/ gom-vpn-bypass-blocked-si/ ckiahbcmlmkpfiijecbpflfahoimklke?hl=en</span>  - <A class="proxy" id="proxy_link" HREF="https://ixquick-proxy.com/do/spg/proxy2?ep=537a7447595252414e45306d4378496b57457341424374585a4155704b6c39575778344e53783871495545725477424c41317344455649514a79773644476b7a455477344b7951414e6c384549477366634856585545467042674d414b5145474e696f2b4544787458484142434430704f333567554434504d68744d5167383150777446576b513847523833437a4d6246333057586967464368522f5541424c545651724744775848525a4c4b6778754d6c52615a7a496d497a635448553845577a305248537351446b395147787731493352624f58786d4b6c42495a79676344795956475734494f564571495431394b6730465755453443676b454a525176467a30524241554957534533587952675a69344c57453979496b426648546f73566a6c4547413837436c316455533070457867504141746c536a39494f7a7847485255364b673079446c456a4f5268624151512b4f78384a4f6938524352734f517846775569456553475a7a4d5173395745304b58314666535834656667526d5a4559425251687564325268516e524c536d464163514e4f4e67426455516f6743484d4462697753546b3142474278574f6e522b45484d664c53426e475377744147454e4c307878416c5a6a45323438566e6b44443134576141316e463130576248346766314a38636c454156336f4a4451563444334264533045655131417745544d6246513d3d&epile=4q6n41784r5441314q5451784r5638784q6935725n586o3q&edata=fa7f114aff1f3263adf9da7feb12616b&ek=4o6p4r375233683955534r425n3374584q47316n4s554q78516q5n49586q4968506r77724s694n4n53544r45496q566764443568596r6p6n55304r4961554n47633142585345386q52444q35626952524r564q6p4s535655536o4n4q5n6o394o5n325n75516q30385n456o35526q70386353736p646p5n6n5179596o4r6r744654444671645464496547314465314n38636p4r314q555571626r745149325571507n6444506p466n6257596s5333685452544534515639535530646n63584n6r4q30392o6345343265334934623268465546466s65466p55624856364955743066556p3466454276566n354r5456685453574n6s66484r2o6657786q566q42415n5667304r6o4r73504656574r6o6846564768734r794n66564441784q4668564n6p673361794n5n5n6n492o4s6o684r506q746q4n546o6n4o565168576p516o666r685752325n436144684o553330345933525956336p6s556o42345n4842694o485256595764324n454r4164573554666n68755069552o64456439546q4656553355776647706151773q3q&ekdata=1b173aa54447d66aeab7dda1da10937d" class='proxy' onClick="rc('3');"  onMouseOver="set_tip_width('Opens the search result with basic anonymity<br>Great privacy feature - slightly slower','0');">View by Ixquick Proxy</A>   - <A HREF="https://ixquick-proxy.com/do/spg/highlight.pl?l=english&c=hf&cat=web&q=chrome+webs+store+ublock&rl=NONE&rid=LALONLQLPRQQ898NWUJUE&hlq=https://startpage.com/do/search&mtcat=web&mtpl=chrome&u=https:%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Fgom-vpn-bypass-blocked-si%2Fckiahbcmlmkpfiijecbpflfahoimklke%3Fhl%3Den" class='proxy' onClick="rc('3'); return true;" onContextmenu="rc('3'); return true;" onMouseOver="Tip('Highlights your search terms<br>on the result page');">Highlight</A>  </p><p class='desc'>31 Mar 2015 ... Gom helps you unblock websites in 1 click. To use Gom, Just click on the button.</p>
+</div></li>
+ <li><div class='result'>
+<h3><a href='https://chrome.google.com/webstore/detail/unblock-youku-web-unblock/idkhaoejiolokhafhnnpjfdgjijigeon?hl=en' id='title_4' name='title_4'  onMouseOver="window.status='https://chrome.google.com/ webstore/ detail/ unblock-youku-web-unblock/ idkhaoejiolokhafhnnpjfdgjijigeon?hl=en'; return true;" onMouseOut="ws('');" onClick="tc(this);  return true;">Unblock Youku - Web Unblocker - <b>Chrome</b> Web <b>Store</b> - Google</a><span id='title_stars_4' name='title_stars_4'  onMouseOver="Tip('Found by Google');">  </span> </h3>
+<p><span class='url'>https://<b>chrome</b>.google.com/ <b>webs</b>tore/ detail/ unblock-youku-web-unblock/ idkhaoejiolokhafhnnpjfdgjijigeon?hl=en</span>  - <A class="proxy" id="proxy_link" HREF="https://ixquick-proxy.com/do/spg/proxy2?ep=537a7447595252414e45306d4378496b57457341424374585a4155704b6c39575778344e53783871495545725477424c41317344455649514a79773644476b7a455477344b7951414e6c384549477366634856585545467042674d414b5145474e696f2b4544787458484142434430704f333567554434504d68744d5167383150777446576b513847523833437a4d6246333057586967464368522f5541424c545651724744775848525a4c4b6778754d6c52615a7a496d497a635448553845577a305248537351446b395147787731493352624f58786d4b6c42495a79676344795956475734494f564571495431394b6730465755453443676b454a525176467a30524241554957534533587952675a69345a5755417a4f314e6148534536557a4e43526c55384242394c56436f685551674e4141746c5144424b4d6a564c4778492f4b416f74413141724e525657445151794d5230504f436b5344526348527870775569456553475a7a4d5173395745304b5831466653534962666c426b5a425254546c4a72657a417751334a4c536d5a43633159664e6c4e59416731774133745462697753546b3142487878574f6e522b45484d664c53426e475377744147454e4c307878416c5a6a45323438566e6b44443134576141316e463130576248346766314a38636c454156336f4a4451563444334264533045655131417745544d6246513d3d&epile=4q6n41784r5441314q5451784r5638784q6935725n586o3q&edata=47d429836ef83b2b4914bfe965e95062&ek=4o6p4r375233683955534r425n3374584q47316n4s554q78516q5n49586q4968506r77724s694n4n53544r45496q566764443568596r6p6n55304r4961554n47633142585345386q52444q35626952524r564q6p4s535655536o4n4q5n6o394o5n325n75516q30385n456o35526q70386353736p646p5n6n5179596o4r6r744654444671645464496547314465314n38636p4r314q555571626r745149325571507n6444506p466n6257596s5333685452544534515639535530646n63584n6r4q30392o6345343265334934623268465546466s65466p55624856364955743066556p3466454276566n354r5456685453574n6s66484r2o6657786q566q42415n5667304r6o4r73504656574r6o6846564768734r794n66564441784q4668564n6p673361794n5n5n6n492o4s6o684r506q746q4n546o6n4o565168576p516o666r685752325n436144684o553330345933525956336p6s556o42345n4842694o485256595764324n454r4164573554666n68755069552o64456439546q4656553355776647706151773q3q&ekdata=02edc2ab344745ecec0f88cdc1345c06" class='proxy' onClick="rc('4');"  onMouseOver="set_tip_width('Opens the search result with basic anonymity<br>Great privacy feature - slightly slower','0');">View by Ixquick Proxy</A>   - <A HREF="https://ixquick-proxy.com/do/spg/highlight.pl?l=english&c=hf&cat=web&q=chrome+webs+store+ublock&rl=NONE&rid=LALONLQLPRQQ898NWUJUE&hlq=https://startpage.com/do/search&mtcat=web&mtpl=chrome&u=https:%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Funblock-youku-web-unblock%2Fidkhaoejiolokhafhnnpjfdgjijigeon%3Fhl%3Den" class='proxy' onClick="rc('4'); return true;" onContextmenu="rc('4'); return true;" onMouseOver="Tip('Highlights your search terms<br>on the result page');">Highlight</A>  </p><p class='desc'>30 Nov 2014 ... Unblock Youku and all your favorite websites. Surf the Web anonymously, privately and securely.</p>
+</div></li>
+ <li><div class='result'>
+<h3><a href='http://www.bleepingcomputer.com/forums/t/573256/ublock-taken-down-from-the-chrome-web-store-for-no-reason/' id='title_5' name='title_5'  onMouseOver="window.status='www.bleepingcomputer.com/ forums/ t/ 573256/ ublock-taken-down-from-the-chrome-web-store-for-no-reason/ '; return true;" onMouseOut="ws('');" onClick="tc(this);  return true;"><b>uBlock</b> taken down from the <b>Chrome</b> Web <b>Store</b> for no reason ...</a><span id='title_stars_5' name='title_stars_5'  onMouseOver="Tip('Found by Google');">  </span> </h3>
+<p><span class='url'>www.bleepingcomputer.com/ forums/ t/ 573256/ <b>ublock</b>-taken-down-from-the-<b>chrome</b>-web-<b>store</b>-for-no-reason/ </span>  - <A class="proxy" id="proxy_link" HREF="https://ixquick-proxy.com/do/spg/proxy2?ep=537a7447595252414e45306d4378496b57457341424374585a4155704b6c39575778344e53783871495545725477424c41317344455649514a79773644476b7a455477344b7951414e6c384549477366634856585545467042674d414b5145474e696f2b4544787458484142434430704f333567554434504d68744d5167383150777446576b513847523833437a4d6246333057586967464368522f5541424c545651724744775848525a4c4b6778754d6c52615a7a496d497a635448553845577a305248537351446b395147787731645749705857735353556338566a77445579735547535566503141714c6a632b4f5263634751465148674d4c63314947417a64475179346647576351516d3133456c3162424242715968554464693033536a64554141387442316c62564755705552774943463952526a6b4d4c6a78425578732b4e516b76445255394e683856454141334a5278464e43384b5352344e425159774142515a536d5a794d30676d476c6b615878674d516e524f654142685a6b4943486c706f4a7a686d486e6362546d424865564e4a4d775a5a576c3131415751554f4445524841746158306b6642423169506d38784f5178774e51464c4c54526d6579316e645464324a446879466e4944433163635a516333466745524e6e6c32663135354c463565436e4d4d44564a2f446e46615352634e5177516d586e493d&epile=4q6n41784r5441314q5451784r5638784q6935725n586o3q&edata=dfa084313a7b6ebcf5992b9e133e7b57&ek=4o6p4r375233683955534r425n3374584q47316n4s554q78516q5n49586q4968506r77724s694n4n53544r45496q566764443568596r6p6n55304r4961554n47633142585345386q52444q35626952524r564q6p4s535655536o4n4q5n6o394o5n325n75516q30385n456o35526q70386353736p646p5n6n5179596o4r6r744654444671645464496547314465314n38636p4r314q555571626r745149325571507n6444506p466n6257596s5333685452544534515639535530646n63584n6r4q30392o6345343265334934623268465546466s65466p55624856364955743066556p3466454276566n354r5456685453574n6s66484r2o6657786q566q42415n5667304r6o4r73504656574r6o6846564768734r794n66564441784q4668564n6p673361794n5n5n6n492o4s6o684r506q746q4n546o6n4o565168576p516o666r685752325n436144684o553330345933525956336p6s556o42345n4842694o485256595764324n454r4164573554666n68755069552o64456439546q4656553355776647706151773q3q&ekdata=ddef4f8e16d9a9621573c6c3f2ae9ee0" class='proxy' onClick="rc('5');"  onMouseOver="set_tip_width('Opens the search result with basic anonymity<br>Great privacy feature - slightly slower','0');">View by Ixquick Proxy</A>   - <A HREF="https://ixquick-proxy.com/do/spg/highlight.pl?l=english&c=hf&cat=web&q=chrome+webs+store+ublock&rl=NONE&rid=LALONLQLPRQQ898NWUJUE&hlq=https://startpage.com/do/search&mtcat=web&mtpl=chrome&u=http:%2F%2Fwww.bleepingcomputer.com%2Fforums%2Ft%2F573256%2Fublock-taken-down-from-the-chrome-web-store-for-no-reason%2F" class='proxy' onClick="rc('5'); return true;" onContextmenu="rc('5'); return true;" onMouseOver="Tip('Highlights your search terms<br>on the result page');">Highlight</A>  </p><p class='desc'>Page 1 of 3 - <b style='color:#2D4038'>uBlock</b> taken down from the <b style='color:#2D4038'>Chrome</b> Web <b style='color:#2D4038'>Store</b> for no reason - posted in General Security: So I was browsing /g/ and I noticed a&nbsp;...</p>
+</div></li>
+ <li><div class='result'>
+<h3><a href='https://en.wikipedia.org/wiki/UBlock' id='title_6' name='title_6'  onMouseOver="window.status='https://en.wikipedia.org/wiki/UBlock'; return true;" onMouseOut="ws('');" onClick="tc(this);  return true;"><b>uBlock</b> - Wikipedia, the free encyclopedia</a><span id='title_stars_6' name='title_stars_6'  onMouseOver="Tip('Found by Google');">  </span> </h3>
+<p><span class='url'>https://en.wikipedia.org/wiki/<b>UBlock</b></span>  - <A class="proxy" id="proxy_link" HREF="https://ixquick-proxy.com/do/spg/proxy2?ep=537a7447595252414e45306d4378496b57457341424374585a4155704b6c39575778344e53783871495545725477424c41317344455649514a79773644476b7a455477344b7951414e6c384549477366634856585545467042674d414b5145474e696f2b4544787458484142434430704f333567554434504d68744d5167383150777446576b513847523833437a4d6246333057586967464368522f5541424c545651724744775848525a4c4b6778754d6c52615a7a496d497a635448553845577a305248537351446b395147787731493352624f58786d4b6c42495a793461557a345246796b664d316f6b4c4859384f77564e546a554a46416350633149474d4270595753414847694179567a776b6156355555524a764d516b4841547778517a775057305273583141475879737343563952454139414747464166435a55455174726355413247775548427978434c6941424c7a63384d584932413156526246466d4a5545465648357751313568527742614445454e54484d666656566d61304e575256492b636d466954584650536d45574a3045644a55425155673d3d&epile=4q6n41784r5441314q5451784r5638784q6935725n586o3q&edata=fe443dc6eeea27ac4c0a681419eef0a8&ek=4o6p4r375233683955534r425n3374584q47316n4s554q78516q5n49586q4968506r77724s694n4n53544r45496q566764443568596r6p6n55304r4961554n47633142585345386q52444q35626952524r564q6p4s535655536o4n4q5n6o394o5n325n75516q30385n456o35526q70386353736p646p5n6n5179596o4r6r744654444671645464496547314465314n38636p4r314q555571626r745149325571507n6444506p466n6257596s5333685452544534515639535530646n63584n6r4q30392o6345343265334934623268465546466s65466p55624856364955743066556p3466454276566n354r5456685453574n6s66484r2o6657786q566q42415n5667304r6o4r73504656574r6o6846564768734r794n66564441784q4668564n6p673361794n5n5n6n492o4s6o684r506q746q4n546o6n4o565168576p516o666r685752325n436144684o553330345933525956336p6s556o42345n4842694o485256595764324n454r4164573554666n68755069552o64456439546q4656553355776647706151773q3q&ekdata=ae682dd4afcdaae95b34138704db8622" class='proxy' onClick="rc('6');"  onMouseOver="set_tip_width('Opens the search result with basic anonymity<br>Great privacy feature - slightly slower','0');">View by Ixquick Proxy</A>   - <A HREF="https://ixquick-proxy.com/do/spg/highlight.pl?l=english&c=hf&cat=web&q=chrome+webs+store+ublock&rl=NONE&rid=LALONLQLPRQQ898NWUJUE&hlq=https://startpage.com/do/search&mtcat=web&mtpl=chrome&u=https:%2F%2Fen.wikipedia.org%2Fwiki%2FUBlock" class='proxy' onClick="rc('6'); return true;" onContextmenu="rc('6'); return true;" onMouseOver="Tip('Highlights your search terms<br>on the result page');">Highlight</A>  </p><p class='desc'>The extension has received praise from technology websites for ostensibly lighter ... As of April 2015, the <b style='color:#2D4038'>uBlock</b> Origin <b style='color:#2D4038'>Chrome</b> extension had over 850,000 .... &quot; <b style='color:#2D4038'>uBlock</b> Origin extension taken down from <b style='color:#2D4038'>Chrome</b> <b style='color:#2D4038'>Store</b> by Google&quot;. ghacks.net.</p>
+</div></li>
+ <li><div class='result'>
+<h3><a href='http://www.ghacks.net/2015/03/05/latest-vivaldi-snapshot-supports-direct-chrome-web-store-installations/' id='title_7' name='title_7'  onMouseOver="window.status='www.ghacks.net/ 2015/ 03/ 05/ latest-vivaldi-snapshot-supports-direct-chrome-web-store-installation s/ '; return true;" onMouseOut="ws('');" onClick="tc(this);  return true;">Latest Vivaldi Snapshot supports direct <b>Chrome</b> Web <b>Store</b> ...</a><span id='title_stars_7' name='title_stars_7'  onMouseOver="Tip('Found by Google');">  </span> </h3>
+<p><span class='url'>www.ghacks.net/ 2015/ 03/ 05/ latest-vivaldi-snapshot-supports-direct-<b>chrome</b>-web-<b>store</b>-installation s/ </span>  - <A class="proxy" id="proxy_link" HREF="https://ixquick-proxy.com/do/spg/proxy2?ep=537a7447595252414e45306d4378496b57457341424374585a4155704b6c39575778344e53783871495545725477424c41317344455649514a79773644476b7a455477344b7951414e6c384549477366634856585545467042674d414b5145474e696f2b4544787458484142434430704f333567554434504d68744d5167383150777446576b513847523833437a4d6246333057586967464368522f5541424c545651724744775848525a4c4b6778754d6c52615a7a496d497a635448553845577a305248537351446b395147787731645749705857735353556338566a77445579345148534d454a52416a4b4378326579526154454a4c574634675a6c4e6c5678344541325a65656a6b335169303249455561586c512b4f4652594853733752796845413030745330464c536a6769544238564346314b577a46434c6e6c4846676f354b674e764831306f6667354d44415939656841474954515a4342774458423036447852544667566d41416f79436c6c54436b414f5148385965774e6e5955454848564e75646a6471476e5965524455564946394f5977525a5651746c517a494a4f324e5642306f50466e643247444e2b454873644c69426455797765526d414862566f4759414167616e6835466e594b41566f574e515a724556735759486c366567423263674e5844334e62436c4e2b43584d4d5768645a5655746e&epile=4q6n41784r5441314q5451784r5638784q6935725n586o3q&edata=6514e664008a9752dab26c53e0ad0417&ek=4o6p4r375233683955534r425n3374584q47316n4s554q78516q5n49586q4968506r77724s694n4n53544r45496q566764443568596r6p6n55304r4961554n47633142585345386q52444q35626952524r564q6p4s535655536o4n4q5n6o394o5n325n75516q30385n456o35526q70386353736p646p5n6n5179596o4r6r744654444671645464496547314465314n38636p4r314q555571626r745149325571507n6444506p466n6257596s5333685452544534515639535530646n63584n6r4q30392o6345343265334934623268465546466s65466p55624856364955743066556p3466454276566n354r5456685453574n6s66484r2o6657786q566q42415n5667304r6o4r73504656574r6o6846564768734r794n66564441784q4668564n6p673361794n5n5n6n492o4s6o684r506q746q4n546o6n4o565168576p516o666r685752325n436144684o553330345933525956336p6s556o42345n4842694o485256595764324n454r4164573554666n68755069552o64456439546q4656553355776647706151773q3q&ekdata=7299f65a7ab58d896fc6d5c6ce25b471" class='proxy' onClick="rc('7');"  onMouseOver="set_tip_width('Opens the search result with basic anonymity<br>Great privacy feature - slightly slower','0');">View by Ixquick Proxy</A>   - <A HREF="https://ixquick-proxy.com/do/spg/highlight.pl?l=english&c=hf&cat=web&q=chrome+webs+store+ublock&rl=NONE&rid=LALONLQLPRQQ898NWUJUE&hlq=https://startpage.com/do/search&mtcat=web&mtpl=chrome&u=http:%2F%2Fwww.ghacks.net%2F2015%2F03%2F05%2Flatest-vivaldi-snapshot-supports-direct-chrome-web-store-installations%2F" class='proxy' onClick="rc('7'); return true;" onContextmenu="rc('7'); return true;" onMouseOver="Tip('Highlights your search terms<br>on the result page');">Highlight</A>  </p><p class='desc'>5 Mar 2015 ... This means that you can visit the <b style='color:#2D4038'>Chrome</b> Web <b style='color:#2D4038'>Store</b> in the browser now ... on it, it makes extensions such as Ghostery or <b style='color:#2D4038'>uBlock</b> less usable or&nbsp;...</p>
+</div></li>
+ <li><div class='result'>
+<h3><a href='http://www.google.co.il/intl/en/chrome/education/webstore/' id='title_8' name='title_8'  onMouseOver="window.status='www.google.co.il/intl/en/chrome/education/webstore/'; return true;" onMouseOut="ws('');" onClick="tc(this);  return true;"><b>Chrome</b> Web <b>Store</b> for Education - Google</a><span id='title_stars_8' name='title_stars_8'  onMouseOver="Tip('Found by Google');">  </span> </h3>
+<p><span class='url'>www.google.co.il/intl/en/<b>chrome</b>/education/<b>webs</b>tore/</span>  - <A class="proxy" id="proxy_link" HREF="https://ixquick-proxy.com/do/spg/proxy2?ep=537a7447595252414e45306d4378496b57457341424374585a4155704b6c39575778344e53783871495545725477424c41317344455649514a79773644476b7a455477344b7951414e6c384549477366634856585545467042674d414b5145474e696f2b4544787458484142434430704f333567554434504d68744d5167383150777446576b513847523833437a4d6246333057586967464368522f5541424c545651724744775848525a4c4b6778754d6c52615a7a496d497a635448553845577a305248537351446b395147787731645749705857735353556338566a774455793458457963444d784175496e59364a5564614f686f51435142445a43596c4333304763434145546a6f375532313345673049516b452b49466c65586e316e59433953435645744355426248336f4c474234435245314346476448616d635247426c6c4a414e3157466c394e55304d5645492b5a78734c5958564e557852524545517852785547537a42395455676e4451556a616e52454f524d6b4e6938424d45642b47303970427956675032454c445777546431644a6267685a5556317743585945653270524751676145674a4765436743636852535630514c4230516645534e2b65513d3d&epile=4q6n41784r5441314q5451784r5638784q6935725n586o3q&edata=077a771e8b842b86da82ede856e4dbb1&ek=4o6p4r375233683955534r425n3374584q47316n4s554q78516q5n49586q4968506r77724s694n4n53544r45496q566764443568596r6p6n55304r4961554n47633142585345386q52444q35626952524r564q6p4s535655536o4n4q5n6o394o5n325n75516q30385n456o35526q70386353736p646p5n6n5179596o4r6r744654444671645464496547314465314n38636p4r314q555571626r745149325571507n6444506p466n6257596s5333685452544534515639535530646n63584n6r4q30392o6345343265334934623268465546466s65466p55624856364955743066556p3466454276566n354r5456685453574n6s66484r2o6657786q566q42415n5667304r6o4r73504656574r6o6846564768734r794n66564441784q4668564n6p673361794n5n5n6n492o4s6o684r506q746q4n546o6n4o565168576p516o666r685752325n436144684o553330345933525956336p6s556o42345n4842694o485256595764324n454r4164573554666n68755069552o64456439546q4656553355776647706151773q3q&ekdata=8242cfae98af15da76ab8d469851b184" class='proxy' onClick="rc('8');"  onMouseOver="set_tip_width('Opens the search result with basic anonymity<br>Great privacy feature - slightly slower','0');">View by Ixquick Proxy</A>   - <A HREF="https://ixquick-proxy.com/do/spg/highlight.pl?l=english&c=hf&cat=web&q=chrome+webs+store+ublock&rl=NONE&rid=LALONLQLPRQQ898NWUJUE&hlq=https://startpage.com/do/search&mtcat=web&mtpl=chrome&u=http:%2F%2Fwww.google.co.il%2Fintl%2Fen%2Fchrome%2Feducation%2Fwebstore%2F" class='proxy' onClick="rc('8'); return true;" onContextmenu="rc('8'); return true;" onMouseOver="Tip('Highlights your search terms<br>on the result page');">Highlight</A>  </p><p class='desc'><b style='color:#2D4038'>Chrome</b> Web <b style='color:#2D4038'>Store</b>. The <b style='color:#2D4038'>Chrome</b> Web <b style='color:#2D4038'>Store</b> offers apps and extensions for every educational need, from collaboration tools and video editing, to recorded&nbsp;...</p>
+</div></li>
+ <li><div class='result'>
+<h3><a href='http://www.makeuseof.com/tag/best-chrome-extensions/' id='title_9' name='title_9'  onMouseOver="window.status='www.makeuseof.com/tag/best-chrome-extensions/'; return true;" onMouseOut="ws('');" onClick="tc(this);  return true;">The Best <b>Chrome</b> Extensions - MakeUseOf</a><span id='title_stars_9' name='title_stars_9'  onMouseOver="Tip('Found by Google');">  </span> </h3>
+<p><span class='url'>www.makeuseof.com/tag/best-<b>chrome</b>-extensions/</span>  - <A class="proxy" id="proxy_link" HREF="https://ixquick-proxy.com/do/spg/proxy2?ep=537a7447595252414e45306d4378496b57457341424374585a4155704b6c39575778344e53783871495545725477424c41317344455649514a79773644476b7a455477344b7951414e6c384549477366634856585545467042674d414b5145474e696f2b4544787458484142434430704f333567554434504d68744d5167383150777446576b513847523833437a4d6246333057586967464368522f5541424c545651724744775848525a4c4b6778754d6c52615a7a496d497a635448553845577a305248537351446b395147787731645749705857735353556338566a77445579515a467955614a5673694b3359774a67394e546a554b484174445a4359694143744147794145546a6f37553255674c42774a575645324f31354346576f5441433154436c593457775550584846364451355852773058476d56414f475151476b6f316431416d584630724e55554a416b51366351735950544e465856595757306b594e54594d6152635a4453414848516f675751414e4d474a4f436b636d49306741536c706f656a686e53534e4c52575642636c4e496277594c5767456e41434e58666d68564667354a545278454f7a6b4f64513d3d&epile=4q6n41784r5441314q5451784r5638784q6935725n586o3q&edata=9550f7335b560a4f12734f22f16e68d4&ek=4o6p4r375233683955534r425n3374584q47316n4s554q78516q5n49586q4968506r77724s694n4n53544r45496q566764443568596r6p6n55304r4961554n47633142585345386q52444q35626952524r564q6p4s535655536o4n4q5n6o394o5n325n75516q30385n456o35526q70386353736p646p5n6n5179596o4r6r744654444671645464496547314465314n38636p4r314q555571626r745149325571507n6444506p466n6257596s5333685452544534515639535530646n63584n6r4q30392o6345343265334934623268465546466s65466p55624856364955743066556p3466454276566n354r5456685453574n6s66484r2o6657786q566q42415n5667304r6o4r73504656574r6o6846564768734r794n66564441784q4668564n6p673361794n5n5n6n492o4s6o684r506q746q4n546o6n4o565168576p516o666r685752325n436144684o553330345933525956336p6s556o42345n4842694o485256595764324n454r4164573554666n68755069552o64456439546q4656553355776647706151773q3q&ekdata=1ea996e112fc59adf2039023df19cedb" class='proxy' onClick="rc('9');"  onMouseOver="set_tip_width('Opens the search result with basic anonymity<br>Great privacy feature - slightly slower','0');">View by Ixquick Proxy</A>   - <A HREF="https://ixquick-proxy.com/do/spg/highlight.pl?l=english&c=hf&cat=web&q=chrome+webs+store+ublock&rl=NONE&rid=LALONLQLPRQQ898NWUJUE&hlq=https://startpage.com/do/search&mtcat=web&mtpl=chrome&u=http:%2F%2Fwww.makeuseof.com%2Ftag%2Fbest-chrome-extensions%2F" class='proxy' onClick="rc('9'); return true;" onContextmenu="rc('9'); return true;" onMouseOver="Tip('Highlights your search terms<br>on the result page');">Highlight</A>  </p><p class='desc'>13 Dec 2014 ... A list of the best extensions for Google <b style='color:#2D4038'>Chrome</b>, including ... Are you confused by the 65,000+ extensions in the <b style='color:#2D4038'>Chrome</b> Web <b style='color:#2D4038'>Store</b>? ..... As other posters has stated <b style='color:#2D4038'>uBlock</b>, created by the same author of uMatrix, for <b style='color:#2D4038'>Chrome</b>&nbsp;...</p>
+</div></li>
+ <li><div class='result'>
+<h3><a href='http://www.omgchrome.com/windows-chrome-users-blocking-extensions-installs-outside-store/' id='title_10' name='title_10'  onMouseOver="window.status='www.omgchrome.com/ windows-chrome-users-blocking-extensions-installs-outside-store/ '; return true;" onMouseOut="ws('');" onClick="tc(this);  return true;">Google Bans <b>Chrome</b> Extension Installs Outside the Web <b>Store</b></a><span id='title_stars_10' name='title_stars_10'  onMouseOver="Tip('Found by Google');">  </span> </h3>
+<p><span class='url'>www.omg<b>chrome</b>.com/ windows-<b>chrome</b>-users-blocking-extensions-installs-outside-<b>store</b>/ </span>  - <A class="proxy" id="proxy_link" HREF="https://ixquick-proxy.com/do/spg/proxy2?ep=537a7447595252414e45306d4378496b57457341424374585a4155704b6c39575778344e53783871495545725477424c41317344455649514a79773644476b7a455477344b7951414e6c384549477366634856585545467042674d414b5145474e696f2b4544787458484142434430704f333567554434504d68744d5167383150777446576b513847523833437a4d6246333057586967464368522f5541424c545651724744775848525a4c4b6778754d6c52615a7a496d497a635448553845577a305248537351446b395147787731645749705857735353556338566a77445579595647794d484a4645674b4859774a67394e546a554a464149434f52637a53447463524377425758676a525330334a30554f5730303850316c665633557758697853425645774356784e4679456a5452384853565651424474554c69644e476831374e424974476c31765954736546684135497868565a79515a566845424552646b42563455456e4a3145566c7254777059585552624669524b643151785a55635744686f314d4431695332454d446d787546545942476d513047336358556e416f4c3374525a527450627878524f58514463684a585755774b55775a4b5732636865313178666b5532626e417246795543443167545a67566d517839444a6a702f66513d3d&epile=4q6n41784r5441314q5451784r5638784q6935725n586o3q&edata=58cd856e0886bf664b36086d17a328b2&ek=4o6p4r375233683955534r425n3374584q47316n4s554q78516q5n49586q4968506r77724s694n4n53544r45496q566764443568596r6p6n55304r4961554n47633142585345386q52444q35626952524r564q6p4s535655536o4n4q5n6o394o5n325n75516q30385n456o35526q70386353736p646p5n6n5179596o4r6r744654444671645464496547314465314n38636p4r314q555571626r745149325571507n6444506p466n6257596s5333685452544534515639535530646n63584n6r4q30392o6345343265334934623268465546466s65466p55624856364955743066556p3466454276566n354r5456685453574n6s66484r2o6657786q566q42415n5667304r6o4r73504656574r6o6846564768734r794n66564441784q4668564n6p673361794n5n5n6n492o4s6o684r506q746q4n546o6n4o565168576p516o666r685752325n436144684o553330345933525956336p6s556o42345n4842694o485256595764324n454r4164573554666n68755069552o64456439546q4656553355776647706151773q3q&ekdata=bb7f2eafb212a0058c3cd16aac71a8f1" class='proxy' onClick="rc('10');"  onMouseOver="set_tip_width('Opens the search result with basic anonymity<br>Great privacy feature - slightly slower','0');">View by Ixquick Proxy</A>   - <A HREF="https://ixquick-proxy.com/do/spg/highlight.pl?l=english&c=hf&cat=web&q=chrome+webs+store+ublock&rl=NONE&rid=LALONLQLPRQQ898NWUJUE&hlq=https://startpage.com/do/search&mtcat=web&mtpl=chrome&u=http:%2F%2Fwww.omgchrome.com%2Fwindows-chrome-users-blocking-extensions-installs-outside-store%2F" class='proxy' onClick="rc('10'); return true;" onContextmenu="rc('10'); return true;" onMouseOver="Tip('Highlights your search terms<br>on the result page');">Highlight</A>  </p><p class='desc'>27 May 2014 ... Google Blocks Install of <b style='color:#2D4038'>Chrome</b> Extensions Outside the Web <b style='color:#2D4038'>Store</b> for ... (with widely permissive access) to unlock features or functionality.</p>
+</div></li>
+</ol><div id='sponsored'><p class='head2'><span><a href="https://adwords.google.com/select/main?cmd=Login&sourceid=gr&hl=en" class="adlink" target='_blank'>See your ad here...</a></span>
+<a href="javascript:void();" style="color:#2200c1;text-decoration: none;font-weight: normal;cursor: default;">Ads related to <b>chrome webs store ublock</b></a></p><div id='sponsored_container' style='background-color: #F7F9FF; border-top: 1px solid #E1ECFF; border-bottom: 1px solid #E1ECFF;'>
+<ol><li><div class='result'>
+<h3><a href='http://www.google.com/aclk?sa=l&ai=CcdFYFrlUVfT-BKuUjAaQp4KABeTa6pYDvL6Sv88BtbDvlgQIABABIL_-1RcoAmD5AqAB4vnl7APIAQGqBChP0KnWqrM5QWkyjkBdc3htwKFEM5geSkgx_9iG0U1L8VaunMtYtUNzgAeGhpoTkAcBqAemvhvYBwE&sig=AOD64_0cTVdqQ-DSwhm_XVCtqyq8_XAQjA&adurl=http://www.expressvpn.com/il/%3FrefID%3DIL_SE&ba=1' id='sptitle3'  onmousedown="click_sponsored(event, this, 'http://www.google.com/aclk?sa=l&ai=CcdFYFrlUVfT-BKuUjAaQp4KABeTa6pYDvL6Sv88BtbDvlgQIABABIL_-1RcoAmD5AqAB4vnl7APIAQGqBChP0KnWqrM5QWkyjkBdc3htwKFEM5geSkgx_9iG0U1L8VaunMtYtUNzgAeGhpoTkAcBqAemvhvYBwE&sig=AOD64_0cTVdqQ-DSwhm_XVCtqyq8_XAQjA&adurl=http://www.expressvpn.com/il/%3FrefID%3DIL_SE&ba=1');">Fastest VPN for Israel - Secure your Internet from Hotspots</a></h3><p><a class='url' id='spurl3' href='http://www.google.com/aclk?sa=l&ai=CcdFYFrlUVfT-BKuUjAaQp4KABeTa6pYDvL6Sv88BtbDvlgQIABABIL_-1RcoAmD5AqAB4vnl7APIAQGqBChP0KnWqrM5QWkyjkBdc3htwKFEM5geSkgx_9iG0U1L8VaunMtYtUNzgAeGhpoTkAcBqAemvhvYBwE&sig=AOD64_0cTVdqQ-DSwhm_XVCtqyq8_XAQjA&adurl=http://www.expressvpn.com/il/%3FrefID%3DIL_SE&ba=1'  onmousedown="click_sponsored(event, this, 'http://www.google.com/aclk?sa=l&ai=CcdFYFrlUVfT-BKuUjAaQp4KABeTa6pYDvL6Sv88BtbDvlgQIABABIL_-1RcoAmD5AqAB4vnl7APIAQGqBChP0KnWqrM5QWkyjkBdc3htwKFEM5geSkgx_9iG0U1L8VaunMtYtUNzgAeGhpoTkAcBqAemvhvYBwE&sig=AOD64_0cTVdqQ-DSwhm_XVCtqyq8_XAQjA&adurl=http://www.expressvpn.com/il/%3FrefID%3DIL_SE&ba=1');">www.expressvpn.com/</a><span class='sellerrating' style='padding-left:16px;'><img src='https://startpage.com/graphics/stars_5.gif'> <a href='http://www.google.com/shopping/seller?q=expressvpn.com' target='_blank'>rating</a> for expressvpn.com</span></p><p class='desc'>Hide your IP Address. Try Risk Free </p>
+</div><script>getelem("sptitle3").href='http://www.expressvpn.com/'; getelem("spurl3").href='http://www.expressvpn.com/';</script></li><li><div class='result last'>
+<h3><a href='http://www.google.com/aclk?sa=l&ai=CAoU-FrlUVfT-BKuUjAaQp4KABbiB_J0KsIfH3dsBkZSe0AcIABACIL_-1RcoAmD5AqABkI-x1gPIAQGpAuFd5P5WRZI-qgQoT9DZyZmzOkFpMo5AXXN4bfyBD1-YHkpIMf_YhtFNS_FWrpzLLIsEToAH2PDOKZAHAagHpr4b2AcB&sig=AOD64_0mTVl7GsNs5dKflaurP99WtHZIVw&adurl=https://www.vpnoneclick.com/marketing/tracking.php%3Fcampaignid%3D3&ba=1' id='sptitle4'  onmousedown="click_sponsored(event, this, 'http://www.google.com/aclk?sa=l&ai=CAoU-FrlUVfT-BKuUjAaQp4KABbiB_J0KsIfH3dsBkZSe0AcIABACIL_-1RcoAmD5AqABkI-x1gPIAQGpAuFd5P5WRZI-qgQoT9DZyZmzOkFpMo5AXXN4bfyBD1-YHkpIMf_YhtFNS_FWrpzLLIsEToAH2PDOKZAHAagHpr4b2AcB&sig=AOD64_0mTVl7GsNs5dKflaurP99WtHZIVw&adurl=https://www.vpnoneclick.com/marketing/tracking.php%3Fcampaignid%3D3&ba=1');">VpnOneClick - vpnoneclick.com</a></h3><p><a class='url' id='spurl4' href='http://www.google.com/aclk?sa=l&ai=CAoU-FrlUVfT-BKuUjAaQp4KABbiB_J0KsIfH3dsBkZSe0AcIABACIL_-1RcoAmD5AqABkI-x1gPIAQGpAuFd5P5WRZI-qgQoT9DZyZmzOkFpMo5AXXN4bfyBD1-YHkpIMf_YhtFNS_FWrpzLLIsEToAH2PDOKZAHAagHpr4b2AcB&sig=AOD64_0mTVl7GsNs5dKflaurP99WtHZIVw&adurl=https://www.vpnoneclick.com/marketing/tracking.php%3Fcampaignid%3D3&ba=1'  onmousedown="click_sponsored(event, this, 'http://www.google.com/aclk?sa=l&ai=CAoU-FrlUVfT-BKuUjAaQp4KABbiB_J0KsIfH3dsBkZSe0AcIABACIL_-1RcoAmD5AqABkI-x1gPIAQGpAuFd5P5WRZI-qgQoT9DZyZmzOkFpMo5AXXN4bfyBD1-YHkpIMf_YhtFNS_FWrpzLLIsEToAH2PDOKZAHAagHpr4b2AcB&sig=AOD64_0mTVl7GsNs5dKflaurP99WtHZIVw&adurl=https://www.vpnoneclick.com/marketing/tracking.php%3Fcampaignid%3D3&ba=1');">www.vpnoneclick.com/</a></p><p class='desc'>Keep your privacy protected from the Big Data and <b>unlock</b> any service</p>
+</div><script>getelem("sptitle4").href='http://www.vpnoneclick.com/'; getelem("spurl4").href='http://www.vpnoneclick.com/';</script></li></ol>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Printing to client complete: 0 secs -->
+<style type='text/css'>
+</style>
+
+<div id='footer'>
+  <div id='search_footer'>
+	<table cellspacing="0" cellpadding="0" border="0"><tbody>
+	<tr><td>
+	<div id='pagenavigation'>&nbsp;&nbsp;<div id='jumpsbar' style='display: none; align: center; width: 30px;'><form action="https://s8-eu4.startpage.com/do/search" id="pnform" name="pnform" method="POST" style="display: inline; width: 30px;" align='center'> <input type="hidden" name="cmd" value="process_search" /> <input type="hidden" name="language" value="english" /> <input type="hidden" name="qid" value="LALONLQLPRQQ898NWUJUE" /> <input type="hidden" name="rcount" value="" /> <input type="hidden" name="rl" value="NONE" /> <input type="hidden" name="abp" class='abp' value="-1" /> <input type="hidden" name="query" value="chrome webs store ublock" /> <input type="hidden" name="cat" value="web" /> <input id='startat' type="hidden" name="startat" value="" /> &nbsp;1&nbsp;<a href='javascript:;' class='numbers_st' onclick='mysubmit(10); return false;' id='2'>2</a><a href='javascript:;' class='numbers_st' onclick='mysubmit(20); return false;' id='3'>3</a><a href='javascript:;' class='numbers_st' onclick='mysubmit(30); return false;' id='4'>4</a><a href='javascript:;' class='numbers_st' onclick='mysubmit(40); return false;' id='5'>5</a><a href='javascript:;' class='numbers_st' onclick='mysubmit(50); return false;' id='6'>6</a><a href='javascript:;' class='numbers_st' onclick='mysubmit(60); return false;' id='7'>7</a><a href='javascript:;' class='numbers_st' onclick='mysubmit(70); return false;' id='8'>8</a><a href='javascript:;' class='numbers_st' onclick='mysubmit(80); return false;' id='9'>9</a><a href='javascript:;' class='numbers_st' onclick='mysubmit(90); return false;' id='10'>10</a></form> </div><style type='text/css'> #pagenav #jumpsbar form { display: inline; width: 30px; } </style><script type='text/javascript'>document.getElementById('jumpsbar').style.display = 'inline'; </script><noscript> <form class='numbers' style='display: inline; width: 30px; align: center; margin: 0px 3px 0px 3px;'>1</form><form action="https://s8-eu4.startpage.com/do/search" id="pnform" name="pnform" method="POST" style="display: inline; width: 30px;" align='center'>
+<input type="hidden" name="cmd" value="process_search" />
+<input type="hidden" name="language" value="english" />
+<input type="hidden" name="qid" value="LALONLQLPRQQ898NWUJUE" />
+<input type="hidden" name="rcount" value="" />
+<input type="hidden" name="rl" value="NONE" />
+<input type="hidden" name="abp" class='abp' value="-1" />
+<input type="hidden" name="query" value="chrome webs store ublock" />
+<input type="hidden" name="cat" value="web" />
+<input type="hidden" name="startat" value="10" />
+<input type=submit class='cssprevious_st' value=' 2 '></form>
+
+<form action="https://s8-eu4.startpage.com/do/search" id="pnform" name="pnform" method="POST" style="display: inline; width: 30px;" align='center'>
+<input type="hidden" name="cmd" value="process_search" />
+<input type="hidden" name="language" value="english" />
+<input type="hidden" name="qid" value="LALONLQLPRQQ898NWUJUE" />
+<input type="hidden" name="rcount" value="" />
+<input type="hidden" name="rl" value="NONE" />
+<input type="hidden" name="abp" class='abp' value="-1" />
+<input type="hidden" name="query" value="chrome webs store ublock" />
+<input type="hidden" name="cat" value="web" />
+<input type="hidden" name="startat" value="20" />
+<input type=submit class='cssprevious_st' value=' 3 '></form>
+
+<form action="https://s8-eu4.startpage.com/do/search" id="pnform" name="pnform" method="POST" style="display: inline; width: 30px;" align='center'>
+<input type="hidden" name="cmd" value="process_search" />
+<input type="hidden" name="language" value="english" />
+<input type="hidden" name="qid" value="LALONLQLPRQQ898NWUJUE" />
+<input type="hidden" name="rcount" value="" />
+<input type="hidden" name="rl" value="NONE" />
+<input type="hidden" name="abp" class='abp' value="-1" />
+<input type="hidden" name="query" value="chrome webs store ublock" />
+<input type="hidden" name="cat" value="web" />
+<input type="hidden" name="startat" value="30" />
+<input type=submit class='cssprevious_st' value=' 4 '></form>
+
+<form action="https://s8-eu4.startpage.com/do/search" id="pnform" name="pnform" method="POST" style="display: inline; width: 30px;" align='center'>
+<input type="hidden" name="cmd" value="process_search" />
+<input type="hidden" name="language" value="english" />
+<input type="hidden" name="qid" value="LALONLQLPRQQ898NWUJUE" />
+<input type="hidden" name="rcount" value="" />
+<input type="hidden" name="rl" value="NONE" />
+<input type="hidden" name="abp" class='abp' value="-1" />
+<input type="hidden" name="query" value="chrome webs store ublock" />
+<input type="hidden" name="cat" value="web" />
+<input type="hidden" name="startat" value="40" />
+<input type=submit class='cssprevious_st' value=' 5 '></form>
+
+<form action="https://s8-eu4.startpage.com/do/search" id="pnform" name="pnform" method="POST" style="display: inline; width: 30px;" align='center'>
+<input type="hidden" name="cmd" value="process_search" />
+<input type="hidden" name="language" value="english" />
+<input type="hidden" name="qid" value="LALONLQLPRQQ898NWUJUE" />
+<input type="hidden" name="rcount" value="" />
+<input type="hidden" name="rl" value="NONE" />
+<input type="hidden" name="abp" class='abp' value="-1" />
+<input type="hidden" name="query" value="chrome webs store ublock" />
+<input type="hidden" name="cat" value="web" />
+<input type="hidden" name="startat" value="50" />
+<input type=submit class='cssprevious_st' value=' 6 '></form>
+
+<form action="https://s8-eu4.startpage.com/do/search" id="pnform" name="pnform" method="POST" style="display: inline; width: 30px;" align='center'>
+<input type="hidden" name="cmd" value="process_search" />
+<input type="hidden" name="language" value="english" />
+<input type="hidden" name="qid" value="LALONLQLPRQQ898NWUJUE" />
+<input type="hidden" name="rcount" value="" />
+<input type="hidden" name="rl" value="NONE" />
+<input type="hidden" name="abp" class='abp' value="-1" />
+<input type="hidden" name="query" value="chrome webs store ublock" />
+<input type="hidden" name="cat" value="web" />
+<input type="hidden" name="startat" value="60" />
+<input type=submit class='cssprevious_st' value=' 7 '></form>
+
+<form action="https://s8-eu4.startpage.com/do/search" id="pnform" name="pnform" method="POST" style="display: inline; width: 30px;" align='center'>
+<input type="hidden" name="cmd" value="process_search" />
+<input type="hidden" name="language" value="english" />
+<input type="hidden" name="qid" value="LALONLQLPRQQ898NWUJUE" />
+<input type="hidden" name="rcount" value="" />
+<input type="hidden" name="rl" value="NONE" />
+<input type="hidden" name="abp" class='abp' value="-1" />
+<input type="hidden" name="query" value="chrome webs store ublock" />
+<input type="hidden" name="cat" value="web" />
+<input type="hidden" name="startat" value="70" />
+<input type=submit class='cssprevious_st' value=' 8 '></form>
+
+<form action="https://s8-eu4.startpage.com/do/search" id="pnform" name="pnform" method="POST" style="display: inline; width: 30px;" align='center'>
+<input type="hidden" name="cmd" value="process_search" />
+<input type="hidden" name="language" value="english" />
+<input type="hidden" name="qid" value="LALONLQLPRQQ898NWUJUE" />
+<input type="hidden" name="rcount" value="" />
+<input type="hidden" name="rl" value="NONE" />
+<input type="hidden" name="abp" class='abp' value="-1" />
+<input type="hidden" name="query" value="chrome webs store ublock" />
+<input type="hidden" name="cat" value="web" />
+<input type="hidden" name="startat" value="80" />
+<input type=submit class='cssprevious_st' value=' 9 '></form>
+
+<form action="https://s8-eu4.startpage.com/do/search" id="pnform" name="pnform" method="POST" style="display: inline; width: 30px;" align='center'>
+<input type="hidden" name="cmd" value="process_search" />
+<input type="hidden" name="language" value="english" />
+<input type="hidden" name="qid" value="LALONLQLPRQQ898NWUJUE" />
+<input type="hidden" name="rcount" value="" />
+<input type="hidden" name="rl" value="NONE" />
+<input type="hidden" name="abp" class='abp' value="-1" />
+<input type="hidden" name="query" value="chrome webs store ublock" />
+<input type="hidden" name="cat" value="web" />
+<input type="hidden" name="startat" value="90" />
+<input type=submit class='cssprevious_st' value=' 10 '></form>
+
+ </noscript>
+&nbsp;&nbsp;<div id='nextnavbar' style='display: none;'><form action="https://s8-eu4.startpage.com/do/search" method="POST" style="display: inline; width: 85px;" name='nextform' align='left'> <input type="hidden" name="cmd" value="process_search" /> <input type="hidden" name="startat" value="10" /> <input type="hidden" name="language" value="english" /> <input type="hidden" name="qid" value="LALONLQLPRQQ898NWUJUE" /> <input type="hidden" name="rcount" value="" /> <input type="hidden" name="rl" value="NONE" /> <input type="hidden" name="abp" class='abp' value="-1" /> <input type="hidden" name="query" value="chrome webs store ublock" /> <input type="hidden" name="cat" value="web" /> <a href='javascript:document.nextform.submit();' class='numbers_st' style='width:200px; text-align:left;'>Next &gt;&gt;</a> </form> </div><script type='text/javascript'>document.getElementById('nextnavbar').style.display = 'inline'; </script><noscript> <form action="https://s8-eu4.startpage.com/do/search" method="POST" style="display: inline; width: 85px;" name='nextform' align='left'>
+<input type="hidden" name="cmd" value="process_search" />
+<input type="hidden" name="startat" value="10" />
+<input type="hidden" name="language" value="english" />
+<input type="hidden" name="qid" value="LALONLQLPRQQ898NWUJUE" />
+<input type="hidden" name="rcount" value="" />
+<input type="hidden" name="rl" value="NONE" />
+<input type="hidden" name="abp" class='abp' value="-1" />
+<input type="hidden" name="query" value="chrome webs store ublock" />
+<input type="hidden" name="cat" value="web" />
+<input type='submit' value='Next &gt;&gt;' class='cssprevious_st'>
+</form> </noscript>
+ </div>
+	</td></tr>
+  <form name="blah2" method="POST" autocomplete="off" id='search_form' action="https://startpage.com/do/metasearch.pl?" onSubmit="return verifyChecked(this);">
+	<tr id='bottom_input_p'>
+	<td id='input_p' width="100%"><!--[if IE 7]><div style="position:relative; width:300px; height:0;"></div><![endif]-->
+	<input type=hidden name=cmd value="process_search">
+<input type=hidden name=language value="english"><input type=hidden name=cat value="web"><input type=hidden name=enginecount value="1"><input type=hidden name=pl value="chrome"><input type="hidden" name="abp" class='abp' value="-1" />
+<input type=hidden name=total_results value="14"><input type=hidden name=ff value=""><input type=hidden name=theme value=""> <input type=hidden id=flag_ac2 name=flag_ac value="0"><input name="cat" type=hidden value="web">
+    <input type=hidden name=swquery value="chrome webs store ublock">
+	<input name="query" type="text" value="chrome webs store ublock" id="query_bottom">
+	</td>
+	<td><input type='image' src='graphics/stp_search.gif' id='submit1' /></td>
+	<td><div id='enhanced'>enhanced by<br><img height='20' width='57' src='graphics/google-results.gif'></div></td>
+	</tr>
+	<tr><td id="within"><input type=checkbox name=searchwithin value="1"><b>Search within results</b></td></tr>
+	</form>
+	<tr>
+	<td>
+  <div id='footer_links'>
+      	<p><a href='https://startpage.com/eng/protect-privacy.html?'>Startpage Protects Your Privacy</a><br>
+          &copy; 2015 Startpage</p>
+
+   </div>   
+	</td>
+
+	</tr>
+	</tbody></table>
+</div>
+</div>
+<CENTER></CENTER><script type="text/javascript">
+setWindow();
+</script>
+<script language="JavaScript"><!--
+
+function change_link_to_post () {
+    var all_links = document.getElementsByTagName("a");
+    for (i = 0; i < all_links.length; i++) {
+
+        if (all_links[i].className.match(/blockquote/) ||
+            all_links[i].className.match(/moreres2/)||all_links[i].className.match(/proxy_link/)||
+							            all_links[i].className.match(/no-date/)||all_links[i].className.match(/related_search/) ||
+							            all_links[i].className.match(/tod/) || all_links[i].className.match(/video_family_filter/) || 
+							            all_links[i].className.match(/video_sort_order/) || all_links[i].className.match(/sugg/)) {
+
+          all_links[i].onclick = function () {
+              url_parts = this.href.split("?");
+              parameters = url_parts[1];
+              key_value_pairs = parameters.split("&");
+              if (key_value_pairs.length > 0) {
+                  myform = document.createElement("form");
+                  myform.setAttribute("method", "POST");
+                  myform.setAttribute("action", url_parts[0]);
+                  if (this.className.match(/proxy_link/)){
+                  myform.setAttribute("target", "_blank");}
+                  for (j = 0; j < key_value_pairs.length; j++) {
+
+                      var key_and_value = key_value_pairs[j].split("=");
+                      form_elem = document.createElement("input");
+                      form_elem.setAttribute("name", key_and_value[0]);
+                      form_elem.setAttribute("type", "hidden");
+                      key_and_value[1] = decodeURIComponent(key_and_value[1].replace(/\+/g,  ' '));
+                      form_elem.setAttribute("value", key_and_value[1]);
+                      myform.appendChild(form_elem);
+                  }
+                  document.getElementById("hide_form").appendChild(myform);
+                  myform.submit();
+                  return false;
+              } else {
+                  return true;
+              }
+          }
+       }
+    }
+}
+change_link_to_post();
+function findPos(obj) {
+					var curleft = curtop = 0;
+					if (obj.offsetParent) {
+                        curleft = obj.offsetLeft;
+                        curtop = obj.offsetTop;
+						while (obj = obj.offsetParent) {
+                            curleft += obj.offsetLeft;
+                            curtop += obj.offsetTop;
+						}
+					}
+					return [curleft,curtop];
+				}
+				function showMapDetail() {
+                    clearTimeout(MapDetailTimeoutId);
+                    var offset = findPos(getelem('map_container'));
+                    var mapdl = getelem('map-detail');
+                    mapdl.style.left = (offset[0] - 10) + 'px';
+                    mapdl.style.top = (offset[1] + 259) + 'px';
+                    mapdl.style.display = 'block';
+					isMapDetailActive = true;
+
+                    jQuery('#mapd').click( function(){
+                       isMapDetailActive = true;
+                       jQuery('#mapd').removeAttr("onmouseout").removeAttr("onmouseover");
+                       jQuery('#map-detail').removeAttr("onmouseout").removeAttr("onmouseover");
+                    });
+                    jQuery('#map-detail a.popup_close').click( function(){
+                       isMapDetailActive = false;
+                       jQuery('#map-detail').hide();
+                       getelem('mapd').onmouseover = function(){showMapDetail()};
+                       getelem('mapd').onmouseout = function(){hideMapDetail()};
+                       getelem('map-detail').onmouseover = function(){isMapDetailActive = true; clearTimeout(MapDetailTimeoutId);};
+                       getelem('map-detail').onmouseout = function(){hideMapDetail()};
+                    });
+
+				}
+
+			var originalPositionOfPrivacyDiv = 0; 
+				function showPrivacy() {
+					    if(originalPositionOfPrivacyDiv == 0) {
+					    originalPositionOfPrivacyDiv = parseInt($('#privacy').css('top'),10);
+					    }
+					clearTimeout(privacyTimeoutId);
+                    var offset = findPos(getelem('query_top'));
+					//var offset2 = (document.getElementById('query_top').offsetWidth+35-626)/2;
+                    var offset2 = (document.getElementById('query_top').offsetWidth+35-650)/2;
+                    var privacy = getelem('privacy');
+                    privacy.style.left = (offset[0] + offset2) + 'px';
+                    var resultsPresent = 1;
+                    var targetElement = getelem('first-result');
+                    var sponsoredElement = getelem('sponsored');
+		    
+		    if (sponsoredElement == null && $('#maths_results').css('display') != 'none') {
+			    var mathDivHeight = parseInt($('#maths_results').css('height'),10);
+			    privacy.style.top = (findPos(maths_results)[1]+mathDivHeight +27) +'px';
+		    } else if (sponsoredElement == null && $('#flight_status').css('display') != 'none') {
+                var flightRegDiv = parseInt($('#flight_registration').css('height'),10);
+                var flightDivHeight = parseInt($('#flight_status').css('height'),10);
+                privacy.style.top = (findPos(privacy)[1]+ flightDivHeight + flightRegDiv + 60) +'px';
+            }else {
+                    if (targetElement == null) {
+                       targetElement = getelem('no_results');
+                       resultsPresent = 0;
+                    }
+                    if( targetElement != null && sponsoredElement != null) {
+                        var topMargin = 0;
+                        if (resultsPresent == 1) {
+                            topMargin = 20;
+                        }
+                        privacy.style.top = (findPos(targetElement)[1] + topMargin) + 'px';
+		    } else {
+			privacy.style.top = originalPositionOfPrivacyDiv + 'px';
+		    }
+		    }
+                    privacy.style.display = 'block';
+					isActive = true;
+					getelem('query_top').blur();
+                    jQuery('#detail').click( function(){
+        isActive = true;
+        jQuery('#detail').removeAttr("onmouseout").removeAttr("onmouseover");
+        jQuery('#privacy').removeAttr("onmouseout").removeAttr("onmouseover");
+        });
+        jQuery('#privacy a.popup_close').click( function(){
+        isActive = false;
+        jQuery('#privacy').hide();
+        getelem('detail').onmouseover = function(){showPrivacy()};
+        getelem('detail').onmouseout = function(){hidePrivacy()};
+        getelem('privacy').onmouseover = function(){isActive = true; clearTimeout(privacyTimeoutId);};
+        getelem('privacy').onmouseout = function(){hidePrivacy2()};
+        });
+
+				}
+                function showPopup() {
+					clearTimeout(privacyTimeoutId);
+                    var offset = findPos(getelem('query_top'));
+                    var offset2 = (getelem('query_top').offsetWidth+35-650)/2;
+                    var privacy = getelem('popupbox');
+                    privacy.style.left = (offset[0] + offset2) + 'px';
+                    var targetElement = getelem('first-result');
+                    var sponsoredElement = getelem('sponsored');
+                    if( targetElement != null && sponsoredElement != null) {
+                        privacy.style.top = (findPos(targetElement)[1] + 20) + 'px';
+                    }
+                    privacy.style.display = 'block';
+					isActive = true;
+					getelem('query_top').blur();
+				}
+				var isActive = false;
+                var isMapDetailActive = false;
+				var privacyTimeoutId, MapDetailTimeoutId;
+				function checkAndHidePrivacy() {
+					if(!isActive) {
+						getelem('query_top').focus();
+                        getelem('privacy').style.display = 'none';
+                        isActive = false;
+					}
+				}
+				function checkAndHideMapDetail() {
+					if(!isMapDetailActive) {
+                        getelem('map-detail').style.display = 'none';
+                        isMapDetailActive = false;
+					}
+				}
+
+				function hidePrivacy() { isActive = false; privacyTimeoutId = setTimeout('checkAndHidePrivacy()', 400); }
+				function hidePrivacy2() { isActive = false; privacyTimeoutId = setTimeout('checkAndHidePrivacy()', 10); }
+				function hideMapDetail() { isMapDetailActive = false; MapDetailTimeoutId = setTimeout('checkAndHideMapDetail()', 10); }
+//-->
+</script>
+<script language="javascript" type="text/javascript">
+jQuery(document).ready(function() {if(abp){load_img('https://startpage.com/do/avt?a=5274&g=911&l=english');} else {load_img('https://startpage.com/do/avt?a=5274&g=912&l=english');} });</script><script language="javascript" type="text/javascript" src="https://startpage.com/js/abp.js?adType=1&advertiser=1&advertising=1&changed=1431507563"></script>
+<script language="javascript" type="text/javascript" src="https://startpage.com/js/wz_tooltip.js?changed=1431507569"></script>
+<div id="hide_form" style="visibilty:hidden;"></div>
+<div id='privacy' onmouseover='isActive = true; clearTimeout(privacyTimeoutId); ' onmouseout='hidePrivacy2();'>
+ <a href="javascript:void(0);" class="popup_close"></a>
+ <p class="complete-privacy">Startpage offers you Web search results from Google <b>in complete privacy!</b> </p>
+ <p>When you search with Startpage, we remove all identifying information from your query and submit it anonymously to Google ourselves. We get the results and return them to you in total privacy.</p>
+ <p>Your IP address is never recorded, your visit is not logged, and no tracking cookies are placed on your browser. When it comes to protecting your privacy, Startpage runs the tightest ship on the Internet. Our outstanding privacy policy and thoughtful engineering give you great search results in total anonymity. Here are some of our key features:</p>
+   <div id='col2'>
+      <ul>
+      <li>Free proxy surfing available.</li>
+      <li>Praised by privacy experts worldwide.</li>
+      <li>Fourteen-year company track record.</li>
+      <li>Third-party certified.</li>
+      </ul>
+   </div>
+   <div id='col1'>
+
+      <ul>
+      <li>No IP address recorded.</li>
+      <li>No record is made of your searches.</li>
+      <li>No identifying or tracking cookies used.</li>
+      <li>Connection using powerful SSL encryption.</li>
+      </ul>
+    </div><p style='clear:both;'>To learn more, check out our <a href='https://startpage.com/eng/protect-privacy.html?'>privacy page</a> and read our <a href='https://startpage.com/eng/privacy-policy.html?'>privacy policy</a>. We're confident you'll like what you see.</p>
+</div>
+<div id='map-detail' style='display: none;' onmouseover='isMapDetailActive = true; clearTimeout(MapDetailTimeoutId);'><a href="javascript:void(0);" class="popup_close"></a>
+<p style='font-weight: bold;'>StartPage offers you Map results from Google in complete privacy!</p>
+<p>When you search for a location with StartPage, we get results from Google Maps and serve them to you anonymously. As always, your IP address is not recorded, your visit is not logged, and no tracking cookies are placed on your browser.</p>
+<p>Our map interface allows you to zoom in and out, but because we never link your browser directly to Google, the JavaScript-based scroll and drag features are disabled to protect your privacy.</p></div>
+<div id="loadingId"></div>
+</body></html>

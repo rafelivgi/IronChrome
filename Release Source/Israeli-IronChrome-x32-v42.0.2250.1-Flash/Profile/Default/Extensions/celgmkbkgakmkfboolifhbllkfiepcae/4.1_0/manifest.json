@@ -1,0 +1,47 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon19.png",
+      "default_popup": "search.html",
+      "default_title": "Script Defender"
+   },
+   "commands": {
+      "myCommandSDCtrlQ": {
+         "description": "Send Command event",
+         "suggested_key": {
+            "default": "Alt+V"
+         }
+      },
+      "myCommandSDCtrlShiftQ": {
+         "description": "Send Command event",
+         "suggested_key": {
+            "default": "Alt+B"
+         }
+      }
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "contentscript.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self'; object-src 'self'",
+   "description": "This extension allows JavaScript, Flash, Silverlight, and Java execution only for trusted domains of your choice.",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmwrC3SmwMG+fSirYCub5BEva/IIBboO7wTUyqLaKCjj2wHC8cRVQiMm0NeOZliNvTeOgFfcic6lmcKTYUePrwpQjulSCPn81LF9FYcv4s5Q2yr3iSv628eCaJeUzMnDAzbUXsk9HgeGEC1sdIFpKSJspuoLAQYNw7Wjpw8kSyIs+/rJRG19+24halpROVVVI6qAPVPJJ+vR6uHwQcv1dZT0pkNh4oYrp+iL9QkEUdL0d9p5MPlXX1nEf6TUp2JuILpSCCyx+PAjzJG7xHGMWIohmCjWHfnAQzQYjNlgx9V2SG6KRjzFt+bu/DXo7D7OVRsrwx98HcpI4bFrpICqF6wIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "22",
+   "name": "Script Defender",
+   "options_page": "options.html",
+   "permissions": [ "contentSettings", "contextMenus", "tabs", "management", "unlimitedStorage", "storage", "webRequest", "webRequestBlocking", "webNavigation", "http://*/*", "https://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "4.1"
+}

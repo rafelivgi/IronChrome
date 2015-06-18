@@ -1,0 +1,13 @@
+2015/06/17-12:31:02.680 9724 Reusing MANIFEST J:\Israeli_IronChrome\Package\Israeli-IronChrome-x32-v42.0.2250.1-Flash\Profile\Default\GCM Store/MANIFEST-000001
+2015/06/17-12:31:02.680 9724 Recovering log #20
+2015/06/17-12:31:02.706 9724 Level-0 table #22: started
+2015/06/17-12:31:02.772 9724 Level-0 table #22: 171 bytes OK
+2015/06/17-12:31:02.785 9724 Delete type=0 #20
+2015/06/17-12:31:02.975 9464 Compacting 4@0 + 0@1 files
+2015/06/17-12:31:02.989 9464 Generated table #24: 10 keys, 1079 bytes
+2015/06/17-12:31:02.989 9464 Compacted 4@0 + 0@1 files => 1079 bytes
+2015/06/17-12:31:03.063 9464 compacted to: files[ 0 1 0 0 0 0 0 ]
+2015/06/17-12:31:03.082 9464 Delete type=2 #3
+2015/06/17-12:31:03.210 9464 Delete type=2 #15
+2015/06/17-12:31:03.222 9464 Delete type=2 #19
+2015/06/17-12:31:03.274 9464 Delete type=2 #22

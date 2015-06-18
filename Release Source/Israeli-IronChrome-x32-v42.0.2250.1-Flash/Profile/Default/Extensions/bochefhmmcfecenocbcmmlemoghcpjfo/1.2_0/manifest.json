@@ -1,0 +1,21 @@
+{
+   "background": {
+      "page": "bg.html"
+   },
+   "browser_action": {
+      "default_icon": "logo-16.png",
+      "default_popup": "popup.html",
+      "default_title": "Israeli IronChrome - VirusTotal LinkScanner"
+   },
+   "description": "Automatically scan any link *Anonymously* in http://www.virustotal.com",
+   "icons": {
+      "128": "logo-128.png",
+      "16": "logo-16.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt1h/cl9yj7si07iJMtK+cj6BlfFeiYxiXgwW1XoK713yKTxTlm8NiuaMlqqnHHYTy3F0sk2BcR35u5nCXN/3oCKd2LGKzehfmKxXhvR1G/A13ZOgqM6WyyCN/TWnwEeWN1xvqMawgSbob4vKA/s9wUOjyZY3kTeUs5NyJhbzCIgx2XzUfRP9PBITC+fCcLuqXgjl92gTd7DCU3LmxymNAZ7H9X0iEpPBIZW2wfG14GR4SOIw/iLPAggaobsPk73WTTGKR7d+neSQJ8qhlttIv+Sd3WWfemRHg19BhS4iHVqThn6jDAf2hBgmtlrSkBml9e+yTW1G+NvbGp3KFvRRlwIDAQAB",
+   "manifest_version": 2,
+   "name": "Israeli IronChrome - VirusTotal LinkScanner",
+   "permissions": [ "tabs", "http://*/*", "https://*/*", "notifications", "contextMenus", "background", "proxy" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.2"
+}

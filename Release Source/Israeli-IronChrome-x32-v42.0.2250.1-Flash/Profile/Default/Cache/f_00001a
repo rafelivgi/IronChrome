@@ -1,0 +1,600 @@
+<!DOCTYPE HTML>
+<HTML lang="en">
+<HEAD><base href="https://startpage.com/" />
+<TITLE>upload chrome extension - Startpage Web Search</TITLE><META HTTP-EQUIV=Content-Language CONTENT=en>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<META name="ROBOTS" content="NOINDEX">
+<LINK REL="SHORTCUT ICON" HREF="https://startpage.com/favicon.ico">
+<script language="javascript" type="text/javascript" src="https://startpage.com/js/jquery-1.8.0.min.js?changed=1431507511"></script>
+<!--[if lt IE 9]> 
+			    <script language="javascript" type="text/javascript" src="https://startpage.com/js/es5-sim-sham.min.js?changed=1431507487"></script>
+		<![endif]-->
+<script language="javascript" type="text/javascript" src="https://startpage.com/js/calculator_new.js?changed=1431507493"></script>
+<script language="javascript" type="text/javascript" src="https://startpage.com/js/util.js?changed=1431507499"></script>
+<script language="javascript" type="text/javascript" src="https://startpage.com/js/imagesloaded.js?changed=1431507484"></script>
+<script language="javascript" type="text/javascript" src="https://startpage.com/js/math.min.js?changed=1431507501"></script>
+<script language="javascript" type="text/javascript" src="https://startpage.com/js/readint.min.js?changed=1431507495"></script>
+<script language="javascript" type="text/javascript" src="https://startpage.com/js/resize.js?changed=1431507491"></script>
+<script language="javascript" type="text/javascript" src="https://startpage.com/js/swfobject.js?changed=1431507512"></script>
+<script language="javascript" type="text/javascript" src="https://startpage.com/js/image_helper_new.js?changed=1431507500"></script>
+<script language="javascript" type="text/javascript" src="https://startpage.com/js/ccspacer.js?w=m" id="ccspacer_incl"></script>
+<link href="https://startpage.com/css/new_ixquick_result_page.css?changed=1431507522" type="text/css" rel="StyleSheet" />
+<link href="https://startpage.com/css/ixquick_result_page_non_asian.css?changed=1431507523" type="text/css" rel="StyleSheet" />
+<SCRIPT LANGUAGE=JAVASCRIPT> if (jQuery.browser.msie && jQuery.browser.version.substr(0,1)<7) { try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {} } function getelem (i) { if (typeof document.getElementById == "undefined") { return document.all[i]; } else { return document.getElementById(i); } } function show_img (i_ob) { i_ob.style.visibility = 'visible'; } function show (ob) { ob.style.display = ''; } function hide (ob) { ob.style.display = 'none'; } function changeimage(id, url) { var imgname = document.getElementById(id); imgname.src = url; } var allCats = new Array('web','pics','video','phone'); function setCat(catr, obj) { document.blah1.cat.value = catr; for(var i = 0; i < allCats.length; i++) { if (getelem(allCats[i])) { removeClass(getelem(allCats[i]), 'active'); } } addClass(getelem(catr), 'active'); } function hasClass(ele,cls) { return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)')); } function addClass(ele,cls) { if (!this.hasClass(ele,cls)) ele.className += " "+cls; } function removeClass(ele,cls) { if (hasClass(ele,cls)) { var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)'); ele.className=ele.className.replace(reg,' '); } } function click_sponsored (event, lobj, curl) { var left_click=0; var middle_click=0; var right_click=0; var isMSIE=0; if (navigator.userAgent.indexOf('MSIE') != 0) {isMSIE=1;} if (!event) var event = window.event; if ( (event.which && event.which == 1) || (event.button && !isMSIE && event.button == 0) || (event.button && isMSIE && event.button == 1) ) {left_click=1;} if ( (event.which && event.which == 2) || (event.button && !isMSIE && event.button == 1) || (event.button && isMSIE && event.button == 4) ) {middle_click=1;} if ( (event.which && event.which == 3) || (event.button && event.button == 2) ) {right_click=1;} if ((left_click==1) || (middle_click==1) || (right_click==1)) { lobj.href = curl; } } function fadeOutNewLook() { jQuery('#new_look').animate({opacity: 0}, 1500, function() { jQuery('#new_look, #new_look a').click(function () { return false; }).css('cursor','default').removeAttr("onclick"); }); jQuery('#promo_box').animate({opacity: 0}, 1500, function() { jQuery('#promo_box, #promo_box a').click(function () { return false; }).css('cursor','default').removeAttr("onclick"); }); } function setResultWidth() { jQuery('.result').css('width', '80%'); jQuery('#promo_box').replaceWith('<div id="promo_box_replaced"><img src="https://startpage.com/graphics/spacer.gif" width="280" height="80" style="_height:45px;"></div>'); } function adjustUrlsForAbp (value) { var time_urls = jQuery('#by_time a'); for (var i = 0; i < time_urls.length; i++) { time_urls[i].href = updateURLParameter(time_urls[i].href, 'abp', value); } time_urls = jQuery('.location_filter a');; for (var i = 0; i < time_urls.length; i++) { time_urls[i].href = updateURLParameter(time_urls[i].href, 'abp', value); } if (jQuery('a.sugg').attr('href')) { jQuery('a.sugg').attr('href', updateURLParameter(jQuery('a.sugg').attr('href'), 'abp', value)); } } function updateURLParameter(url, param, paramVal){ var newAdditionalURL = ''; var tempArray = url.split('?'); var baseURL = tempArray[0]; var additionalURL = tempArray[1]; var temp = ''; if (additionalURL) { tempArray = additionalURL.split('&'); for (i=0; i<tempArray.length; i++){ if(tempArray[i].split('=')[0] != param){ newAdditionalURL += temp + tempArray[i]; temp = '&'; } } } var rows_txt = temp + "" + param + "=" + paramVal; return baseURL + "?" + newAdditionalURL + rows_txt; } jQuery(document).ready(function() { setTimeout(function() { jQuery("#fade_date_promo").fadeOut(1000); }, 15000); jQuery('#promo_box').fadeIn(1000); jQuery('#new_look').fadeIn(1000); jQuery('#ix_promo_box').fadeIn(1000); setTimeout('fadeOutNewLook()', 9000); if(abp) {jQuery('.abp').val('1');adjustUrlsForAbp('1');} else {jQuery('.abp').val('-1');adjustUrlsForAbp('-1');} jQuery('#search_engines ul li a').click(function() { var inp = jQuery(this).find('input'); if(jQuery(inp).attr('checked')) { jQuery(inp).attr('checked', false); jQuery(this).removeClass('selected'); } else { jQuery(inp).attr('checked', true); jQuery(this).addClass('selected'); } return false; }); jQuery('#vsearch_engines ul li a').click(function() { var inp = jQuery(this).find('input'); jQuery('#vsearch_engines input').attr('checked', false); jQuery(inp).attr('checked', true); jQuery('#vsearch_engines a').removeClass('selected'); jQuery(this).addClass('selected'); jQuery('#results_header form').submit(); return false; }); jQuery('#detail').show(); var is_visible = true; jQuery("#show_hide").click(function(event) { is_visible = !is_visible; jQuery('#side_bar').toggle(); jQuery('#results_content').toggleClass('hide_side_bar'); jQuery("#msg_div").css( 'display', (is_visible) ? 'none' : 'block'); setTimeout(function() { jQuery("#msg_div").fadeOut(500); }, 5000); jQuery("#msg_div").click(function() { jQuery("#msg_div").fadeOut(500); }); return false; }); }); function rc (result_number) { getelem('title_' + result_number).style.color = '#763B75'; } function eh (e_ob, fg, enginename) { var sp_el = document.createElement('span'); if (document.blah1.elements[enginename].value != '') { if (fg == 1) { sp_el.innerHTML = 'Click to disable this search engine for your next search'; e_ob.title = sp_el.innerHTML; e_ob.style.color = '#4585e7';} else {e_ob.style.color = '#140b74';} } else { if (fg == 1) { sp_el.innerHTML = 'Click to enable this search engine for your next search'; e_ob.title = sp_el.innerHTML; e_ob.style.color = '#140b74'; } else {e_ob.style.color = '#4585e7';} } } function vch (e_ob, fg, enginename) { if (document.blah1.elements[enginename].value != '') { if (fg == 1) { e_ob.style.color = '#4585e7';} else {e_ob.style.color = '#140b74';} } else { if (fg == 1) { e_ob.style.color = '#140b74'; } else {e_ob.style.color = '#4585e7';} } } function vd_s (form_obj, enginename, engine) { for (i = 0; i < form_obj.elements.length; i++) { elem = form_obj.elements[i].name; if (elem.indexOf('engine') != -1) { form_obj.elements[elem].value = ''; } } form_obj.elements[enginename].value = engine; if (form_obj.elements['query'].value != '') { form_obj.submit(); } } function serveBookmarkedQuery(){ if (document.forms["blah1"].query.value == '') { var loc = window.location.href; if(loc.match(/(.*?)#q=(.*?)(&|$)(.*?)$/g)){ var resubmit_query = RegExp.$2 ; resubmit_query = resubmit_query.replace(/\+/g, ' '); resubmit_query = unescape(resubmit_query); document.getElementById('query_top').value = resubmit_query; document.forms["blah1"].action = loc; document.forms["blah1"].submit(); } } } function addQueryToUrl () { if (window.location.href.indexOf('#q=') == -1) { window.location.href += '#q=' + 'upload+chrome+extension'; } } function bookmarkUrl(title, url){ if (window.sidebar) window.sidebar.addPanel(title, url, ""); else if(window.opera && window.print){ var elem = document.createElement('a'); elem.setAttribute('href',url); elem.setAttribute('title',title); elem.setAttribute('rel','sidebar'); elem.click(); } else if(document.all) window.external.AddFavorite(url, title); } function bookmarkTip(tiptext){ document.getElementById('bookmark_tip').style.display = 'block'; jQuery('#bookmark_tip_text').html(tiptext); document.getElementById('loadingId').style.display = 'block'; } function te (enginename, engine, instance, wp) { var formname = 'blah' + instance; var imagename = instance + engine; if (document[formname].elements[enginename].value != '') { document[formname].elements[enginename].value = ''; document[imagename].src = 'https://startpage.com/graphics/radio_res_U.gif'; if (wp == 'image') { getelem(imagename + '_span').style.color = '#4585E7'; } else { getelem(imagename + '_span').style.color = '#140B74'; } } else { document[formname].elements[enginename].value = engine; document[imagename].src = 'https://startpage.com/graphics/radio_res_C.gif'; if (wp == 'image') { getelem(imagename + '_span').style.color = '#140B74'; } else { getelem(imagename + '_span').style.color = '#4585E7'; } } } function changeImages() { if (document.images) { var selected = ""; if (typeof document.blah2 == 'undefined') { var catpos = changeImages.arguments[0].indexOf("_"); if (catpos != -1) { changeImages.arguments[0] = changeImages.arguments[0].substring(0,catpos); } } for (var i=0; i<changeImages.arguments.length; i+=2) { document[changeImages.arguments[i]].src = changeImages.arguments[i+1]; var intext = changeImages.arguments[i] + "_span"; getelem(intext).style.color = "#140B74"; var id=changeImages.arguments[i].indexOf("_"); if (id != -1){ changeImages.arguments[i] = changeImages.arguments[i].substring(0,id); } if (typeof document.blah1 != 'undefined') { document.blah1.cat.value=changeImages.arguments[i]; } if (typeof document.blah2 != 'undefined') { document.blah2.cat.value=changeImages.arguments[i]; } } } } function change (image_id, image_url) { getelem(image_id).src = image_url; return true; } function verifyChecked (form_obj) { var formname = form_obj.name; var orig_query = document[formname].query.value; if (orig_query == "") { return false; } form_obj.submit(); return false; } function passQueryAdv(url) { if (url.indexOf('?') == -1) { url += '?'; } url += "&cat=" + document.blah1.cat.value; var orig_query = document.blah1.query.value; url += "&query=" + escape(orig_query); document.getElementById('xsearch').href = url; } function maincats (ct) { uncheckall('web', 'phone', 'video', 'pics'); if ((ct == 'video') && (document.blah1.cat.value != 'video')) { for (i = 0; i < document.blah1.elements.length; i++) { elem_name = document.blah1.elements[i].name; if (elem_name.indexOf('engine') != -1) { document.blah1.elements[i].value = ''; } } } changeImages(ct, 'https://startpage.com/graphics/radio_res_C.gif'); } function cho (c_ob, fg, ct) { if (fg == 1) { c_ob.style.color = '#140b73'; window.status=''; return true; } else { if (document.blah1.cat.value != ct) { c_ob.style.color = '#4585E7'; } else { c_ob.style.color = '#140b73'; } } } function uncheckall() { var selected = ""; var intext = ""; for (var i=0; i<uncheckall.arguments.length; i+=1) { document[uncheckall.arguments[i]].src="https://startpage.com/graphics/radio_res_U.gif"; intext = uncheckall.arguments[i] + "_span"; getelem(intext).style.color = "#4585E7"; } } function ws () { window.status = ''; } function tc (t_ob) { t_ob.style.color = '#763B75'; } function changeIxquickStarRatingImage(start, end, changeOnColor, newImageSrc, theme) { if (theme != 'white') { return false; } for (var i=start;i<=end;i++) { if (document.getElementById('title_'+i) && document.getElementById('title_stars_'+i) ) { var current_color = getStyle('title_'+i, 'color'); if ( current_color.indexOf('#') == -1 ) { current_color = rgbConvert(current_color); } if ( current_color == changeOnColor || current_color == changeOnColor.toLowerCase() ) { var baseTag = document.getElementById("title_stars_"+i); var documentTag = baseTag.getElementsByTagName("img"); for (var j = 0; j < documentTag.length; j++) { if (documentTag[j].src.indexOf('s/white/graphics') != -1) { documentTag[j].src = newImageSrc; } } } } } return false; } function getStyle(el,styleProp) { var x = document.getElementById(el); if (x.currentStyle) var y = x.currentStyle[styleProp]; else if (window.getComputedStyle) var y = document.defaultView.getComputedStyle(x,null).getPropertyValue(styleProp); return y; } function rgbConvert(str) { str = str.replace('rgb', '').replace('(' , '').replace(')' , ''); str = str.split(','); str[0] = parseInt(str[0], 10).toString(16).toLowerCase(); str[1] = parseInt(str[1], 10).toString(16).toLowerCase(); str[2] = parseInt(str[2], 10).toString(16).toLowerCase(); str[0] = (str[0].length == 1) ? '0' + str[0] : str[0]; str[1] = (str[1].length == 1) ? '0' + str[1] : str[1]; str[2] = (str[2].length == 1) ? '0' + str[2] : str[2]; return ('#' + str.join("")); } function newImage(arg) { if (document.images) { rslt = new Image(); rslt.src = arg; return rslt; } } function openResult(imgurl, url, where) { var reg = /result?/; if (reg.test(imgurl)) { var t_url = imgurl + "&j=js&anticache=" + Math.floor(Math.random()*1000001); newImage(t_url); }; reg = /\/highlight.pl?/; if (imgurl == url) { return true; } else if (reg.test(url)) { return true; } where = where.toLowerCase(); if (where == '_blank') { window.open(url); } else { location.href = url; }; return false; } function certifiedsecure() { day = new Date(); id = day.getTime(); eval("page" + id + " = window.open('http://www.certifiedsecure.nl/certificates/52771bfa615370cb7a6a9c31385086a8/', '" + id + "', 'toolbar=0,location=0,statusbar=0,scrollbars=1,menubar=0,resizable=0,width=580,height=515');"); } var preloadFlag = false; function load_img (img_url) {if (document.images) {var dt = new Date(); var arbit_num = dt.getTime();img_url += '&anticache=' + arbit_num + '&/filename.gif';var i_ob = new Image(); i_ob.src = img_url;}; return true;} function preloadImages() { if (document.images) { on = newImage('https://startpage.com/graphics/radio_res_U.gif'); off = newImage('https://startpage.com/graphics/radio_res_C.gif'); pl1 = newImage('https://startpage.com/graphics/eng/plugin_promo_ff.gif'); pl2 = newImage('https://startpage.com/graphics/eng/plugin_promo_ff_hov.gif'); pl3 = newImage('https://startpage.com/graphics/eng/plugin_promo_ie.gif'); pl4 = newImage('https://startpage.com/graphics/eng/plugin_promo_ie_hov.gif'); a1 = newImage('https://startpage.com/graphics/eng/protects_privacy.gif'); a2 = newImage('https://startpage.com/graphics/eng/protects_privacy_hov.gif'); n1 = newImage('https://startpage.com/graphics/eng/certified_secure_results.gif'); seal = newImage('https://startpage.com/graphics/eng/privacy_seal_result.gif'); seal_h = newImage('https://startpage.com/graphics/eng/privacy_seal_result_hover.gif'); preloadFlag = true; } } preloadImages(); function bg_hover(id, imgp_url) { document.getElementById(id).style.backgroundImage = "url(" + imgp_url + ")"; } var abp=true; jQuery(document).ready(function() {if (jQuery.browser.mozilla) {jQuery('#results_content').append('<div id="bookmark_tip"><p class="closeArea"><a id="closeAreaId" style="text-decoration : none;" onclick="changeLoadingIDDisplay()" href="#">x</a></p><p id="bookmark_tip_text">Your bookmark will be opening in the sidebar by default.<br> This can be changed easily by adjusting the properties for this bookmark - uncheck "Load this bookmark in the sidebar". You can locate this after expanding the bottom section in the bookmark details dialog box. </p></div>');jQuery("#bookmark_tip").click( function() {jQuery("#bookmark_tip").hide();document.getElementById("loadingId").style.display = "none";return false;});}if(jQuery.browser.msie){jQuery("#bookmark_tip").click(function() {jQuery("#bookmark_tip").hide();document.getElementById("loadingId").style.display = "none";return false;});}});function changeLoadingIDDisplay() { document.getElementById("bookmark_tip").style.display = "none"; document.getElementById("loadingId").style.display = "none"; return false; }function firefox_bookmark(title,url) {jQuery("#bookmark_tip").show();document.getElementById('loadingId').style.display = 'block'; if(jQuery.browser.mozilla){setTimeout(function() { jQuery("#bookmark_tip").fadeOut(500); document.getElementById("loadingId").style.display = "none";}, 30000);}bookmarkUrl(title, url);if(jQuery.browser.msie){document.getElementById("loadingId").style.display = "none";}}</SCRIPT> </HEAD><BODY  >
+<!--[if IE 7]>
+                <style type=text/css>
+                #results_header {margin-bottom:-16px;}
+               #search input#submit1 {margin-top:3px;}
+                  input#submit1 {margin-left:14px;}
+                </style>
+                <![endif]-->
+               <!--[if IE 8]><style>div.ac_results { margin-left : 0px; margin-right: 14px;}</style><![endif]-->
+               <!-- whichserver: https://s6-eu5.startpage.com/do/--><!-- Loading Time: 0.00061 seconds --> <div id='head'>
+    <table cellspacing=1 cellpadding=1><tr><td><img src='graphics/spacer.gif' width=10 height=1></td></tr></table>
+<table width=100%>
+    <tr><td align='left' nowrap='nowrap' >
+    <div id='head_left'>
+<a href="#" id='web' class='active'>Web</a> &nbsp;&nbsp; <a href="https://startpage.com/do/metasearch.pl?cat=pics&cmd=process_search&language=english&query=upload+chrome+extension&ff=" id='pics' onClick="setCat('pics', this); verifyChecked(document.blah1); return false;">Images</a> &nbsp;&nbsp; <a href="https://startpage.com/do/metasearch.pl?cat=video&cmd=process_search&language=english&query=upload+chrome+extension&ff=" id='video' onClick="setCat('video', this); verifyChecked(document.blah1); return false;">Videos</a> &nbsp;&nbsp; 
+    </div>
+    </td>
+    <td width="260"><img src='graphics/spacer.gif' width=260 height=10></td>
+    <td align='right' nowrap='nowrap'>
+    <a href='https://startpage.com/eng/advanced-search.html?' id='xsearch' onMouseOver="passQueryAdv('https://startpage.com/eng/advanced-search.html?');">Advanced Search</a> &nbsp;&nbsp; <a href="https://startpage.com/do/preferences.pl?language_ui=english&cat=web&query=upload+chrome+extension" title="Customize Startpage to your own taste" >Settings</a>
+    </td></tr>
+</table>
+</div>
+	<div id='results_header'>
+	<div id='logo' class='f-l'>
+	<a href='https://startpage.com/eng/?'><img src='graphics/startpage_logo_res.gif' width='154' height='103' border='0' /></a>
+	</div>
+	<form action="https://startpage.com/do/metasearch.pl?" autocomplete="off" method="POST" name="blah1" id="search_form" onSubmit="return verifyChecked(this);" >
+
+	<div id='search'>
+	<table cellspacing="0" cellpadding="0" border="0">
+	<tbody><tr>
+	<td id='input_p' width="100%"><!--[if IE 7]><div style="position:relative; width:300px; height:0;"></div><![endif]-->
+    <input type=hidden name=cmd value="process_search">
+<input type=hidden name=language value="english"><input type=hidden name=enginecount value="1"><input type=hidden name=pl value="chrome"><input type="hidden" name="abp" class='abp' value="-1" />
+<input type=hidden name=ff value=""><input type=hidden name=theme value=""> <input type=hidden id=flag_ac1 name=flag_ac value="0"><input name="cat" type=hidden value="web">
+	<input type='text' autocomplete='off' name='query' id='query_top' value="upload chrome extension" onChange="result();adjust_privacy_div();" onKeyDown="result();adjust_privacy_div();">
+	</td>
+	<td>
+	<input type='image' src='graphics/stp_search.gif' id='submit1' title='Startpage Web Search'/>
+	</td>
+	<td><div id='enhanced'>enhanced by<br><img height='20' width='57' src='graphics/google-results.gif'></div></td>
+	<td><a id='detail' href='javascript:void(0);' onmouseover='if (getelem("popupbox")) { if (getelem("popupbox").style.display != "block") {showPrivacy();}} else {showPrivacy();}' onmouseout='hidePrivacy();' style='display:none;'>Details</a></td>
+	<td><noscript><img src='https://startpage.com/do/avt?a=5285&g=939&l=english&anticache=1843135&/filename.gif' width=1 height=1></noscript></td>
+	</tr>
+	<tr>
+        <td>
+        <div id='maths_results' class='result none' style="width : auto;word-break: break-all; max-width: 620px; min-height : 40px; border: 1px solid #CCCCFF; -moz-border-radius: 8px ; -webkit-border-radius:8px; border-radius: 8px 8px 8px 8px; color: #0E5398; margin-right: -14px; _margin-right: 0; margin-top: 4px; padding: 10px 0px 10px 10px; overflow: auto; outline: medium none; text-align: left; position: relative;line-height:23px;background: #FFF;">
+
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                
+                <tr>
+                    <td colspan="2" style="padding-right:10px; padding-left: 5px;padding-top: 5px;">
+                        <span id="maths_results_span" style="width:100%;word-break:break-all;">
+                            <span id='maths_expression'></span>
+                            <span id='maths_final_result'></span>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        </td>
+        <script> result(); load_img('https://startpage.com/do/avt?a=5285&g=938&l=english');
+	</script>
+        </tr>	
+    <tr>
+    <td>
+    <div id="flight_status" class="result none" style="width: 100%; height : 140px; background: url(graphics/enhanced_bg.gif) repeat-x scroll 0 30px #FFFFFF; border: 1px solid #CCCCFF; -moz-border-radius: 8px ; -webkit-border-radius:8px; border-radius: 8px 8px 8px 8px; color: #0E5398; margin-right: -14px; _margin-right: 0; margin-top: 4px; padding: 10px 0 0 10px; overflow: auto; outline: medium none; text-align: left; position: relative; font-size:13px;"></div>
+    <div id="flight_registration" class="result none" style="width: 100%; height: 142px; background: url(graphics/enhanced_bg.gif) repeat-x scroll 0 30px #FFFFFF; border: 1px solid #CCCCFF; -moz-border-radius: 8px ; -webkit-border-radius:8px; border-radius: 8px 8px 8px 8px; color: #0E5398; margin-right: -14px; _margin-right: 0; margin-top: 4px; padding: 10px 0 0 10px; overflow: auto; outline: medium none; text-align: left; position: relative; font-size:13px;"></div>
+    </td>
+    </tr>
+
+	</tbody>
+	</table>
+	</div>
+	</form>
+</div>
+
+<style type='text/css'>
+#sponsored_container ol {list-style: none;padding-left: 0;} #results ol {padding-left: 0; list-style: none;margin: 0;}#results_count_p {*margin-bottom: 16px; *margin-left: 220px; *margin-top: 0px !important; _margin-top: 5px !important;}
+#side_bar {margin-top:8px; *margin-top:25px; _margin-top:20px;}
+div.hide_side_bar #tod_wrap {_margin-left:189px;}
+#bookmark_tip{ background-color: #F7F9FF; border: 1px solid #e4e4e4 !important; left: 50%; margin-left:-300px; position: absolute; top: 149px; width: 530px; z-index: 9; display : none;right: 5px; }
+#bookmark_tip p#bookmark_tip_text{border: 2px solid #BCD3F5;}
+.closeArea{ float: right; font-size: 12px; height: 19px; line-height: 16px; margin: 0; padding: 3px 4px 5px 7px !important; width: 14px; padding : 5px; }
+.closeArea a{ color: #FFFFFF;font-family: tahoma;font-size: 18px;font-weight: bold;text-decoration: none !important; display:block; cursor:pointer;}
+#loadingId{ background:#777; opacity:.4; filter:alpha(opacity=40); display:none; position:fixed; z-index:8; left:0; top:0; bottom:0; right:0}
+</style>
+
+<!--RID=NCLONLQLPSSQ109LPRKUE-->
+<script language="javascript">
+e_urls = new Array();
+var c = 0;
+
+function eu (fg, target) { // eu->engine url
+    var u = e_urls[fg-1];
+    if (target !== '') {
+        c++;
+        window.open(u, 'wn'+c, '');
+    } else {
+        location.href = u;
+    }
+    return false;
+}
+var proxyu; // proxy url
+
+function mysubmit (myID) {
+    if (document.pnform && document.pnform.startat) {
+        document.pnform.startat.value = myID;
+        document.pnform.submit();
+    }
+}
+
+function set_tip_width(hover_text, width) {
+    var agentname = navigator.userAgent;
+    if ((agentname.indexOf('Mac') != -1) && (agentname.toLowerCase().indexOf('firefox') != -1)) {
+        Tip(hover_text, WIDTH, width);
+    } else {
+        Tip(hover_text);
+    }
+}
+</script>
+<!-- ELAPSED TIME 1402.93896484375 millisec. --><script>
+	    var privacyDivEvent;
+            function adjust_privacy_div () {
+		if(privacyDivEvent) {
+		    window.clearTimeout(privacyDivEvent);
+		}
+		privacyDivEvent = window.setTimeout ( function () {
+		    if($('#privacy').css('display') == 'block') {
+			$('#privacy').css('display','none');  
+			showPrivacy();
+			$('#query_top').focus();
+		    }
+		},400);
+	    }
+	    </script>
+<div id='results_content'>
+<p id='results_count_p'>About 1,129,589 results (0.31 seconds)<span></span><img src="https://startpage.com/do/showimage?t=metasearch&l=english&anticache=188905" border=0 width=1 height=1>
+<img src="https://startpage.com/do/avt?a=5276&g=920&l=english&anticache=700657&/filename.gif" border=0 width=1 height=1><img src="https://startpage.com/english/web/?anticache=216506" border=0 width=1 height=1>
+<img src="https://startpage.com/tst2/english/?anticache=417323" border=0 width=1 height=1>
+<span id="news_message_content" class="new_design">StartPage&#8217;s new look is coming soon. <a id="news_message_1_link" class="news" href="https://new.startpage.com/eng/" target="_blank" style="text-decoration: underline;">Preview it here</a>.</span><style>
+                .new_design{ padding: 5px 10px; color: #1261e4; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 5px; outline: medium none; display: inline-block; margin: 4px auto; border: 1px solid #ccf; background-color: #fff; font-size: 13px; background: url('https://startpage.com/graphics/enhanced_bg.gif') repeat-x 0 0px #fff; text-align: center; position: absolute; right: 5px; margin: 5px 0; margin-top: 0px; }
+                .new_design  a{ text-decoration: underline; color:#1261e4; }@media screen and (max-width: 790px){ .new_design { display:none;} }</style></p><!-- 23712 Bookmark - Div : Start -->
+<div id='bookmark_tip'>
+<p class="closeArea">
+<a id="closeAreaId" style='text-decoration : none;' onclick='document.getElementById("bookmark_tip").style.display = "none"; document.getElementById("loadingId").style.display = "none"; return false;' >x</a></p>
+<p id='bookmark_tip_text' style='padding : 10px; margin : 0;'></p>
+</div>
+ <!-- Bookmark - Div : End -->
+<div id='tip'>
+<div id='tod_wrap'>
+<table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td valign="top">
+<a target="_blank" href="https://startpage.com/eng/top-ten-ways-startpage.html?" onclick="window.open(this.href, '', 'resizable=no,scrollbars=yes,height=970,width=950'); return false;" class="tod">Click here to learn the top 10 ways StartPage protects your privacy.</a></td>
+<td valign="top" align="right"><a href="javascript:void(0);" class='bookmark' onclick="bookmarkTip('Please copy the following URL and store it as a bookmark.<br><br><div style=\'padding-bottom:3px; overflow:auto; white-space:nowrap;\'><b>https://startpage.com/do/search?q=upload+chrome+extension</b></div>');return false;">Bookmark this search</a></td></tr></table>
+</div>
+</div>
+<div id='show_hide' class='show_side_bar'><span></span></div>
+<div id='side_bar' class='f-l'>
+<ul id='by_time'>
+<li><a href='https://startpage.com/do/metasearch.pl?cmd=process_search&query=upload+chrome+extension&language=english&cat=web&with_language=&with_region=&pl=chrome&ff=&rl=&abp=-1' class='active'>Any time</a></li>
+<li><a href='https://startpage.com/do/metasearch.pl?cmd=process_search&query=upload+chrome+extension&language=english&cat=web&with_language=&with_region=&pl=chrome&ff=&rl=&abp=-1&with_date=d' class='no-date'>Past 24 hours</a></li>
+<li><a href='https://startpage.com/do/metasearch.pl?cmd=process_search&query=upload+chrome+extension&language=english&cat=web&with_language=&with_region=&pl=chrome&ff=&rl=&abp=-1&with_date=w' class='no-date'>Past week</a></li>
+<li><a href='https://startpage.com/do/metasearch.pl?cmd=process_search&query=upload+chrome+extension&language=english&cat=web&with_language=&with_region=&pl=chrome&ff=&rl=&abp=-1&with_date=m' class='no-date'>Past month</a></li>
+<li><a href='https://startpage.com/do/metasearch.pl?cmd=process_search&query=upload+chrome+extension&language=english&cat=web&with_language=&with_region=&pl=chrome&ff=&rl=&abp=-1&with_date=y' class='no-date'>Past year</a></li>
+</ul>
+</div>
+<div id='results' class='show_side_bar' style='*position:relative'>
+<div style='padding-bottom:24px;'></div><ol> <li><div class='result' id='first-result' style='width: 80%; *width : auto; *margin-right : 10%; *padding-right: 10px;'>
+<h3><a href='https://chrome.google.com/webstore/developer/dashboard' id='title_1' name='title_1'  onMouseOver="window.status='https://chrome.google.com/webstore/developer/dashboard'; return true;" onMouseOut="ws('');" onClick="tc(this);  return true;"><b>Chrome</b> Web Store Developer Dashboard - Google</a><span id='title_stars_1' name='title_stars_1'  onMouseOver="Tip('Found by Google');">  </span> </h3>
+<p><span class='url'>https://<b>chrome</b>.google.com/webstore/developer/dashboard</span>  - <A class="proxy" id="proxy_link" HREF="https://ixquick-proxy.com/do/spg/proxy2?ep=566a643558695a454c56596b56675656496c384444684543524451534651704a4d41707246486738486941584b443134514534384c453830566a4d7447694a6644526458503049694d676f49656a4237585273354452596b63535930455255424c446b6f42697075536e7031627855634e54495254444a54425349374a6745775878645a455552444e43354644534244626a425a544530595846395a4b466755557a74735478704a4f6b6c49526d6b5044563561435178504e417859416c705a48315a455855383041793046555577644652675041565132556b7773556b6f534944347058554d334c6c30414646516c41694e4e6144497a47516b2f473145315657743662445530466852494e7a6f324947465045566363483046454c5655675068773048425664484552594b6a5a64556b4d515551594945446f615767344141773157496b395947434953664738575656393566527842416b30335867392f4e46706c417a494f417767704d4563624942644849436b5641335144444478435278774d666c417559475a73496b423954336b4964414a564879684c41674e4f4267593251414146446d46666567646a4c7877385258673d&epile=4q6n41784r5441314q5451784r56387n4s4335725n586o3q&edata=804b68817b438f48e3449cb1409ab604&ek=4r31394565457035534468444s6q776q536r6p674q336p6o596p647n5954632o5657684r5n55564n626o783453566p5449795n4s51794n5266565n56626o6378666r343455575251586n64474r58342o65326p51615374714q6q703758316p5159476p3756587466656o4q3550306458594863334n4634694s457050556r46445n546832596n4169526p6s316245636q51464q3249574n384q33417154546p6q4q464r4o496q343553696s704q6p5234614478385n48672s52487730507n6o7862546o704s476p42506o56784n5478754q43744s4n475n77643335714q534n6754314r4q6379525951547073635870476255356s576r52456647744q627n35484q4535494o6p46525948456o57457054556o5239567n4r3962436o6q516n5253576n70426548517066586o2o546p5275594346795n4439734n6p68384s446p6n59546730514370746655456o53316p794q47704q53546s7n63694n45597n355n51436p59546q5n6665555639615439566448427n626o34774q44416q5033686o4r4777785454524957513q3q&ekdata=25d9ab2fa53d21af6ced8a1ae02e5385" class='proxy' onClick="rc('1');"  onMouseOver="set_tip_width('Opens the search result with basic anonymity<br>Great privacy feature - slightly slower','0');">View by Ixquick Proxy</A>   - <A HREF="https://ixquick-proxy.com/do/spg/highlight.pl?l=english&c=hf&cat=web&q=upload+chrome+extension&rl=NONE&rid=NCLONLQLPSSQ109LPRKUE&hlq=https://startpage.com/do/search&mtcat=web&mtpl=chrome&u=https:%2F%2Fchrome.google.com%2Fwebstore%2Fdeveloper%2Fdashboard" class='proxy' onClick="rc('1'); return true;" onContextmenu="rc('1'); return true;" onMouseOver="Tip('Highlights your search terms<br>on the result page');">Highlight</A>  </p><p class='desc'>Discover great apps, games, extensions and themes for <b style='color:#2D4038'>Chrome</b>. ... One account. All of Google. Sign in to continue to <b style='color:#2D4038'>Chrome</b> Web Store. Email Password</p>
+</div></li>
+ <li><div class='result' style=' *width : auto; *margin-right : 10%;'>
+<h3><a href='https://developer.chrome.com/webstore/publish' id='title_2' name='title_2'  onMouseOver="window.status='https://developer.chrome.com/webstore/publish'; return true;" onMouseOut="ws('');" onClick="tc(this);  return true;">Publishing Your App - Google <b>Chrome</b></a><span id='title_stars_2' name='title_stars_2'  onMouseOver="Tip('Found by Google');">  </span> </h3>
+<p><span class='url'>https://developer.<b>chrome</b>.com/webstore/publish</span>  - <A class="proxy" id="proxy_link" HREF="https://ixquick-proxy.com/do/spg/proxy2?ep=566a643558695a454c56596b56675656496c384444684543524451534651704a4d41707246486738486941584b443134514534384c453830566a4d7447694a6644526458503049694d676f49656a4237585273354452596b63535930455255424c446b6f42697075536e7031627855634e54495254444a54425349374a6745775878645a455552444e43354644534244626a425a544530595846395a4b466755557a74735478704a4f6b6c49526d6b5044563561435178504e417859416c705a48315a455855383041793046555577644652675041565132556b7773565563574b6a386a4130457162316b45417855724347414c4e526c6854693037436c7730524345365433526a4a6746524f69593649537862496c636347456762634156674f7770775445635947556b47667a5a5841526754426c3555463270494441344341774651646b744c447a464c4f4752414668342f6448646e4931674a4e326368446e302f65696734584859355441775255674d445533315556676c414442356341316f4166514e7759446b39646870365469706349676b4e4648704e567751625167516c41317747&epile=4q6n41784r5441314q5451784r56387n4s4335725n586o3q&edata=fa3b91259e6fba627c0958d9798026c6&ek=4r31394565457035534468444s6q776q536r6p674q336p6o596p647n5954632o5657684r5n55564n626o783453566p5449795n4s51794n5266565n56626o6378666r343455575251586n64474r58342o65326p51615374714q6q703758316p5159476p3756587466656o4q3550306458594863334n4634694s457050556r46445n546832596n4169526p6s316245636q51464q3249574n384q33417154546p6q4q464r4o496q343553696s704q6p5234614478385n48672s52487730507n6o7862546o704s476p42506o56784n5478754q43744s4n475n77643335714q534n6754314r4q6379525951547073635870476255356s576r52456647744q627n35484q4535494o6p46525948456o57457054556o5239567n4r3962436o6q516n5253576n70426548517066586o2o546p5275594346795n4439734n6p68384s446p6n59546730514370746655456o53316p794q47704q53546s7n63694n45597n355n51436p59546q5n6665555639615439566448427n626o34774q44416q5033686o4r4777785454524957513q3q&ekdata=6a60fd8391a028ebe3d1f6bc637b04d4" class='proxy' onClick="rc('2');"  onMouseOver="set_tip_width('Opens the search result with basic anonymity<br>Great privacy feature - slightly slower','0');">View by Ixquick Proxy</A>   - <A HREF="https://ixquick-proxy.com/do/spg/highlight.pl?l=english&c=hf&cat=web&q=upload+chrome+extension&rl=NONE&rid=NCLONLQLPSSQ109LPRKUE&hlq=https://startpage.com/do/search&mtcat=web&mtpl=chrome&u=https:%2F%2Fdeveloper.chrome.com%2Fwebstore%2Fpublish" class='proxy' onClick="rc('2'); return true;" onContextmenu="rc('2'); return true;" onMouseOver="Tip('Highlights your search terms<br>on the result page');">Highlight</A>  </p><p class='desc'>Once you <b style='color:#2D4038'>upload</b> your app, the <b style='color:#2D4038'>Chrome</b> Developer Dashboard will remind you if ... If your packaged app or <b style='color:#2D4038'>extension</b> uses Native Client, you can structure your&nbsp;...</p>
+</div></li>
+ <li><div class='result'>
+<h3><a href='https://developer.chrome.com/extensions/packaging' id='title_3' name='title_3'  onMouseOver="window.status='https://developer.chrome.com/extensions/packaging'; return true;" onMouseOut="ws('');" onClick="tc(this);  return true;">Packaging - Google <b>Chrome</b></a><span id='title_stars_3' name='title_stars_3'  onMouseOver="Tip('Found by Google');">  </span> </h3>
+<p><span class='url'>https://developer.<b>chrome</b>.com/<b>extension</b>s/packaging</span>  - <A class="proxy" id="proxy_link" HREF="https://ixquick-proxy.com/do/spg/proxy2?ep=566a643558695a454c56596b56675656496c384444684543524451534651704a4d41707246486738486941584b443134514534384c453830566a4d7447694a6644526458503049694d676f49656a4237585273354452596b63535930455255424c446b6f42697075536e7031627855634e54495254444a54425349374a6745775878645a455552444e43354644534244626a425a544530595846395a4b466755557a74735478704a4f6b6c49526d6b5044563561435178504e417859416c705a48315a455855383041793046555577644652675041565132556b7773565563574b6a386a4130457162316b45417855724347414c4e526c685469307046306f69586a30685254386952554e694b4373774f535561506c3061536c78434930417a5a7768344855455248786f494c575a574155415758413156523277654156304642416f484a68395a524341526253734358786c78656878484152384a4e32386a445830424e69674c486e457a4468706d4d4656414b6d68445141305657783564556c395864514e2b6144426f6645467a473370616377304f5169744b4151464a55465667455564525443565666413d3d&epile=4q6n41784r5441314q5451784r56387n4s4335725n586o3q&edata=bb2c32e7774554c889f7da720d639278&ek=4r31394565457035534468444s6q776q536r6p674q336p6o596p647n5954632o5657684r5n55564n626o783453566p5449795n4s51794n5266565n56626o6378666r343455575251586n64474r58342o65326p51615374714q6q703758316p5159476p3756587466656o4q3550306458594863334n4634694s457050556r46445n546832596n4169526p6s316245636q51464q3249574n384q33417154546p6q4q464r4o496q343553696s704q6p5234614478385n48672s52487730507n6o7862546o704s476p42506o56784n5478754q43744s4n475n77643335714q534n6754314r4q6379525951547073635870476255356s576r52456647744q627n35484q4535494o6p46525948456o57457054556o5239567n4r3962436o6q516n5253576n70426548517066586o2o546p5275594346795n4439734n6p68384s446p6n59546730514370746655456o53316p794q47704q53546s7n63694n45597n355n51436p59546q5n6665555639615439566448427n626o34774q44416q5033686o4r4777785454524957513q3q&ekdata=c94ba34695c5beb00ea5d250f8d48296" class='proxy' onClick="rc('3');"  onMouseOver="set_tip_width('Opens the search result with basic anonymity<br>Great privacy feature - slightly slower','0');">View by Ixquick Proxy</A>   - <A HREF="https://ixquick-proxy.com/do/spg/highlight.pl?l=english&c=hf&cat=web&q=upload+chrome+extension&rl=NONE&rid=NCLONLQLPSSQ109LPRKUE&hlq=https://startpage.com/do/search&mtcat=web&mtpl=chrome&u=https:%2F%2Fdeveloper.chrome.com%2Fextensions%2Fpackaging" class='proxy' onClick="rc('3'); return true;" onContextmenu="rc('3'); return true;" onMouseOver="Tip('Highlights your search terms<br>on the result page');">Highlight</A>  </p><p class='desc'>Creating a package; Updating a package; Uploading a previously packaged <b style='color:#2D4038'>extension</b> to the <b style='color:#2D4038'>Chrome</b> Web Store; Packaging at the command line; Package&nbsp;...</p>
+</div></li>
+ <li><div class='result'>
+<h3><a href='https://developer.chrome.com/webstore/get_started_simple' id='title_4' name='title_4'  onMouseOver="window.status='https://developer.chrome.com/webstore/get_started_simple'; return true;" onMouseOut="ws('');" onClick="tc(this);  return true;">Tutorial: Getting Started - Google <b>Chrome</b></a><span id='title_stars_4' name='title_stars_4'  onMouseOver="Tip('Found by Google');">  </span> </h3>
+<p><span class='url'>https://developer.<b>chrome</b>.com/webstore/get_started_simple</span>  - <A class="proxy" id="proxy_link" HREF="https://ixquick-proxy.com/do/spg/proxy2?ep=566a643558695a454c56596b56675656496c384444684543524451534651704a4d41707246486738486941584b443134514534384c453830566a4d7447694a6644526458503049694d676f49656a4237585273354452596b63535930455255424c446b6f42697075536e7031627855634e54495254444a54425349374a6745775878645a455552444e43354644534244626a425a544530595846395a4b466755557a74735478704a4f6b6c49526d6b5044563561435178504e417859416c705a48315a455855383041793046555577644652675041565132556b7773565563574b6a386a4130457162316b45417855724347414c4e526c6854693037436c7730524345365433526a4a685a424c4255674a6955504931595a4d3170504c30512b5078773048425664484551504c7a64635555424455776c55466a6f61446c7061414146524a6b774d4748416466324555416c313666427842416b30335867702f4e46706c417a494f417767704d4563624942644849436b5641335144444478435278774d666c417559475a73496b423954336b4964414a564879684c41674e4f4267593251414146446d46666567646a4c7877385258673d&epile=4q6n41784r5441314q5451784r56387n4s4335725n586o3q&edata=97b9215468a6fed0177eb9de8d4eeaa7&ek=4r31394565457035534468444s6q776q536r6p674q336p6o596p647n5954632o5657684r5n55564n626o783453566p5449795n4s51794n5266565n56626o6378666r343455575251586n64474r58342o65326p51615374714q6q703758316p5159476p3756587466656o4q3550306458594863334n4634694s457050556r46445n546832596n4169526p6s316245636q51464q3249574n384q33417154546p6q4q464r4o496q343553696s704q6p5234614478385n48672s52487730507n6o7862546o704s476p42506o56784n5478754q43744s4n475n77643335714q534n6754314r4q6379525951547073635870476255356s576r52456647744q627n35484q4535494o6p46525948456o57457054556o5239567n4r3962436o6q516n5253576n70426548517066586o2o546p5275594346795n4439734n6p68384s446p6n59546730514370746655456o53316p794q47704q53546s7n63694n45597n355n51436p59546q5n6665555639615439566448427n626o34774q44416q5033686o4r4777785454524957513q3q&ekdata=d87a5e4e3f5896b0ab33ce6c3ecf2a4c" class='proxy' onClick="rc('4');"  onMouseOver="set_tip_width('Opens the search result with basic anonymity<br>Great privacy feature - slightly slower','0');">View by Ixquick Proxy</A>   - <A HREF="https://ixquick-proxy.com/do/spg/highlight.pl?l=english&c=hf&cat=web&q=upload+chrome+extension&rl=NONE&rid=NCLONLQLPSSQ109LPRKUE&hlq=https://startpage.com/do/search&mtcat=web&mtpl=chrome&u=https:%2F%2Fdeveloper.chrome.com%2Fwebstore%2Fget_started_simple" class='proxy' onClick="rc('4'); return true;" onContextmenu="rc('4'); return true;" onMouseOver="Tip('Highlights your search terms<br>on the result page');">Highlight</A>  </p><p class='desc'>Note: If you&#39;re interested in developing a <b style='color:#2D4038'>Chrome</b> <b style='color:#2D4038'>Extension</b> or <b style='color:#2D4038'>Chrome</b> App .... If you&#39;ve never uploaded an installable web app, <b style='color:#2D4038'>extension</b>, or theme before, you&nbsp;...</p>
+</div></li>
+ <li><div class='result'>
+<h3><a href='https://www.youtube.com/watch?v=Gn_jlvkHTnM' id='title_5' name='title_5'  onMouseOver="window.status='https://www.youtube.com/watch?v=Gn_jlvkHTnM'; return true;" onMouseOut="ws('');" onClick="tc(this);  return true;">Google <b>Chrome</b> Extensions: Publishing - YouTube</a><span id='title_stars_5' name='title_stars_5'  onMouseOver="Tip('Found by Google');">  </span> </h3>
+<p><span class='url'>https://www.youtube.com/watch?v=Gn_jlvkHTnM</span>  - <A class="proxy" id="proxy_link" HREF="https://ixquick-proxy.com/do/spg/proxy2?ep=566a643558695a454c56596b56675656496c384444684543524451534651704a4d41707246486738486941584b443134514534384c453830566a4d7447694a6644526458503049694d676f49656a4237585273354452596b63535930455255424c446b6f42697075536e7031627855634e54495254444a54425349374a6745775878645a455552444e43354644534244626a425a544530595846395a4b466755557a74735478704a4f6b6c49526d6b5044563561435178504e417859416c705a48315a455855383041793046555577644652675041565132556b7773526c555859536f6a426c41744931394345685572534877754c52557748774e70584867784658304d6254384f436831534d77494850416c62496c636347456762653163784f77783347304a4b5442674c4b6a4657556b63545841634e4557394558517052555131524a68314c447a464c4f4752484668342f6448646e4931674a4e326368446e302f65696734584859355441775255674d445533315556676c414442356341316f4166514e7759446b39646870365469706349676b4e4648704e567751625167516c41317747&epile=4q6n41784r5441314q5451784r56387n4s4335725n586o3q&edata=be94585fb56b01551580c00a5685e58c&ek=4r31394565457035534468444s6q776q536r6p674q336p6o596p647n5954632o5657684r5n55564n626o783453566p5449795n4s51794n5266565n56626o6378666r343455575251586n64474r58342o65326p51615374714q6q703758316p5159476p3756587466656o4q3550306458594863334n4634694s457050556r46445n546832596n4169526p6s316245636q51464q3249574n384q33417154546p6q4q464r4o496q343553696s704q6p5234614478385n48672s52487730507n6o7862546o704s476p42506o56784n5478754q43744s4n475n77643335714q534n6754314r4q6379525951547073635870476255356s576r52456647744q627n35484q4535494o6p46525948456o57457054556o5239567n4r3962436o6q516n5253576n70426548517066586o2o546p5275594346795n4439734n6p68384s446p6n59546730514370746655456o53316p794q47704q53546s7n63694n45597n355n51436p59546q5n6665555639615439566448427n626o34774q44416q5033686o4r4777785454524957513q3q&ekdata=4677a7f52b5e407ca86bd84d30b833bc" class='proxy' onClick="rc('5');"  onMouseOver="set_tip_width('Opens the search result with basic anonymity<br>Great privacy feature - slightly slower','0');">View by Ixquick Proxy</A>   - <A HREF="https://ixquick-proxy.com/do/spg/highlight.pl?l=english&c=hf&cat=web&q=upload+chrome+extension&rl=NONE&rid=NCLONLQLPSSQ109LPRKUE&hlq=https://startpage.com/do/search&mtcat=web&mtpl=chrome&u=https:%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DGn_jlvkHTnM" class='proxy' onClick="rc('5'); return true;" onContextmenu="rc('5'); return true;" onMouseOver="Tip('Highlights your search terms<br>on the result page');">Highlight</A>  </p><p class='desc'>7 Dec 2009 ... Nick Baum, product manager for Google <b style='color:#2D4038'>Chrome</b>&#39;s extensions system, demonstrates uploading and publishing an <b style='color:#2D4038'>extension</b> to the Google&nbsp;...</p>
+</div></li>
+ <li><div class='result'>
+<h3><a href='https://www.youtube.com/watch?v=vnXb1S6l_jE' id='title_6' name='title_6'  onMouseOver="window.status='https://www.youtube.com/watch?v=vnXb1S6l_jE'; return true;" onMouseOut="ws('');" onClick="tc(this);  return true;">How to <b>upload</b> your app to the <b>Chrome</b> Web Store - YouTube</a><span id='title_stars_6' name='title_stars_6'  onMouseOver="Tip('Found by Google');">  </span> </h3>
+<p><span class='url'>https://www.youtube.com/watch?v=vnXb1S6l_jE</span>  - <A class="proxy" id="proxy_link" HREF="https://ixquick-proxy.com/do/spg/proxy2?ep=566a643558695a454c56596b56675656496c384444684543524451534651704a4d41707246486738486941584b443134514534384c453830566a4d7447694a6644526458503049694d676f49656a4237585273354452596b63535930455255424c446b6f42697075536e7031627855634e54495254444a54425349374a6745775878645a455552444e43354644534244626a425a544530595846395a4b466755557a74735478704a4f6b6c49526d6b5044563561435178504e417859416c705a48315a455855383041793046555577644652675041565132556b7773526c555859536f6a426c41744931394345685572534877754c52557748774e70584867784658304d5844384a416b42336269594d4f414662496c63634745676264565a6c4f77676954785552525239626657774942686c4758466c55466a306643777857554168564955684c447a464c4f4752454668342f6448646e4931674a4e326368446e302f65696734584859355441775255674d445533315556676c414442356341316f4166514e7759446b39646870365469706349676b4e4648704e567751625167516c41317747&epile=4q6n41784r5441314q5451784r56387n4s4335725n586o3q&edata=617dc57e16213a94cc5aba12c4c1f14d&ek=4r31394565457035534468444s6q776q536r6p674q336p6o596p647n5954632o5657684r5n55564n626o783453566p5449795n4s51794n5266565n56626o6378666r343455575251586n64474r58342o65326p51615374714q6q703758316p5159476p3756587466656o4q3550306458594863334n4634694s457050556r46445n546832596n4169526p6s316245636q51464q3249574n384q33417154546p6q4q464r4o496q343553696s704q6p5234614478385n48672s52487730507n6o7862546o704s476p42506o56784n5478754q43744s4n475n77643335714q534n6754314r4q6379525951547073635870476255356s576r52456647744q627n35484q4535494o6p46525948456o57457054556o5239567n4r3962436o6q516n5253576n70426548517066586o2o546p5275594346795n4439734n6p68384s446p6n59546730514370746655456o53316p794q47704q53546s7n63694n45597n355n51436p59546q5n6665555639615439566448427n626o34774q44416q5033686o4r4777785454524957513q3q&ekdata=909b56ee5c0623758141c0f2f57625e7" class='proxy' onClick="rc('6');"  onMouseOver="set_tip_width('Opens the search result with basic anonymity<br>Great privacy feature - slightly slower','0');">View by Ixquick Proxy</A>   - <A HREF="https://ixquick-proxy.com/do/spg/highlight.pl?l=english&c=hf&cat=web&q=upload+chrome+extension&rl=NONE&rid=NCLONLQLPSSQ109LPRKUE&hlq=https://startpage.com/do/search&mtcat=web&mtpl=chrome&u=https:%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DvnXb1S6l_jE" class='proxy' onClick="rc('6'); return true;" onContextmenu="rc('6'); return true;" onMouseOver="Tip('Highlights your search terms<br>on the result page');">Highlight</A>  </p><p class='desc'>19 Aug 2010 ... Your <b style='color:#2D4038'>Chrome</b> version is not supported by the Web Store....???? Read more .... Is there any other way to <b style='color:#2D4038'>upload</b> an <b style='color:#2D4038'>extension</b>? Webstore is&nbsp;...</p>
+</div></li>
+ <li><div class='result'>
+<h3><a href='http://ecquire.com/blog/how-to-get-more-chrome-extension-downloads/' id='title_7' name='title_7'  onMouseOver="window.status='www.ecquire.com/blog/how-to-get-more-chrome-extension-downloads/'; return true;" onMouseOut="ws('');" onClick="tc(this);  return true;">Publishing a <b>Chrome</b> <b>Extension</b>? 7 Tips to Get More Downloads ...</a><span id='title_stars_7' name='title_stars_7'  onMouseOver="Tip('Found by Google');">  </span> </h3>
+<p><span class='url'>www.ecquire.com/blog/how-to-get-more-<b>chrome</b>-<b>extension</b>-downloads/</span>  - <A class="proxy" id="proxy_link" HREF="https://ixquick-proxy.com/do/spg/proxy2?ep=566a643558695a454c56596b56675656496c384444684543524451534651704a4d41707246486738486941584b443134514534384c453830566a4d7447694a6644526458503049694d676f49656a4237585273354452596b63535930455255424c446b6f42697075536e7031627855634e54495254444a54425349374a6745775878645a455552444e43354644534244626a425a544530595846395a4b466755557a74735478704a4f6b6c49526d6b5044563561435178504e417859416c705a48315a4558553830417930465555784c413270724669425652546750556c4d564a694570585563334c4239654e78677141696c4e61444973457878684731467156797338427a772b4568514a4f79496850536b59656c5946474578494d5630394e42636c46774e4845525a664b69644c556d64554556734e556a6c4243673152564168564a457463543349646547744541566b704c41494b51524e3056567475496845384b774235437a555347674a695567514155774e6b5955707261794563656a685765586f2f66444d625955734f587a744966674e5a466e4e4a415163594146557952314d43576d565a4b46636d63413070473331675a5246484b6e4a446478736b4a564e32&epile=4q6n41784r5441314q5451784r56387n4s4335725n586o3q&edata=5c08cd01a116d0b6aada9fd21dbfb901&ek=4r31394565457035534468444s6q776q536r6p674q336p6o596p647n5954632o5657684r5n55564n626o783453566p5449795n4s51794n5266565n56626o6378666r343455575251586n64474r58342o65326p51615374714q6q703758316p5159476p3756587466656o4q3550306458594863334n4634694s457050556r46445n546832596n4169526p6s316245636q51464q3249574n384q33417154546p6q4q464r4o496q343553696s704q6p5234614478385n48672s52487730507n6o7862546o704s476p42506o56784n5478754q43744s4n475n77643335714q534n6754314r4q6379525951547073635870476255356s576r52456647744q627n35484q4535494o6p46525948456o57457054556o5239567n4r3962436o6q516n5253576n70426548517066586o2o546p5275594346795n4439734n6p68384s446p6n59546730514370746655456o53316p794q47704q53546s7n63694n45597n355n51436p59546q5n6665555639615439566448427n626o34774q44416q5033686o4r4777785454524957513q3q&ekdata=e81750b6f4962bf18f196a51e1a359f1" class='proxy' onClick="rc('7');"  onMouseOver="set_tip_width('Opens the search result with basic anonymity<br>Great privacy feature - slightly slower','0');">View by Ixquick Proxy</A>   - <A HREF="https://ixquick-proxy.com/do/spg/highlight.pl?l=english&c=hf&cat=web&q=upload+chrome+extension&rl=NONE&rid=NCLONLQLPSSQ109LPRKUE&hlq=https://startpage.com/do/search&mtcat=web&mtpl=chrome&u=http:%2F%2Fecquire.com%2Fblog%2Fhow-to-get-more-chrome-extension-downloads%2F" class='proxy' onClick="rc('7'); return true;" onContextmenu="rc('7'); return true;" onMouseOver="Tip('Highlights your search terms<br>on the result page');">Highlight</A>  </p><p class='desc'>16 Apr 2012 ... Launching your <b style='color:#2D4038'>Chrome</b> <b style='color:#2D4038'>Extension</b> is technically very straightforward. However, getting ... The difference is whether you uploaded assets or not.</p>
+</div></li>
+ <li><div class='result'>
+<h3><a href='https://productforums.google.com/d/topic/chrome/lFg5EuL4Tnw' id='title_8' name='title_8'  onMouseOver="window.status='https://productforums.google.com/d/topic/chrome/lFg5EuL4Tnw'; return true;" onMouseOut="ws('');" onClick="tc(this);  return true;">Help! Uploading a .crx theme to the google <b>chrome</b> <b>extension</b> ...</a><span id='title_stars_8' name='title_stars_8'  onMouseOver="Tip('Found by Google');">  </span> </h3>
+<p><span class='url'>https://productforums.google.com/d/topic/<b>chrome</b>/lFg5EuL4Tnw</span>  - <A class="proxy" id="proxy_link" HREF="https://ixquick-proxy.com/do/spg/proxy2?ep=566a643558695a454c56596b56675656496c384444684543524451534651704a4d41707246486738486941584b443134514534384c453830566a4d7447694a6644526458503049694d676f49656a4237585273354452596b63535930455255424c446b6f42697075536e7031627855634e54495254444a54425349374a6745775878645a455552444e43354644534244626a425a544530595846395a4b466755557a74735478704a4f6b6c49526d6b5044563561435178504e417859416c705a48315a455855383041793046555577644652675041565132556b7773515641504b795976423049334d303842416c5168416945504e6846714877516853677742564774366243552b45426848665867564d5377504f463459535274674c6e4931623338304e454239457734594f7a41504645425055416b495247744c43467462566c6c5863306c6148694e474b576f515551777466676f4845524969566c392f4d6c6b335056746e587a454f564849424a516f2b4f686449666d5242437a5954455639316141634d66334d766555462f535845494967344e516e30635641464d41464a6d466c4e55427a594e4c6c4638663177744848673464555655506e3454&epile=4q6n41784r5441314q5451784r56387n4s4335725n586o3q&edata=7da4a7c3557b7f3cc4425450f92e1211&ek=4r31394565457035534468444s6q776q536r6p674q336p6o596p647n5954632o5657684r5n55564n626o783453566p5449795n4s51794n5266565n56626o6378666r343455575251586n64474r58342o65326p51615374714q6q703758316p5159476p3756587466656o4q3550306458594863334n4634694s457050556r46445n546832596n4169526p6s316245636q51464q3249574n384q33417154546p6q4q464r4o496q343553696s704q6p5234614478385n48672s52487730507n6o7862546o704s476p42506o56784n5478754q43744s4n475n77643335714q534n6754314r4q6379525951547073635870476255356s576r52456647744q627n35484q4535494o6p46525948456o57457054556o5239567n4r3962436o6q516n5253576n70426548517066586o2o546p5275594346795n4439734n6p68384s446p6n59546730514370746655456o53316p794q47704q53546s7n63694n45597n355n51436p59546q5n6665555639615439566448427n626o34774q44416q5033686o4r4777785454524957513q3q&ekdata=4dac9e628bb017337812cb296f075f21" class='proxy' onClick="rc('8');"  onMouseOver="set_tip_width('Opens the search result with basic anonymity<br>Great privacy feature - slightly slower','0');">View by Ixquick Proxy</A>   - <A HREF="https://ixquick-proxy.com/do/spg/highlight.pl?l=english&c=hf&cat=web&q=upload+chrome+extension&rl=NONE&rid=NCLONLQLPSSQ109LPRKUE&hlq=https://startpage.com/do/search&mtcat=web&mtpl=chrome&u=https:%2F%2Fproductforums.google.com%2Fd%2Ftopic%2Fchrome%2FlFg5EuL4Tnw" class='proxy' onClick="rc('8'); return true;" onContextmenu="rc('8'); return true;" onMouseOver="Tip('Highlights your search terms<br>on the result page');">Highlight</A>  </p><p class='desc'>Ok I made my own Google <b style='color:#2D4038'>chrome</b> theme and it&#39;s saved as a .crx file. It works just fine, I&#39;m using it right now. But I want to <b style='color:#2D4038'>upload</b> it to the Google&nbsp;...</p>
+</div></li>
+ <li><div class='result'>
+<h3><a href='http://stackoverflow.com/questions/4093722/upload-a-file-in-a-google-chrome-extension' id='title_9' name='title_9'  onMouseOver="window.status='www.stackoverflow.com/ questions/ 4093722/ upload-a-file-in-a-google-chrome-extension'; return true;" onMouseOut="ws('');" onClick="tc(this);  return true;"><b>Upload</b> a File in a Google <b>Chrome</b> <b>Extension</b> - Stack Overflow</a><span id='title_stars_9' name='title_stars_9'  onMouseOver="Tip('Found by Google');">  </span> </h3>
+<p><span class='url'>www.stackoverflow.com/ questions/ 4093722/ <b>upload</b>-a-file-in-a-google-<b>chrome</b>-<b>extension</b></span>  - <A class="proxy" id="proxy_link" HREF="https://ixquick-proxy.com/do/spg/proxy2?ep=566a643558695a454c56596b56675656496c384444684543524451534651704a4d41707246486738486941584b443134514534384c453830566a4d7447694a6644526458503049694d676f49656a4237585273354452596b63535930455255424c446b6f42697075536e7031627855634e54495254444a54425349374a6745775878645a455552444e43354644534244626a425a544530595846395a4b466755557a74735478704a4f6b6c49526d6b5044563561435178504e417859416c705a48315a4558553830417930465555784c41327072466942565254675a52554d444a447736466c592b4c56556258786b70414774614841557847526734426c4570513274366247566857554954616e6832594149494a3138534455304c49786b304d31596b56523148554267544b54734242303058535677455644635258525147475578524c6c6b4545693843506a3054524174784b6c774c4668643841416f3449683573657741384858416558413167514568435869304141674966443042435268786550676c7866335173655455654b444a3146324d55614234655648304f51564554566c4a7a474359596346787765566438475830344e785244656e45584e55316e4d46776b43423062573256645a6d7857496751664742306249465161&epile=4q6n41784r5441314q5451784r56387n4s4335725n586o3q&edata=9c0c453bffbee6af707fe784b5032615&ek=4r31394565457035534468444s6q776q536r6p674q336p6o596p647n5954632o5657684r5n55564n626o783453566p5449795n4s51794n5266565n56626o6378666r343455575251586n64474r58342o65326p51615374714q6q703758316p5159476p3756587466656o4q3550306458594863334n4634694s457050556r46445n546832596n4169526p6s316245636q51464q3249574n384q33417154546p6q4q464r4o496q343553696s704q6p5234614478385n48672s52487730507n6o7862546o704s476p42506o56784n5478754q43744s4n475n77643335714q534n6754314r4q6379525951547073635870476255356s576r52456647744q627n35484q4535494o6p46525948456o57457054556o5239567n4r3962436o6q516n5253576n70426548517066586o2o546p5275594346795n4439734n6p68384s446p6n59546730514370746655456o53316p794q47704q53546s7n63694n45597n355n51436p59546q5n6665555639615439566448427n626o34774q44416q5033686o4r4777785454524957513q3q&ekdata=677c27a47929e59db35088a936a8001a" class='proxy' onClick="rc('9');"  onMouseOver="set_tip_width('Opens the search result with basic anonymity<br>Great privacy feature - slightly slower','0');">View by Ixquick Proxy</A>   - <A HREF="https://ixquick-proxy.com/do/spg/highlight.pl?l=english&c=hf&cat=web&q=upload+chrome+extension&rl=NONE&rid=NCLONLQLPSSQ109LPRKUE&hlq=https://startpage.com/do/search&mtcat=web&mtpl=chrome&u=http:%2F%2Fstackoverflow.com%2Fquestions%2F4093722%2Fupload-a-file-in-a-google-chrome-extension" class='proxy' onClick="rc('9'); return true;" onContextmenu="rc('9'); return true;" onMouseOver="Tip('Highlights your search terms<br>on the result page');">Highlight</A>  </p><p class='desc'>You should checkout the following: <b style='color:#2D4038'>chrome</b>.<b style='color:#2D4038'>extension</b>.sendRequest() and <b style='color:#2D4038'>chrome</b>.<b style='color:#2D4038'>extension</b>.onRequest(). You can read more about them here:&nbsp;...</p>
+</div></li>
+ <li><div class='result'>
+<h3><a href='http://stackoverflow.com/questions/11822975/how-to-automate-publishing-chrome-extension-to-the-web-store' id='title_10' name='title_10'  onMouseOver="window.status='www.stackoverflow.com/ questions/ 11822975/ how-to-automate-publishing-chrome-extension-to-the-web-store'; return true;" onMouseOut="ws('');" onClick="tc(this);  return true;">How to automate publishing <b>Chrome</b> <b>extension</b> to the Web store ...</a><span id='title_stars_10' name='title_stars_10'  onMouseOver="Tip('Found by Google');">  </span> </h3>
+<p><span class='url'>www.stackoverflow.com/ questions/ 11822975/ how-to-automate-publishing-<b>chrome</b>-<b>extension</b>-to-the-web-store</span>  - <A class="proxy" id="proxy_link" HREF="https://ixquick-proxy.com/do/spg/proxy2?ep=566a643558695a454c56596b56675656496c384444684543524451534651704a4d41707246486738486941584b443134514534384c453830566a4d7447694a6644526458503049694d676f49656a4237585273354452596b63535930455255424c446b6f42697075536e7031627855634e54495254444a54425349374a6745775878645a455552444e43354644534244626a425a544530595846395a4b466755557a74735478704a4f6b6c49526d6b5044563561435178504e417859416c705a48315a4558553830417930465555784c41327072466942565254675a52554d444a447736466c592b4c56556258786b70414774614841557847526734426c4570513274366247426757454d575958316d643359375031774b5156314a6231556e4c6c55734751424d55416c4c4c44674845306b62436c68425254414f563151475446314d4e4538444469684c4a58514758306334495638654255636d546b30744c31733961424d37474445635641786854424a415858774a41416755426877414256395665565a39616d5937636b70374748705a644168554144674a4430424556564a784278494b637745354e796752454259434c4335744856514466516348596a6c774a6835364345744f415745465a4439546356424b4445344e5946684f5746465447446f365a466c66535451666268746c58303033616c453d&epile=4q6n41784r5441314q5451784r56387n4s4335725n586o3q&edata=3d6507252a73efc2bb572624cc9ac4d6&ek=4r31394565457035534468444s6q776q536r6p674q336p6o596p647n5954632o5657684r5n55564n626o783453566p5449795n4s51794n5266565n56626o6378666r343455575251586n64474r58342o65326p51615374714q6q703758316p5159476p3756587466656o4q3550306458594863334n4634694s457050556r46445n546832596n4169526p6s316245636q51464q3249574n384q33417154546p6q4q464r4o496q343553696s704q6p5234614478385n48672s52487730507n6o7862546o704s476p42506o56784n5478754q43744s4n475n77643335714q534n6754314r4q6379525951547073635870476255356s576r52456647744q627n35484q4535494o6p46525948456o57457054556o5239567n4r3962436o6q516n5253576n70426548517066586o2o546p5275594346795n4439734n6p68384s446p6n59546730514370746655456o53316p794q47704q53546s7n63694n45597n355n51436p59546q5n6665555639615439566448427n626o34774q44416q5033686o4r4777785454524957513q3q&ekdata=eecc75ec56a9725e0eeb301de79ad1df" class='proxy' onClick="rc('10');"  onMouseOver="set_tip_width('Opens the search result with basic anonymity<br>Great privacy feature - slightly slower','0');">View by Ixquick Proxy</A>   - <A HREF="https://ixquick-proxy.com/do/spg/highlight.pl?l=english&c=hf&cat=web&q=upload+chrome+extension&rl=NONE&rid=NCLONLQLPSSQ109LPRKUE&hlq=https://startpage.com/do/search&mtcat=web&mtpl=chrome&u=http:%2F%2Fstackoverflow.com%2Fquestions%2F11822975%2Fhow-to-automate-publishing-chrome-extension-to-the-web-store" class='proxy' onClick="rc('10'); return true;" onContextmenu="rc('10'); return true;" onMouseOver="Tip('Highlights your search terms<br>on the result page');">Highlight</A>  </p><p class='desc'>Starting from Google <b style='color:#2D4038'>Chrome</b> 21.x private update sites won&#39;t be ... Is there a way to do script uploading <b style='color:#2D4038'>extension</b> to the Google Web store?</p>
+</div></li>
+
+</div>
+</div>
+
+<!-- Printing to client complete: 0 secs -->
+<style type='text/css'>
+</style>
+
+<div id='footer'>
+  <div id='search_footer'>
+	<table cellspacing="0" cellpadding="0" border="0"><tbody>
+	<tr><td>
+	<div id='pagenavigation'>&nbsp;&nbsp;<div id='jumpsbar' style='display: none; align: center; width: 30px;'><form action="https://s6-eu5.startpage.com/do/search" id="pnform" name="pnform" method="POST" style="display: inline; width: 30px;" align='center'> <input type="hidden" name="cmd" value="process_search" /> <input type="hidden" name="language" value="english" /> <input type="hidden" name="qid" value="NCLONLQLPSSQ109LPRKUE" /> <input type="hidden" name="rcount" value="" /> <input type="hidden" name="rl" value="NONE" /> <input type="hidden" name="abp" class='abp' value="-1" /> <input type="hidden" name="query" value="upload chrome extension" /> <input type="hidden" name="cat" value="web" /> <input id='startat' type="hidden" name="startat" value="" /> &nbsp;1&nbsp;<a href='javascript:;' class='numbers_st' onclick='mysubmit(10); return false;' id='2'>2</a><a href='javascript:;' class='numbers_st' onclick='mysubmit(20); return false;' id='3'>3</a><a href='javascript:;' class='numbers_st' onclick='mysubmit(30); return false;' id='4'>4</a><a href='javascript:;' class='numbers_st' onclick='mysubmit(40); return false;' id='5'>5</a><a href='javascript:;' class='numbers_st' onclick='mysubmit(50); return false;' id='6'>6</a><a href='javascript:;' class='numbers_st' onclick='mysubmit(60); return false;' id='7'>7</a><a href='javascript:;' class='numbers_st' onclick='mysubmit(70); return false;' id='8'>8</a><a href='javascript:;' class='numbers_st' onclick='mysubmit(80); return false;' id='9'>9</a><a href='javascript:;' class='numbers_st' onclick='mysubmit(90); return false;' id='10'>10</a></form> </div><style type='text/css'> #pagenav #jumpsbar form { display: inline; width: 30px; } </style><script type='text/javascript'>document.getElementById('jumpsbar').style.display = 'inline'; </script><noscript> <form class='numbers' style='display: inline; width: 30px; align: center; margin: 0px 3px 0px 3px;'>1</form><form action="https://s6-eu5.startpage.com/do/search" id="pnform" name="pnform" method="POST" style="display: inline; width: 30px;" align='center'>
+<input type="hidden" name="cmd" value="process_search" />
+<input type="hidden" name="language" value="english" />
+<input type="hidden" name="qid" value="NCLONLQLPSSQ109LPRKUE" />
+<input type="hidden" name="rcount" value="" />
+<input type="hidden" name="rl" value="NONE" />
+<input type="hidden" name="abp" class='abp' value="-1" />
+<input type="hidden" name="query" value="upload chrome extension" />
+<input type="hidden" name="cat" value="web" />
+<input type="hidden" name="startat" value="10" />
+<input type=submit class='cssprevious_st' value=' 2 '></form>
+
+<form action="https://s6-eu5.startpage.com/do/search" id="pnform" name="pnform" method="POST" style="display: inline; width: 30px;" align='center'>
+<input type="hidden" name="cmd" value="process_search" />
+<input type="hidden" name="language" value="english" />
+<input type="hidden" name="qid" value="NCLONLQLPSSQ109LPRKUE" />
+<input type="hidden" name="rcount" value="" />
+<input type="hidden" name="rl" value="NONE" />
+<input type="hidden" name="abp" class='abp' value="-1" />
+<input type="hidden" name="query" value="upload chrome extension" />
+<input type="hidden" name="cat" value="web" />
+<input type="hidden" name="startat" value="20" />
+<input type=submit class='cssprevious_st' value=' 3 '></form>
+
+<form action="https://s6-eu5.startpage.com/do/search" id="pnform" name="pnform" method="POST" style="display: inline; width: 30px;" align='center'>
+<input type="hidden" name="cmd" value="process_search" />
+<input type="hidden" name="language" value="english" />
+<input type="hidden" name="qid" value="NCLONLQLPSSQ109LPRKUE" />
+<input type="hidden" name="rcount" value="" />
+<input type="hidden" name="rl" value="NONE" />
+<input type="hidden" name="abp" class='abp' value="-1" />
+<input type="hidden" name="query" value="upload chrome extension" />
+<input type="hidden" name="cat" value="web" />
+<input type="hidden" name="startat" value="30" />
+<input type=submit class='cssprevious_st' value=' 4 '></form>
+
+<form action="https://s6-eu5.startpage.com/do/search" id="pnform" name="pnform" method="POST" style="display: inline; width: 30px;" align='center'>
+<input type="hidden" name="cmd" value="process_search" />
+<input type="hidden" name="language" value="english" />
+<input type="hidden" name="qid" value="NCLONLQLPSSQ109LPRKUE" />
+<input type="hidden" name="rcount" value="" />
+<input type="hidden" name="rl" value="NONE" />
+<input type="hidden" name="abp" class='abp' value="-1" />
+<input type="hidden" name="query" value="upload chrome extension" />
+<input type="hidden" name="cat" value="web" />
+<input type="hidden" name="startat" value="40" />
+<input type=submit class='cssprevious_st' value=' 5 '></form>
+
+<form action="https://s6-eu5.startpage.com/do/search" id="pnform" name="pnform" method="POST" style="display: inline; width: 30px;" align='center'>
+<input type="hidden" name="cmd" value="process_search" />
+<input type="hidden" name="language" value="english" />
+<input type="hidden" name="qid" value="NCLONLQLPSSQ109LPRKUE" />
+<input type="hidden" name="rcount" value="" />
+<input type="hidden" name="rl" value="NONE" />
+<input type="hidden" name="abp" class='abp' value="-1" />
+<input type="hidden" name="query" value="upload chrome extension" />
+<input type="hidden" name="cat" value="web" />
+<input type="hidden" name="startat" value="50" />
+<input type=submit class='cssprevious_st' value=' 6 '></form>
+
+<form action="https://s6-eu5.startpage.com/do/search" id="pnform" name="pnform" method="POST" style="display: inline; width: 30px;" align='center'>
+<input type="hidden" name="cmd" value="process_search" />
+<input type="hidden" name="language" value="english" />
+<input type="hidden" name="qid" value="NCLONLQLPSSQ109LPRKUE" />
+<input type="hidden" name="rcount" value="" />
+<input type="hidden" name="rl" value="NONE" />
+<input type="hidden" name="abp" class='abp' value="-1" />
+<input type="hidden" name="query" value="upload chrome extension" />
+<input type="hidden" name="cat" value="web" />
+<input type="hidden" name="startat" value="60" />
+<input type=submit class='cssprevious_st' value=' 7 '></form>
+
+<form action="https://s6-eu5.startpage.com/do/search" id="pnform" name="pnform" method="POST" style="display: inline; width: 30px;" align='center'>
+<input type="hidden" name="cmd" value="process_search" />
+<input type="hidden" name="language" value="english" />
+<input type="hidden" name="qid" value="NCLONLQLPSSQ109LPRKUE" />
+<input type="hidden" name="rcount" value="" />
+<input type="hidden" name="rl" value="NONE" />
+<input type="hidden" name="abp" class='abp' value="-1" />
+<input type="hidden" name="query" value="upload chrome extension" />
+<input type="hidden" name="cat" value="web" />
+<input type="hidden" name="startat" value="70" />
+<input type=submit class='cssprevious_st' value=' 8 '></form>
+
+<form action="https://s6-eu5.startpage.com/do/search" id="pnform" name="pnform" method="POST" style="display: inline; width: 30px;" align='center'>
+<input type="hidden" name="cmd" value="process_search" />
+<input type="hidden" name="language" value="english" />
+<input type="hidden" name="qid" value="NCLONLQLPSSQ109LPRKUE" />
+<input type="hidden" name="rcount" value="" />
+<input type="hidden" name="rl" value="NONE" />
+<input type="hidden" name="abp" class='abp' value="-1" />
+<input type="hidden" name="query" value="upload chrome extension" />
+<input type="hidden" name="cat" value="web" />
+<input type="hidden" name="startat" value="80" />
+<input type=submit class='cssprevious_st' value=' 9 '></form>
+
+<form action="https://s6-eu5.startpage.com/do/search" id="pnform" name="pnform" method="POST" style="display: inline; width: 30px;" align='center'>
+<input type="hidden" name="cmd" value="process_search" />
+<input type="hidden" name="language" value="english" />
+<input type="hidden" name="qid" value="NCLONLQLPSSQ109LPRKUE" />
+<input type="hidden" name="rcount" value="" />
+<input type="hidden" name="rl" value="NONE" />
+<input type="hidden" name="abp" class='abp' value="-1" />
+<input type="hidden" name="query" value="upload chrome extension" />
+<input type="hidden" name="cat" value="web" />
+<input type="hidden" name="startat" value="90" />
+<input type=submit class='cssprevious_st' value=' 10 '></form>
+
+ </noscript>
+&nbsp;&nbsp;<div id='nextnavbar' style='display: none;'><form action="https://s6-eu5.startpage.com/do/search" method="POST" style="display: inline; width: 85px;" name='nextform' align='left'> <input type="hidden" name="cmd" value="process_search" /> <input type="hidden" name="startat" value="10" /> <input type="hidden" name="language" value="english" /> <input type="hidden" name="qid" value="NCLONLQLPSSQ109LPRKUE" /> <input type="hidden" name="rcount" value="" /> <input type="hidden" name="rl" value="NONE" /> <input type="hidden" name="abp" class='abp' value="-1" /> <input type="hidden" name="query" value="upload chrome extension" /> <input type="hidden" name="cat" value="web" /> <a href='javascript:document.nextform.submit();' class='numbers_st' style='width:200px; text-align:left;'>Next &gt;&gt;</a> </form> </div><script type='text/javascript'>document.getElementById('nextnavbar').style.display = 'inline'; </script><noscript> <form action="https://s6-eu5.startpage.com/do/search" method="POST" style="display: inline; width: 85px;" name='nextform' align='left'>
+<input type="hidden" name="cmd" value="process_search" />
+<input type="hidden" name="startat" value="10" />
+<input type="hidden" name="language" value="english" />
+<input type="hidden" name="qid" value="NCLONLQLPSSQ109LPRKUE" />
+<input type="hidden" name="rcount" value="" />
+<input type="hidden" name="rl" value="NONE" />
+<input type="hidden" name="abp" class='abp' value="-1" />
+<input type="hidden" name="query" value="upload chrome extension" />
+<input type="hidden" name="cat" value="web" />
+<input type='submit' value='Next &gt;&gt;' class='cssprevious_st'>
+</form> </noscript>
+ </div>
+	</td></tr>
+  <form name="blah2" method="POST" autocomplete="off" id='search_form' action="https://startpage.com/do/metasearch.pl?" onSubmit="return verifyChecked(this);">
+	<tr id='bottom_input_p'>
+	<td id='input_p' width="100%"><!--[if IE 7]><div style="position:relative; width:300px; height:0;"></div><![endif]-->
+	<input type=hidden name=cmd value="process_search">
+<input type=hidden name=language value="english"><input type=hidden name=cat value="web"><input type=hidden name=enginecount value="1"><input type=hidden name=pl value="chrome"><input type="hidden" name="abp" class='abp' value="-1" />
+<input type=hidden name=total_results value="10"><input type=hidden name=ff value=""><input type=hidden name=theme value=""> <input type=hidden id=flag_ac2 name=flag_ac value="0"><input name="cat" type=hidden value="web">
+    <input type=hidden name=swquery value="upload chrome extension">
+	<input name="query" type="text" value="upload chrome extension" id="query_bottom">
+	</td>
+	<td><input type='image' src='graphics/stp_search.gif' id='submit1' /></td>
+	<td><div id='enhanced'>enhanced by<br><img height='20' width='57' src='graphics/google-results.gif'></div></td>
+	</tr>
+	<tr><td id="within"><input type=checkbox name=searchwithin value="1"><b>Search within results</b></td></tr>
+	</form>
+	<tr>
+	<td>
+  <div id='footer_links'>
+      	<p><a href='https://startpage.com/eng/protect-privacy.html?'>Startpage Protects Your Privacy</a><br>
+          &copy; 2015 Startpage</p>
+
+   </div>   
+	</td>
+
+	</tr>
+	</tbody></table>
+</div>
+</div>
+<CENTER></CENTER><script type="text/javascript">
+setWindow();
+</script>
+<script language="JavaScript"><!--
+
+function change_link_to_post () {
+    var all_links = document.getElementsByTagName("a");
+    for (i = 0; i < all_links.length; i++) {
+
+        if (all_links[i].className.match(/blockquote/) ||
+            all_links[i].className.match(/moreres2/)||all_links[i].className.match(/proxy_link/)||
+							            all_links[i].className.match(/no-date/)||all_links[i].className.match(/related_search/) ||
+							            all_links[i].className.match(/tod/) || all_links[i].className.match(/video_family_filter/) || 
+							            all_links[i].className.match(/video_sort_order/) || all_links[i].className.match(/sugg/)) {
+
+          all_links[i].onclick = function () {
+              url_parts = this.href.split("?");
+              parameters = url_parts[1];
+              key_value_pairs = parameters.split("&");
+              if (key_value_pairs.length > 0) {
+                  myform = document.createElement("form");
+                  myform.setAttribute("method", "POST");
+                  myform.setAttribute("action", url_parts[0]);
+                  if (this.className.match(/proxy_link/)){
+                  myform.setAttribute("target", "_blank");}
+                  for (j = 0; j < key_value_pairs.length; j++) {
+
+                      var key_and_value = key_value_pairs[j].split("=");
+                      form_elem = document.createElement("input");
+                      form_elem.setAttribute("name", key_and_value[0]);
+                      form_elem.setAttribute("type", "hidden");
+                      key_and_value[1] = decodeURIComponent(key_and_value[1].replace(/\+/g,  ' '));
+                      form_elem.setAttribute("value", key_and_value[1]);
+                      myform.appendChild(form_elem);
+                  }
+                  document.getElementById("hide_form").appendChild(myform);
+                  myform.submit();
+                  return false;
+              } else {
+                  return true;
+              }
+          }
+       }
+    }
+}
+change_link_to_post();
+function findPos(obj) {
+					var curleft = curtop = 0;
+					if (obj.offsetParent) {
+                        curleft = obj.offsetLeft;
+                        curtop = obj.offsetTop;
+						while (obj = obj.offsetParent) {
+                            curleft += obj.offsetLeft;
+                            curtop += obj.offsetTop;
+						}
+					}
+					return [curleft,curtop];
+				}
+				function showMapDetail() {
+                    clearTimeout(MapDetailTimeoutId);
+                    var offset = findPos(getelem('map_container'));
+                    var mapdl = getelem('map-detail');
+                    mapdl.style.left = (offset[0] - 10) + 'px';
+                    mapdl.style.top = (offset[1] + 259) + 'px';
+                    mapdl.style.display = 'block';
+					isMapDetailActive = true;
+
+                    jQuery('#mapd').click( function(){
+                       isMapDetailActive = true;
+                       jQuery('#mapd').removeAttr("onmouseout").removeAttr("onmouseover");
+                       jQuery('#map-detail').removeAttr("onmouseout").removeAttr("onmouseover");
+                    });
+                    jQuery('#map-detail a.popup_close').click( function(){
+                       isMapDetailActive = false;
+                       jQuery('#map-detail').hide();
+                       getelem('mapd').onmouseover = function(){showMapDetail()};
+                       getelem('mapd').onmouseout = function(){hideMapDetail()};
+                       getelem('map-detail').onmouseover = function(){isMapDetailActive = true; clearTimeout(MapDetailTimeoutId);};
+                       getelem('map-detail').onmouseout = function(){hideMapDetail()};
+                    });
+
+				}
+
+			var originalPositionOfPrivacyDiv = 0; 
+				function showPrivacy() {
+					    if(originalPositionOfPrivacyDiv == 0) {
+					    originalPositionOfPrivacyDiv = parseInt($('#privacy').css('top'),10);
+					    }
+					clearTimeout(privacyTimeoutId);
+                    var offset = findPos(getelem('query_top'));
+					//var offset2 = (document.getElementById('query_top').offsetWidth+35-626)/2;
+                    var offset2 = (document.getElementById('query_top').offsetWidth+35-650)/2;
+                    var privacy = getelem('privacy');
+                    privacy.style.left = (offset[0] + offset2) + 'px';
+                    var resultsPresent = 1;
+                    var targetElement = getelem('first-result');
+                    var sponsoredElement = getelem('sponsored');
+		    
+		    if (sponsoredElement == null && $('#maths_results').css('display') != 'none') {
+			    var mathDivHeight = parseInt($('#maths_results').css('height'),10);
+			    privacy.style.top = (findPos(maths_results)[1]+mathDivHeight +27) +'px';
+		    } else if (sponsoredElement == null && $('#flight_status').css('display') != 'none') {
+                var flightRegDiv = parseInt($('#flight_registration').css('height'),10);
+                var flightDivHeight = parseInt($('#flight_status').css('height'),10);
+                privacy.style.top = (findPos(privacy)[1]+ flightDivHeight + flightRegDiv + 60) +'px';
+            }else {
+                    if (targetElement == null) {
+                       targetElement = getelem('no_results');
+                       resultsPresent = 0;
+                    }
+                    if( targetElement != null && sponsoredElement != null) {
+                        var topMargin = 0;
+                        if (resultsPresent == 1) {
+                            topMargin = 20;
+                        }
+                        privacy.style.top = (findPos(targetElement)[1] + topMargin) + 'px';
+		    } else {
+			privacy.style.top = originalPositionOfPrivacyDiv + 'px';
+		    }
+		    }
+                    privacy.style.display = 'block';
+					isActive = true;
+					getelem('query_top').blur();
+                    jQuery('#detail').click( function(){
+        isActive = true;
+        jQuery('#detail').removeAttr("onmouseout").removeAttr("onmouseover");
+        jQuery('#privacy').removeAttr("onmouseout").removeAttr("onmouseover");
+        });
+        jQuery('#privacy a.popup_close').click( function(){
+        isActive = false;
+        jQuery('#privacy').hide();
+        getelem('detail').onmouseover = function(){showPrivacy()};
+        getelem('detail').onmouseout = function(){hidePrivacy()};
+        getelem('privacy').onmouseover = function(){isActive = true; clearTimeout(privacyTimeoutId);};
+        getelem('privacy').onmouseout = function(){hidePrivacy2()};
+        });
+
+				}
+                function showPopup() {
+					clearTimeout(privacyTimeoutId);
+                    var offset = findPos(getelem('query_top'));
+                    var offset2 = (getelem('query_top').offsetWidth+35-650)/2;
+                    var privacy = getelem('popupbox');
+                    privacy.style.left = (offset[0] + offset2) + 'px';
+                    var targetElement = getelem('first-result');
+                    var sponsoredElement = getelem('sponsored');
+                    if( targetElement != null && sponsoredElement != null) {
+                        privacy.style.top = (findPos(targetElement)[1] + 20) + 'px';
+                    }
+                    privacy.style.display = 'block';
+					isActive = true;
+					getelem('query_top').blur();
+				}
+				var isActive = false;
+                var isMapDetailActive = false;
+				var privacyTimeoutId, MapDetailTimeoutId;
+				function checkAndHidePrivacy() {
+					if(!isActive) {
+						getelem('query_top').focus();
+                        getelem('privacy').style.display = 'none';
+                        isActive = false;
+					}
+				}
+				function checkAndHideMapDetail() {
+					if(!isMapDetailActive) {
+                        getelem('map-detail').style.display = 'none';
+                        isMapDetailActive = false;
+					}
+				}
+
+				function hidePrivacy() { isActive = false; privacyTimeoutId = setTimeout('checkAndHidePrivacy()', 400); }
+				function hidePrivacy2() { isActive = false; privacyTimeoutId = setTimeout('checkAndHidePrivacy()', 10); }
+				function hideMapDetail() { isMapDetailActive = false; MapDetailTimeoutId = setTimeout('checkAndHideMapDetail()', 10); }
+//-->
+</script>
+<script language="javascript" type="text/javascript">
+jQuery(document).ready(function() {if(abp){load_img('https://startpage.com/do/avt?a=5274&g=911&l=english');} else {load_img('https://startpage.com/do/avt?a=5274&g=912&l=english');} });</script><script language="javascript" type="text/javascript" src="https://startpage.com/js/abp.js?adType=1&advertiser=1&advertising=1&changed=1431507492"></script>
+<script language="javascript" type="text/javascript" src="https://startpage.com/js/wz_tooltip.js?changed=1431507508"></script>
+<div id="hide_form" style="visibilty:hidden;"></div>
+<div id='privacy' onmouseover='isActive = true; clearTimeout(privacyTimeoutId); ' onmouseout='hidePrivacy2();'>
+ <a href="javascript:void(0);" class="popup_close"></a>
+ <p class="complete-privacy">Startpage offers you Web search results from Google <b>in complete privacy!</b> </p>
+ <p>When you search with Startpage, we remove all identifying information from your query and submit it anonymously to Google ourselves. We get the results and return them to you in total privacy.</p>
+ <p>Your IP address is never recorded, your visit is not logged, and no tracking cookies are placed on your browser. When it comes to protecting your privacy, Startpage runs the tightest ship on the Internet. Our outstanding privacy policy and thoughtful engineering give you great search results in total anonymity. Here are some of our key features:</p>
+   <div id='col2'>
+      <ul>
+      <li>Free proxy surfing available.</li>
+      <li>Praised by privacy experts worldwide.</li>
+      <li>Fourteen-year company track record.</li>
+      <li>Third-party certified.</li>
+      </ul>
+   </div>
+   <div id='col1'>
+
+      <ul>
+      <li>No IP address recorded.</li>
+      <li>No record is made of your searches.</li>
+      <li>No identifying or tracking cookies used.</li>
+      <li>Connection using powerful SSL encryption.</li>
+      </ul>
+    </div><p style='clear:both;'>To learn more, check out our <a href='https://startpage.com/eng/protect-privacy.html?'>privacy page</a> and read our <a href='https://startpage.com/eng/privacy-policy.html?'>privacy policy</a>. We're confident you'll like what you see.</p>
+</div>
+<div id='map-detail' style='display: none;' onmouseover='isMapDetailActive = true; clearTimeout(MapDetailTimeoutId);'><a href="javascript:void(0);" class="popup_close"></a>
+<p style='font-weight: bold;'>StartPage offers you Map results from Google in complete privacy!</p>
+<p>When you search for a location with StartPage, we get results from Google Maps and serve them to you anonymously. As always, your IP address is not recorded, your visit is not logged, and no tracking cookies are placed on your browser.</p>
+<p>Our map interface allows you to zoom in and out, but because we never link your browser directly to Google, the JavaScript-based scroll and drag features are disabled to protect your privacy.</p></div>
+<div id="loadingId"></div>
+</body></html>

@@ -1,0 +1,69 @@
+html {
+  height: 230px;
+  max-width: 650px;
+}
+
+body {
+  font-family: arial,sans-serif;
+  font-size: 13px;
+  height: 215px;
+  min-width: 450px;
+  overflow: auto;
+}
+
+a {
+  color: #15c;
+  display: block;
+  margin-top: 2px;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+#url-list {
+  overflow-y: auto;
+  height: 150px;
+  white-space: nowrap;
+  width: 100%;
+}
+
+#url-list a:hover {
+  background-color: #f7f7f7;
+}
+
+#options-link {
+  float: right;
+  outline: none;
+}
+
+#rate-link {
+  float: left;
+  outline: none;
+}
+
+#bug-link {
+  float: left;
+  margin-left: 10px;
+  outline: none;
+}
+
+#donate-link {
+  float: left;
+  margin-left: 10px;
+  outline: none;
+}
+
+#no-popups {
+  margin-top: 10px;
+  text-align: center;
+}
+
+#site-manage {
+  cursor: pointer;
+  margin: 10px 0 10px 0;
+  outline: none;
+  width: 243px;
+}
+

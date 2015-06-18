@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html dir="ltr">
+<head>
+	<meta charset="UTF-8">
+    <title>Script Defender</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+	<div id="headerleft">
+		<span id="cookiecontainer">
+			<img src="cookiea.png" id="cookiessettingimg" class="settingimg"  title="Block Cookies">
+			<img src="img.png" id="imagesettingimg" class="settingimg"  title="Web Request Blocked (Images)">
+			<img src="iframe.png" id="iframesettingimg" class="settingimg"  title="Web Request Blocked (IFrames)">
+			<img src="js.png" id="jssettingimg" class="settingimg"  title="Web Request Blocked (JS Files)">
+			<img src="plgin.png" id="pluginsettingimg" class="settingimg"  title="Web Request Blocked (Plug-ins)">
+			<img src="xml.png" id="xhrsettingimg" class="settingimg"  title="Web Request Blocked (XMLHttpRequest)">
+		</span>
+		<img src="pause.png" id="pauseimg" class="settingimg"  title="pause"><span id="infospan" style="font-size:12px"></span>
+	</div>
+	<div id="headerright"><img src="options.png"  class="settingimg"  id="settingimg" title="Options" style="margin:0 15px"></div>
+	<div id="buttoncontainer">
+		<button type="button" id="allallowbtn" class="btnobjclass btnleft" title="Allow All (a)">Allow All</button><button type="button" id="hostallowbtn" class="btnobjclass btncenter" title="Allow Host (h)">Allow Host</button><button type="button" id="allblockbtn" class="btnobjclass btnright" title="Block All (b)">Block All</button><br>
+		<button type="button" id="scriptallowbtn" class="allowallbuttonclass">Allow Script</button><button type="button" id="pluginallowbtn" class="allowallbuttonclass">Allow Plugin</button><button type="button" id="imageallowbtn" class="allowallbuttonclass">Allow Image</button><button type="button" id="iframeallowbtn" class="allowallbuttonclass">Allow IFrame</button><br>
+
+		<button type="button" id="scriptblockbtn" class="blockallbuttonclass">Block Script</button><button type="button" id="pluginblockbtn" class="blockallbuttonclass">Block Plugin</button><button type="button" id="imageblockbtn" class="blockallbuttonclass">Block Image</button><button type="button" id="iframeblockbtn" class="blockallbuttonclass">Block IFrame</button><br>
+
+		<button type="button" id="Reloadbtn" class="btnobjclass btnleft" title="Reload Tab (r)">Reload Tab</button>
+	</div>
+	<div id="content">
+	</div>
+</body>
+</html>

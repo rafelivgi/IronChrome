@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Options</title>
+    <link href="options.css" rel="stylesheet">
+    <script src="options.js"></script>
+</head>
+<body>
+	<div style="margin-top:16px;text-align: center;">
+		<div>
+			<img src="review.png" id="rateimg" style="vertical-align:middle;margin-right:25px" title="Rate">
+			<button type="button" id="allclearbutton" class="btnobjclass">Clear All</button>
+			<button type="button" id="showjssettingbutton" class="btnobjclass">Show Script Settings</button>
+			<button type="button" id="showplsettingbutton" class="btnobjclass">Show Plugin Settings</button>
+			<button type="button" id="showimgsettingbutton" class="btnobjclass">Show Image Settings</button>
+			<button type="button" id="showcookiesettingbutton" class="btnobjclass">Show Cookie Settings</button>
+		</div>
+		<div style="display:inline-block; text-align: left;margin-bottom:10px;padding-top:50px">
+			<div style="float:left">
+				<input type="checkbox" id="blockscriptbtn" class="chkboxobjclass" checked> <label for="blockscriptbtn">Block Scripts</label><br><br>
+				<input type="checkbox" id="blockpluginbtn" class="chkboxobjclass" checked> <label for="blockpluginbtn">Block Plugins</label><br><br>
+				<input type="checkbox" id="blockimagebtn" class="chkboxobjclass"> <label for="blockimagebtn">Block Images</label><br><br>
+				<input type="checkbox" id="blockiframebtn" class="chkboxobjclass"> <label for="blockiframebtn">Block IFrames</label><br><br>
+				<input type="checkbox" id="blockcookiebtn" class="chkboxobjclass"> <label for="blockcookiebtn">Block Cookies</label>
+			</div>
+			<div style="float:left; padding-left:75px">
+				<input type="checkbox" id="autoreloadbtn" class="chkboxobjclass"> <label for="autoreloadbtn">Auto Reload</label><br><br>
+				<input type="checkbox" id="showbadgebtn" class="chkboxobjclass"> <label for="showbadgebtn">Badge Text</label><br><br>
+				<input type="checkbox" id="showcontextbtn" class="chkboxobjclass" checked> <label for="showcontextbtn">Context Menu</label><br><br>
+				<input type="checkbox" id="showstatusbarbtn" class="chkboxobjclass"> <label for="showstatusbarbtn">Status Bar on page bottom</label><br><br>
+				<input type="checkbox" id="allowexjsfilebtn" class="chkboxobjclass" checked> <label for="allowexjsfilebtn">Allow External Scripts</label><br><br>
+				<input type="checkbox" id="syncwhitelistbtn" class="chkboxobjclass" style="margin-bottom: 12px;"> <label for="syncwhitelistbtn" title="Please Sign in to Chrome">Sync Allow Script Settings</label><br>
+				<label style="padding-left:1em;font-size:12px;font-weight:normal">(Please Sign in to Chrome)</label><br>
+				<button id="syncstartbtn" style="visibility:hidden"> Get Data </button>
+				<button id="synccleartbtn" style="visibility:hidden;display:none"> Clear Data </button>
+				<span id="infosyncsizespan" style="font-weight:normal;padding-left:1em"></span>
+			</div>
+			<div style="float:left; padding-left:75px">
+				Safe Web<br>
+				<input type="url" id="safesearchinput" class="" size="45"><br>
+				Whois<br>
+				<input type="url" id="whoisinput" class="" size="45"><br><br>
+				Shortcut Key: Alt+V<br>
+				<select id="CommandActionSelect" class="selectelemclass">
+					<option value="script">Allow Script (Host Only)</option>
+					<option value="scriptandex">Allow Script (Host Only) + External JS File</option>
+					<option value="host">Allow Host</option>
+					<option value="whitelist">WhiteList</option>
+					<option value="none">None</option>
+				</select><br>
+				Shortcut Key: Alt+B<br>
+				<select id="CommandActionSelect2" class="selectelemclass">
+					<option value="script">Allow Script (Host Only)</option>
+					<option value="scriptandex">Allow Script (Host Only) + External JS File</option>
+					<option value="host" selected>Allow Host</option>
+					<option value="whitelist">WhiteList</option>
+					<option value="none">None</option>
+				</select>
+			</div>
+		</div>
+		<div style="padding:36px 0 0 0">
+			<div style="float: left;width:50%">
+				<div style="float: right;margin-right:20px">
+					Whitelist<br>
+					<textarea name="whitelist" id="whitelist" placeholder="www.youtube.com" style="padding: 5px;" spellcheck="false" wrap="off"></textarea><br>
+					<button type="button" id="savebutton" class="btnobjclass">Save List</button>
+				</div>
+			</div>
+			<div style="float: right;width:50%">
+				<div style="float: left;margin-left:20px">
+					list<br>
+					<textarea name="allowlist" id="allowlist" style="padding: 5px;" spellcheck="false" readonly wrap="off" disabled></textarea><br>
+					<button type="button" id="restorebutton" class="btnobjclass">Restore rules</button>
+					<button type="button" id="synclistbutton" class="btnobjclass" style="display:none">Sync List</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="padding-top:10px;text-align: center;clear:both;">
+		<button type="button" id="downloadbutton" class="btnobjclass">Export</button>
+		<button type="button" id="importbutton" class="btnobjclass">Import</button>
+	</div>
+	<div id="loadingdiv">
+	    <img id="ajaximg" src="ajax.gif">    
+	</div>
+</body>
+</html>

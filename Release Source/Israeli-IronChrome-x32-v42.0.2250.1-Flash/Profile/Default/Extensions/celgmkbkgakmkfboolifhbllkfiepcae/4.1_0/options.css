@@ -1,0 +1,94 @@
+body{
+    font-family:arial, sans-serif;
+    font-size: 13px;
+    color:#333;
+    background-color:#fff;
+    font-weight: bold;
+}
+h3{
+    color:#333;
+    font-size: 16px;
+    margin: 25px 0 15px 0;
+}
+.selectelemclass{
+    font-size: 13px;
+    font-family:arial, sans-serif;
+}
+
+.btnobjclass{
+	border:1px solid #25729a;
+	font-size:13px;
+	font-family:arial, helvetica, sans-serif;
+	padding: 7px 10px; 
+	text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+	font-weight:bold; 
+	color: #FFFFFF;
+	background-color: #3093c7;
+	background-image: -webkit-linear-gradient(top, #3093c7, #1c5a85);
+	background-image: linear-gradient(to bottom, #3093c7, #1c5a85);
+	margin-right: 10px;
+	margin-top: 9px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+.btnobjclass:hover{
+	border:1px solid #1c5675;
+	background-color: #26759e;
+	background-image: -webkit-linear-gradient(top, #26759e, #133d5b);
+	background-image: linear-gradient(to bottom, #26759e, #133d5b);
+}
+.btnobjclass:active{
+	background-image: -webkit-linear-gradient(#111111, #222222);
+	background-image: linear-gradient(#111111, #222222);
+}
+#allclearbutton{
+	border:1px solid #72021c;
+	text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+	color: #FFFFFF;
+	background-color: #a90329;
+	background-image: -webkit-linear-gradient(top, #a90329, #6d0019);
+	background-image: linear-gradient(to bottom, #a90329, #6d0019);
+}
+#allclearbutton:hover{
+	background-image: -webkit-linear-gradient(top, #990329, #550019);
+	background-image: linear-gradient(to bottom, #990329, #550019);
+}
+#allclearbutton:active{
+	color: orange;
+	background-image: -webkit-linear-gradient(#222222, #333333);
+	background-image: linear-gradient(#222222, #333333);
+}
+#whitelist{
+	width: 350px;
+	height: 303px;	
+	font-family: monospace;
+	white-space: pre-wrap;
+	background-color: white;
+	vertical-align: top;
+	resize:none;
+}
+#allowlist{
+	width: 350px;
+	height: 303px;	
+	font-family: monospace;
+	white-space: pre-wrap;
+	background-color: white;
+	vertical-align: top;
+	resize:none;
+}
+#ajaximg{
+    margin-top: 300px;
+}
+#loadingdiv{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background: rgba(255,255,255,0);
+    display: none;
+    text-align: center;
+}
+#hiddenfilebutton{
+display: none;
+}

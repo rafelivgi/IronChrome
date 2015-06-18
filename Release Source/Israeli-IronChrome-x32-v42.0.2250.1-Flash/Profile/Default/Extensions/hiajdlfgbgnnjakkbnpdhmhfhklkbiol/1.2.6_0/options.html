@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>JavaScript Popup Blocker Options</title>
+  <link rel="stylesheet" type="text/css" href="css/options.css" />
+</head>
+<body>
+  <div id="content">
+    <h1 id="title">JavaScript Popup Blocker</h1>
+    <img id="logo" src="images/128.png" />
+    <h2>Mode:</h2>
+    <input type="radio" name="mode" id="whitelist-radio" />
+    <label for="whitelist-radio">Whitelist</label> - Blocks all popups except ones of whitelisted pages<br />
+    <input type="radio" name="mode" id="blacklist-radio" />
+    <label for="blacklist-radio">Blacklist</label> - Only blocks popups of blacklisted pages<br /><br />
+    <input type="checkbox" id="applyToIframes" />
+    <label for="applyToIframes">Iframes should obey the parent page's setting</label>
+    <h2><span id="mode-text"></span> web pages:</h2>
+    <center>
+      <select id="site-list" size="2"></select><br />
+      <button id="add-site">Add</button> <button id="edit-site">Edit</button> <button id="remove-site">Remove</button>
+    </center>
+    <p>
+      You can input standard URLs as well as the wildcard character <span id="star">*</span>. There's no need to use regular expressions (They also won't work if you do!).
+      <br /><br /><strong>Examples:</strong><br />
+      http://my-site.com/*<br />
+      http*://*.my-site.com/*
+    </p>
+    <button id="save">Save</button>
+    <span id="status"></span>
+    <form id="donate-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_donations">
+      <input type="hidden" name="business" value="3WZ2MKGTT8VBJ">
+      <input type="hidden" name="lc" value="IE">
+      <input type="hidden" name="item_name" value="JavaScript Popup Blocker">
+      <input type="hidden" name="currency_code" value="EUR">
+      <a id="donate-link" href="javascript:void(0)" target="_blank">
+        <img src="images/donate.gif" />
+      </a>
+    </form>
+  </div>
+  <script type="text/javascript" src="js/options.js"></script>
+</body>
+</html>
